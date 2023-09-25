@@ -1,0 +1,5 @@
+progress: 0.0
+eta_relative: 0.0
+state: {'skipped': False, 'interrupted': False, 'job': '', 'job_count': 0, 'job_timestamp': '20230921155012', 'job_no': 1, 'sampling_step': 0, 'sampling_steps': 13}
+current_image: None
+textinfo: None

@@ -1,0 +1,2 @@
+txt2img: ['prompt matrix', 'prompts from file or textbox', 'refiner', 'seed', 'x/y/z plot', 'openpose editor', 'controlnet', 'controlnet m2m', 'roop', 'extra options']
+img2img: ['img2img alternative test', 'loopback', 'outpainting mk2', "poor man's outpainting", 'prompt matrix', 'prompts from file or textbox', 'refiner', 'sd upscale', 'seed', 'x/y/z plot', 'openpose editor', 'controlnet', 'controlnet m2m', 'roop', 'extra options']

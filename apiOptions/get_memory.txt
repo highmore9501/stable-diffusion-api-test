@@ -1,0 +1,3 @@
+{'ram': {'free': 29994987520.0, 'used': 4165529600, 'total': 34160517120.0}, 'cuda': {'system': {'free': 8445231104, 'used': 4439015424, 'total': 12884246528}, 'active': {'current': 
+2187835904, 'peak': 4709858304}, 'allocated': {'current': 2187835904, 'peak': 4709858304}, 'reserved': {'current': 2206203904, 'peak': 4819255296}, 'inactive': {'current': 18368000, 
+'peak': 1325745152}, 'events': {'retries': 0, 'oom': 0}}}

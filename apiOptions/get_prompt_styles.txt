@@ -1,0 +1,1 @@
+{'name': 'real', 'prompt': 'masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,shinning skin,', 'negative_prompt': ' easynegative'}

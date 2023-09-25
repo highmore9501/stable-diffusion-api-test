@@ -1,0 +1,2 @@
+loaded: {'easynegative': {'step': None, 'sd_checkpoint': None, 'sd_checkpoint_name': None, 'shape': 768, 'vectors': 8}, 'easynegative_2': {'step': None, 'sd_checkpoint': None, 'sd_checkpoint_name': None, 'shape': 768, 'vectors': 8}, 'EasyNegativeV2': {'step': None, 'sd_checkpoint': None, 'sd_checkpoint_name': None, 'shape': 768, 'vectors': 16}}
+skipped: {}

@@ -1,0 +1,8 @@
+{'name': 'bad-picture-chill-75v', 'path': 'E:\\sdwebui\\webui\\models\\hypernetworks\\bad-picture-chill-75v.pt'}
+{'name': 'bad_prompt_version2', 'path': 'E:\\sdwebui\\webui\\models\\hypernetworks\\bad_prompt_version2.pt'}
+{'name': 'badhandsv5-neg', 'path': 'E:\\sdwebui\\webui\\models\\hypernetworks\\badhandsv5-neg.pt'}
+{'name': 'badhandv4', 'path': 'E:\\sdwebui\\webui\\models\\hypernetworks\\badhandv4.pt'}
+{'name': 'By bad artist -neg', 'path': 'E:\\sdwebui\\webui\\models\\hypernetworks\\By bad artist -neg.pt'}
+{'name': 'negative_hand-neg', 'path': 'E:\\sdwebui\\webui\\models\\hypernetworks\\negative_hand-neg.pt'}
+{'name': 'ng_deepnegative_v1_75t', 'path': 'E:\\sdwebui\\webui\\models\\hypernetworks\\ng_deepnegative_v1_75t.pt'}
+{'name': 'verybadimagenegative_v1.3', 'path': 'E:\\sdwebui\\webui\\models\\hypernetworks\\verybadimagenegative_v1.3.pt'}
