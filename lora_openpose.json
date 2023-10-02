@@ -1,6 +1,6 @@
 {
-  "last_node_id": 18,
-  "last_link_id": 26,
+  "last_node_id": 19,
+  "last_link_id": 27,
   "nodes": [
     {
       "id": 6,
@@ -14,7 +14,7 @@
         "1": 164.31304931640625
       },
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -52,7 +52,7 @@
         "1": 166
       },
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -284,7 +284,7 @@
         "1": 262
       },
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -332,46 +332,6 @@
       ]
     },
     {
-      "id": 17,
-      "type": "AIO_Preprocessor",
-      "pos": [
-        178,
-        18
-      ],
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 24
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            25
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AIO_Preprocessor"
-      },
-      "widgets_values": [
-        "OpenposePreprocessor",
-        512
-      ]
-    },
-    {
       "id": 8,
       "type": "VAEDecode",
       "pos": [
@@ -383,7 +343,7 @@
         "1": 46
       },
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -423,13 +383,111 @@
         "1": 246
       },
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
           "link": 16
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 10,
+      "type": "ControlNetLoader",
+      "pos": [
+        866,
+        -129
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            10
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "models\\t2i-adapter_diffusers_xl_openpose.safetensors"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        178,
+        18
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            25,
+            27
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AIO_Preprocessor"
+      },
+      "widgets_values": [
+        "OpenposePreprocessor",
+        512
+      ]
+    },
+    {
+      "id": 19,
+      "type": "PreviewImage",
+      "pos": [
+        509,
+        -132
+      ],
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 27
         }
       ],
       "properties": {
@@ -448,7 +506,7 @@
         "1": 98
       },
       "flags": {},
-      "order": 2,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -481,39 +539,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "leosamsHelloworldSDXLModel_helloworldSDXL10.safetensors"
-      ]
-    },
-    {
-      "id": 10,
-      "type": "ControlNetLoader",
-      "pos": [
-        866,
-        -129
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "CONTROL_NET",
-          "type": "CONTROL_NET",
-          "links": [
-            10
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ControlNetLoader"
-      },
-      "widgets_values": [
-        "models\\t2i-adapter_diffusers_xl_openpose.safetensors"
+        "pandorasBoxNSFW_v1PussBoots.safetensors"
       ]
     }
   ],
@@ -644,6 +670,14 @@
       0,
       11,
       3,
+      "IMAGE"
+    ],
+    [
+      27,
+      17,
+      0,
+      19,
+      0,
       "IMAGE"
     ]
   ],

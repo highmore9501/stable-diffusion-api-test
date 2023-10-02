@@ -28,7 +28,7 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "leosamsHelloworldSDXLModel_helloworldSDXL10.safetensors"
+      "ckpt_name": "pandorasBoxNSFW_v1PussBoots.safetensors"
     },
     "class_type": "CheckpointLoaderSimple"
   },
@@ -42,7 +42,7 @@
   },
   "6": {
     "inputs": {
-      "text": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,1girl,petite,(small breast:1.5),black twin tails,white stockings, ",
+      "text": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,japaness girl,sex, petite,(small breast:1.5),black twin tails,white stockings, naked,thigh,show breasts and pussy,",
       "clip": [
         "14",
         1
@@ -145,5 +145,14 @@
       ]
     },
     "class_type": "AIO_Preprocessor"
+  },
+  "19": {
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
   }
 }
