@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 105376877273840,
+      "seed": 7006214000903,
       "steps": 35,
       "cfg": 7,
       "sampler_name": "dpmpp_2m_sde",
@@ -20,7 +20,7 @@
         0
       ],
       "latent_image": [
-        "34",
+        "42",
         0
       ]
     },
@@ -67,7 +67,7 @@
   },
   "12": {
     "inputs": {
-      "image": "clipspace-mask-39030.69999998808.png [temp]",
+      "image": "clipspace/clipspace-mask-728446.6999999881.png [input]",
       "choose file to upload": "image"
     },
     "class_type": "LoadImage"
@@ -97,8 +97,9 @@
     },
     "class_type": "LoraLoader"
   },
-  "33": {
+  "39": {
     "inputs": {
+      "grow_mask_by": 5,
       "pixels": [
         "12",
         0
@@ -106,21 +107,22 @@
       "vae": [
         "4",
         2
-      ]
-    },
-    "class_type": "VAEEncode"
-  },
-  "34": {
-    "inputs": {
-      "samples": [
-        "33",
-        0
       ],
       "mask": [
         "12",
         1
       ]
     },
-    "class_type": "SetLatentNoiseMask"
+    "class_type": "VAEEncodeForInpaint"
+  },
+  "42": {
+    "inputs": {
+      "amount": 2,
+      "samples": [
+        "39",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch"
   }
 }
