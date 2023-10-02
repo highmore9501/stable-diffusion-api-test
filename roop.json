@@ -1,0 +1,191 @@
+{
+  "last_node_id": 39,
+  "last_link_id": 59,
+  "nodes": [
+    {
+      "id": 34,
+      "type": "RoopImproved",
+      "pos": [
+        207,
+        851
+      ],
+      "size": {
+        "0": 315,
+        "1": 246
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 49
+        },
+        {
+          "name": "reference_image",
+          "type": "IMAGE",
+          "link": 50,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            58
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RoopImproved"
+      },
+      "widgets_values": [
+        "inswapper_128.onnx",
+        "0",
+        "0",
+        "left to right",
+        false,
+        "left to right",
+        false,
+        0
+      ]
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        -320,
+        719
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            49
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "020_0.png",
+        "image"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "PreviewImage",
+      "pos": [
+        624,
+        883
+      ],
+      "size": [
+        250.76041397085294,
+        296.9598831980288
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 58
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 35,
+      "type": "LoadImage",
+      "pos": [
+        -178,
+        1108
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            50
+          ],
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "828bbd3b93befac87c8ae2a61dd552f0.jpeg",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      49,
+      12,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      35,
+      0,
+      34,
+      1,
+      "IMAGE"
+    ],
+    [
+      58,
+      34,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

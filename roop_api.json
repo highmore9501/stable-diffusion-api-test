@@ -1,0 +1,46 @@
+{
+  "12": {
+    "inputs": {
+      "image": "020_0.png",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "34": {
+    "inputs": {
+      "swap_model": "inswapper_128.onnx",
+      "faces_index": "0",
+      "reference_faces_index": "0",
+      "face_order": "left to right",
+      "reverse_order": false,
+      "reference_order": "left to right",
+      "reverse_reference_order": false,
+      "console_logging_level": 0,
+      "image": [
+        "12",
+        0
+      ],
+      "reference_image": [
+        "35",
+        0
+      ]
+    },
+    "class_type": "RoopImproved"
+  },
+  "35": {
+    "inputs": {
+      "image": "828bbd3b93befac87c8ae2a61dd552f0.jpeg",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "39": {
+    "inputs": {
+      "images": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  }
+}
