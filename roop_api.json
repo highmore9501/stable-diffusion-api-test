@@ -34,10 +34,31 @@
     },
     "class_type": "LoadImage"
   },
-  "39": {
+  "41": {
+    "inputs": {
+      "facedetection": "retinaface_resnet50",
+      "codeformer_fidelity": 0.5,
+      "facerestore_model": [
+        "42",
+        0
+      ],
+      "image": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "FaceRestoreCFWithModel"
+  },
+  "42": {
+    "inputs": {
+      "model_name": "GFPGANv1.4.pth"
+    },
+    "class_type": "FaceRestoreModelLoader"
+  },
+  "43": {
     "inputs": {
       "images": [
-        "34",
+        "41",
         0
       ]
     },
