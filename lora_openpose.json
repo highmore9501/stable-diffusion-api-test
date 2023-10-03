@@ -1,6 +1,6 @@
 {
-  "last_node_id": 19,
-  "last_link_id": 27,
+  "last_node_id": 21,
+  "last_link_id": 30,
   "nodes": [
     {
       "id": 6,
@@ -151,7 +151,7 @@
         "1": 126
       },
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -206,7 +206,7 @@
         "1": 180.6060791015625
       },
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -322,7 +322,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        690824298618463,
+        882671989913747,
         "randomize",
         35,
         7,
@@ -330,71 +330,6 @@
         "karras",
         1
       ]
-    },
-    {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        1235,
-        238
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 7
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 8
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            16
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
-    {
-      "id": 13,
-      "type": "PreviewImage",
-      "pos": [
-        1549,
-        296
-      ],
-      "size": {
-        "0": 210,
-        "1": 246
-      },
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 16
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
     },
     {
       "id": 10,
@@ -440,7 +375,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -454,8 +389,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            25,
-            27
+            25
           ],
           "shape": 3,
           "slot_index": 0
@@ -468,31 +402,6 @@
         "OpenposePreprocessor",
         512
       ]
-    },
-    {
-      "id": 19,
-      "type": "PreviewImage",
-      "pos": [
-        509,
-        -132
-      ],
-      "size": {
-        "0": 210,
-        "1": 26
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 27
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
     },
     {
       "id": 4,
@@ -541,6 +450,148 @@
       "widgets_values": [
         "pandorasBoxNSFW_v1PussBoots.safetensors"
       ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1235,
+        238
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 21,
+      "type": "FaceRestoreModelLoader",
+      "pos": [
+        1547,
+        -45
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FACERESTORE_MODEL",
+          "type": "FACERESTORE_MODEL",
+          "links": [
+            29
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceRestoreModelLoader"
+      },
+      "widgets_values": [
+        "GFPGANv1.4.pth"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "FaceRestoreCFWithModel",
+      "pos": [
+        1522,
+        59
+      ],
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "facerestore_model",
+          "type": "FACERESTORE_MODEL",
+          "link": 29,
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            30
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceRestoreCFWithModel"
+      },
+      "widgets_values": [
+        "retinaface_resnet50",
+        0.5
+      ]
+    },
+    {
+      "id": 13,
+      "type": "PreviewImage",
+      "pos": [
+        1523,
+        428
+      ],
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 30
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
     }
   ],
   "links": [
@@ -617,14 +668,6 @@
       "CONDITIONING"
     ],
     [
-      16,
-      8,
-      0,
-      13,
-      0,
-      "IMAGE"
-    ],
-    [
       17,
       4,
       0,
@@ -673,10 +716,26 @@
       "IMAGE"
     ],
     [
-      27,
-      17,
+      28,
+      8,
       0,
-      19,
+      20,
+      1,
+      "IMAGE"
+    ],
+    [
+      29,
+      21,
+      0,
+      20,
+      0,
+      "FACERESTORE_MODEL"
+    ],
+    [
+      30,
+      20,
+      0,
+      13,
       0,
       "IMAGE"
     ]
