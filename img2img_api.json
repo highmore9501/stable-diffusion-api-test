@@ -1,0 +1,173 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 958148975345641,
+      "steps": 35,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 0.3,
+      "model": [
+        "44",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "fudukiMix_v15.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "6": {
+    "inputs": {
+      "text": "masterpiece, best quality, ultra high res, highres,best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,vivid,realistic,Bokeh,(a Japanese girl:1.5),(female child:1.2),cute,round face,shining skin, petite,flat chest,naked,nsfw,thigh,(shaved pussy),anal sex,after sex,Orange hair, Double ponytail,glasses, green headband, necklace, black bracelet, thin waist, black and red stockings\nBREAK\nShe was in a cozy room with colorful balloons, wood chairs, cloth sofas. ",
+      "clip": [
+        "44",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "embedding:negativeXL_D, ",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "12": {
+    "inputs": {
+      "image": "030.jpg",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "13": {
+    "inputs": {
+      "images": [
+        "20",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "20": {
+    "inputs": {
+      "facedetection": "retinaface_resnet50",
+      "codeformer_fidelity": 0.5,
+      "facerestore_model": [
+        "21",
+        0
+      ],
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "FaceRestoreCFWithModel"
+  },
+  "21": {
+    "inputs": {
+      "model_name": "GFPGANv1.4.pth"
+    },
+    "class_type": "FaceRestoreModelLoader"
+  },
+  "44": {
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ],
+      "lora_stack": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "CR Apply LoRA Stack"
+  },
+  "45": {
+    "inputs": {
+      "switch_1": "On",
+      "lora_name_1": "NsfwPovAllInOneLoraSdxl-000009.safetensors",
+      "model_weight_1": 1,
+      "clip_weight_1": 0.4,
+      "switch_2": "On",
+      "lora_name_2": "neg4all_bdsqlsz_xl_V7.safetensors",
+      "model_weight_2": 1,
+      "clip_weight_2": 0.3,
+      "switch_3": "Off",
+      "lora_name_3": "None",
+      "model_weight_3": 1,
+      "clip_weight_3": 1
+    },
+    "class_type": "CR LoRA Stack"
+  },
+  "49": {
+    "inputs": {
+      "pixels": [
+        "50",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "50": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 0.8,
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels"
+  },
+  "54": {
+    "inputs": {
+      "amount": 4,
+      "samples": [
+        "49",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch"
+  }
+}

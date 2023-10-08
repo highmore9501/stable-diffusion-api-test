@@ -1,48 +1,7 @@
 {
-  "last_node_id": 42,
-  "last_link_id": 72,
+  "last_node_id": 50,
+  "last_link_id": 83,
   "nodes": [
-    {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        1329,
-        555
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 7
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 46,
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            16
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
     {
       "id": 7,
       "type": "CLIPTextEncode",
@@ -55,7 +14,7 @@
         "1": 180.6060791015625
       },
       "flags": {},
-      "order": 2,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -78,7 +37,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch, tooth, open mouth, bad hand, bad fingers"
+        "embedding:negativeXL_D, "
       ]
     },
     {
@@ -93,7 +52,7 @@
         "1": 164.31304931640625
       },
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -116,62 +75,67 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "masterpiece, best quality, ultra high res, highres, indirect lighting, extremely delicate and beautiful,extremely detailed,1 japanese girl,petite,(flat breast:1.5),naked body,show pussy,"
+        "masterpiece, best quality, ultra high res, highres, indirect lighting, extremely delicate and beautiful,extremely detailed,flat chest,naked,nsfw,thigh,pussy,Thin waist,"
       ]
     },
     {
-      "id": 14,
-      "type": "LoraLoader",
+      "id": 3,
+      "type": "KSampler",
       "pos": [
-        -332,
-        446
+        955,
+        387
       ],
       "size": {
         "0": 315,
-        "1": 126
+        "1": 262
       },
       "flags": {},
-      "order": 3,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 17
+          "link": 19
         },
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 18
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 56
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 55
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 71,
+          "slot_index": 3
         }
       ],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
+          "name": "LATENT",
+          "type": "LATENT",
           "links": [
-            19
+            7
           ],
-          "shape": 3,
           "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            20
-          ],
-          "shape": 3,
-          "slot_index": 1
         }
       ],
       "properties": {
-        "Node name for S&R": "LoraLoader"
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        "Grool LORA.safetensors",
-        1,
-        0.1
+        1110558198641388,
+        "randomize",
+        35,
+        7,
+        "dpmpp_2m_sde",
+        "karras",
+        1
       ]
     },
     {
@@ -220,29 +184,265 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "chilloutmix_NiPrunedFp32Fix.safetensors"
+        "fudukiMix_v15.safetensors"
       ]
     },
     {
-      "id": 12,
-      "type": "LoadImage",
+      "id": 14,
+      "type": "LoraLoader",
       "pos": [
-        -271,
-        837
+        -332,
+        446
       ],
       "size": {
         "0": 315,
-        "1": 314
+        "1": 126
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 17
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            20
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "NsfwPovAllInOneLoraSdxl-000009.safetensors",
+        1,
+        0.4
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1329,
+        555
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 46,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            73
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 44,
+      "type": "FaceRestoreModelLoader",
+      "pos": [
+        1642,
+        439
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
       },
       "flags": {},
       "order": 1,
       "mode": 0,
       "outputs": [
         {
+          "name": "FACERESTORE_MODEL",
+          "type": "FACERESTORE_MODEL",
+          "links": [
+            74
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceRestoreModelLoader"
+      },
+      "widgets_values": [
+        "GFPGANv1.4.pth"
+      ]
+    },
+    {
+      "id": 42,
+      "type": "RepeatLatentBatch",
+      "pos": [
+        669,
+        741
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 82
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            71
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RepeatLatentBatch"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 13,
+      "type": "PreviewImage",
+      "pos": [
+        1062,
+        899
+      ],
+      "size": {
+        "0": 210,
+        "1": 246
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 75
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 43,
+      "type": "FaceRestoreCFWithModel",
+      "pos": [
+        1634.7865234375001,
+        540.6282165527343
+      ],
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "facerestore_model",
+          "type": "FACERESTORE_MODEL",
+          "link": 74,
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 73
+        }
+      ],
+      "outputs": [
+        {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            63
+            75
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceRestoreCFWithModel"
+      },
+      "widgets_values": [
+        "retinaface_resnet50",
+        0.5
+      ]
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        -501,
+        835
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            80
           ],
           "shape": 3,
           "slot_index": 0
@@ -266,84 +466,64 @@
       ]
     },
     {
-      "id": 3,
-      "type": "KSampler",
+      "id": 49,
+      "type": "ImageScaleToTotalPixels",
       "pos": [
-        955,
-        387
+        -82,
+        1008
       ],
       "size": {
         "0": 315,
-        "1": 262
+        "1": 82
       },
       "flags": {},
-      "order": 7,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 19
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 56
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 55
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 71,
-          "slot_index": 3
+          "name": "image",
+          "type": "IMAGE",
+          "link": 80
         }
       ],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
+          "name": "IMAGE",
+          "type": "IMAGE",
           "links": [
-            7
+            81
           ],
+          "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "KSampler"
+        "Node name for S&R": "ImageScaleToTotalPixels"
       },
       "widgets_values": [
-        7006214000903,
-        "randomize",
-        35,
-        7,
-        "dpmpp_2m_sde",
-        "karras",
-        1
+        "nearest-exact",
+        0.8
       ]
     },
     {
       "id": 39,
       "type": "VAEEncodeForInpaint",
       "pos": [
-        305,
-        753
+        246,
+        833
       ],
       "size": {
         "0": 315,
         "1": 98
       },
       "flags": {},
-      "order": 4,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
           "name": "pixels",
           "type": "IMAGE",
-          "link": 63
+          "link": 81
         },
         {
           "name": "vae",
@@ -361,7 +541,7 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            72
+            82
           ],
           "shape": 3,
           "slot_index": 0
@@ -371,71 +551,8 @@
         "Node name for S&R": "VAEEncodeForInpaint"
       },
       "widgets_values": [
-        5
+        6
       ]
-    },
-    {
-      "id": 42,
-      "type": "RepeatLatentBatch",
-      "pos": [
-        669,
-        741
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 72
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            71
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "RepeatLatentBatch"
-      },
-      "widgets_values": [
-        2
-      ]
-    },
-    {
-      "id": 13,
-      "type": "PreviewImage",
-      "pos": [
-        1084,
-        801
-      ],
-      "size": {
-        "0": 210,
-        "1": 246
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 16
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
     }
   ],
   "links": [
@@ -454,14 +571,6 @@
       8,
       0,
       "LATENT"
-    ],
-    [
-      16,
-      8,
-      0,
-      13,
-      0,
-      "IMAGE"
     ],
     [
       17,
@@ -520,14 +629,6 @@
       "CONDITIONING"
     ],
     [
-      63,
-      12,
-      0,
-      39,
-      0,
-      "IMAGE"
-    ],
-    [
       64,
       4,
       2,
@@ -552,7 +653,47 @@
       "LATENT"
     ],
     [
-      72,
+      73,
+      8,
+      0,
+      43,
+      1,
+      "IMAGE"
+    ],
+    [
+      74,
+      44,
+      0,
+      43,
+      0,
+      "FACERESTORE_MODEL"
+    ],
+    [
+      75,
+      43,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      80,
+      12,
+      0,
+      49,
+      0,
+      "IMAGE"
+    ],
+    [
+      81,
+      49,
+      0,
+      39,
+      0,
+      "IMAGE"
+    ],
+    [
+      82,
       39,
       0,
       42,

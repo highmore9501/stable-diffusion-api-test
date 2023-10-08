@@ -1,7 +1,7 @@
 {
   "3": {
     "inputs": {
-      "seed": 1110558198641388,
+      "seed": 58696893585849,
       "steps": 35,
       "cfg": 7,
       "sampler_name": "dpmpp_2m_sde",
@@ -20,7 +20,7 @@
         0
       ],
       "latent_image": [
-        "42",
+        "5",
         0
       ]
     },
@@ -28,13 +28,21 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "fudukiMix_v15.safetensors"
+      "ckpt_name": "chilloutmix_NiPrunedFp32Fix.safetensors"
     },
     "class_type": "CheckpointLoaderSimple"
   },
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 4
+    },
+    "class_type": "EmptyLatentImage"
+  },
   "6": {
     "inputs": {
-      "text": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,1girl,sex, petite,(small breast:1.5),black twin tails,white stockings, naked,thigh,show breasts and pussy,",
+      "text": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,1 girl,Cho Yi-hyun,sex, petite,(small breast:1.5),black twin tails,white stockings, naked,thigh,show breasts and pussy,",
       "clip": [
         "14",
         1
@@ -44,7 +52,7 @@
   },
   "7": {
     "inputs": {
-      "text": "embedding:negativeXL_D, ",
+      "text": "",
       "clip": [
         "4",
         1
@@ -65,17 +73,10 @@
     },
     "class_type": "VAEDecode"
   },
-  "12": {
-    "inputs": {
-      "image": "clipspace/clipspace-mask-728446.6999999881.png [input]",
-      "choose file to upload": "image"
-    },
-    "class_type": "LoadImage"
-  },
   "13": {
     "inputs": {
       "images": [
-        "43",
+        "20",
         0
       ]
     },
@@ -83,9 +84,9 @@
   },
   "14": {
     "inputs": {
-      "lora_name": "NsfwPovAllInOneLoraSdxl-000009.safetensors",
+      "lora_name": "Grool LORA.safetensors",
       "strength_model": 1,
-      "strength_clip": 0.4,
+      "strength_clip": 0.2,
       "model": [
         "4",
         0
@@ -97,40 +98,12 @@
     },
     "class_type": "LoraLoader"
   },
-  "39": {
-    "inputs": {
-      "grow_mask_by": 10,
-      "pixels": [
-        "49",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ],
-      "mask": [
-        "12",
-        1
-      ]
-    },
-    "class_type": "VAEEncodeForInpaint"
-  },
-  "42": {
-    "inputs": {
-      "amount": 1,
-      "samples": [
-        "39",
-        0
-      ]
-    },
-    "class_type": "RepeatLatentBatch"
-  },
-  "43": {
+  "20": {
     "inputs": {
       "facedetection": "retinaface_resnet50",
       "codeformer_fidelity": 0.5,
       "facerestore_model": [
-        "44",
+        "21",
         0
       ],
       "image": [
@@ -140,21 +113,10 @@
     },
     "class_type": "FaceRestoreCFWithModel"
   },
-  "44": {
+  "21": {
     "inputs": {
       "model_name": "GFPGANv1.4.pth"
     },
     "class_type": "FaceRestoreModelLoader"
-  },
-  "49": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 0.8,
-      "image": [
-        "12",
-        0
-      ]
-    },
-    "class_type": "ImageScaleToTotalPixels"
   }
 }
