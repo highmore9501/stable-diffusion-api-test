@@ -3,6 +3,7 @@ import datetime
 from PIL import Image, PngImagePlugin
 import os
 from pathlib import Path
+import json
 
 # 初始化api
 api = webuiapi.WebUIApi()
@@ -109,5 +110,9 @@ if __name__ == "__main__":
     # result = mki.get_keywords()
     # print(result)
     # api.controlnet_version()
-    options = api.get_options()
+    # options = api.get_loras()
+    # 将options转换为json格式,保存到/apiOptions/get_loras.json
+    # with open("apiOptions/get_loras.json", "w") as f:
+    #     json.dump(options, f)
+    options = api.get_sd_vae()
     print(options)

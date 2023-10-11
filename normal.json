@@ -37,66 +37,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,1 girl,Cho Yi-hyun,sex, petite,(small breast:1.5),black twin tails,white stockings, naked,thigh,show breasts and pussy,"
-      ]
-    },
-    {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        981,
-        401
-      ],
-      "size": {
-        "0": 315,
-        "1": 262
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 19
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 31
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 32
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 2
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            7
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        58696893585849,
-        "randomize",
-        35,
-        7,
-        "dpmpp_2m_sde",
-        "karras",
-        1
+        "boken,(TOK:1.5),(ID photo:1.5), BREAK A photo of a woman in a suit standing in front of a building with some trees behind her, Sunlight shines from the side,The focus was on her face, the background blurred"
       ]
     },
     {
@@ -177,35 +118,88 @@
       ]
     },
     {
-      "id": 13,
-      "type": "PreviewImage",
+      "id": 7,
+      "type": "CLIPTextEncode",
       "pos": [
-        1523,
-        428
+        415,
+        404
       ],
       "size": {
-        "0": 210,
-        "1": 246
+        "0": 425.27801513671875,
+        "1": 180.6060791015625
       },
       "flags": {},
-      "order": 9,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 30
+          "name": "clip",
+          "type": "CLIP",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            32
+          ],
+          "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "PreviewImage"
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime), text, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, UnrealisticDream"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1261,
+        277
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
       }
     },
     {
       "id": 4,
       "type": "CheckpointLoaderSimple",
       "pos": [
-        -340,
+        -316,
         630
       ],
       "size": {
@@ -246,7 +240,7 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "chilloutmix_NiPrunedFp32Fix.safetensors"
+        "fudukiMix_v15.safetensors"
       ]
     },
     {
@@ -299,9 +293,68 @@
         "Node name for S&R": "LoraLoader"
       },
       "widgets_values": [
-        "Grool LORA.safetensors",
+        "duoduo.safetensors",
         1,
-        0.2
+        0.4
+      ]
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        981,
+        401
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 19
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 31
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 32
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        503505589820867,
+        "randomize",
+        20,
+        5,
+        "dpmpp_2m_sde",
+        "karras",
+        1
       ]
     },
     {
@@ -332,87 +385,34 @@
         "Node name for S&R": "EmptyLatentImage"
       },
       "widgets_values": [
-        1024,
-        1024,
+        768,
+        1152,
         4
       ]
     },
     {
-      "id": 7,
-      "type": "CLIPTextEncode",
+      "id": 13,
+      "type": "PreviewImage",
       "pos": [
-        415,
-        404
+        1523,
+        428
       ],
-      "size": {
-        "0": 425.27801513671875,
-        "1": 180.6060791015625
-      },
+      "size": [
+        684.7167358398438,
+        778.1551513671875
+      ],
       "flags": {},
-      "order": 3,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 5
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            32
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch, tooth, open mouth, bad hand, bad fingers"
-      ]
-    },
-    {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        1261,
-        277
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 7
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 8
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
+          "name": "images",
           "type": "IMAGE",
-          "links": [
-            28
-          ],
-          "slot_index": 0
+          "link": 30
         }
       ],
       "properties": {
-        "Node name for S&R": "VAEDecode"
+        "Node name for S&R": "PreviewImage"
       }
     }
   ],

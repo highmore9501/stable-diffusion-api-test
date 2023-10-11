@@ -1,9 +1,9 @@
 {
   "3": {
     "inputs": {
-      "seed": 58696893585849,
-      "steps": 35,
-      "cfg": 7,
+      "seed": 503505589820867,
+      "steps": 20,
+      "cfg": 5,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
       "denoise": 1,
@@ -28,21 +28,21 @@
   },
   "4": {
     "inputs": {
-      "ckpt_name": "chilloutmix_NiPrunedFp32Fix.safetensors"
+      "ckpt_name": "fudukiMix_v15.safetensors"
     },
     "class_type": "CheckpointLoaderSimple"
   },
   "5": {
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 768,
+      "height": 1152,
       "batch_size": 4
     },
     "class_type": "EmptyLatentImage"
   },
   "6": {
     "inputs": {
-      "text": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,1 girl,Cho Yi-hyun,sex, petite,(small breast:1.5),black twin tails,white stockings, naked,thigh,show breasts and pussy,",
+      "text": "boken,(TOK:1.5),(ID photo:1.5), BREAK A photo of a woman in a suit standing in front of a building with some trees behind her, Sunlight shines from the side,The focus was on her face, the background blurred",
       "clip": [
         "14",
         1
@@ -52,7 +52,7 @@
   },
   "7": {
     "inputs": {
-      "text": "",
+      "text": "(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime), text, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck, UnrealisticDream",
       "clip": [
         "4",
         1
@@ -84,9 +84,9 @@
   },
   "14": {
     "inputs": {
-      "lora_name": "Grool LORA.safetensors",
+      "lora_name": "duoduo.safetensors",
       "strength_model": 1,
-      "strength_clip": 0.2,
+      "strength_clip": 0.4,
       "model": [
         "4",
         0

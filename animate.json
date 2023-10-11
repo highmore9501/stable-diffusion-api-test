@@ -1,0 +1,693 @@
+{
+  "last_node_id": 39,
+  "last_link_id": 88,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -873,
+        1106
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            33
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "embedding:EasyNegativeV2,nfsw,naked,nude"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "PreviewImage",
+      "pos": [
+        693,
+        725
+      ],
+      "size": [
+        624.9632299804689,
+        843.4424462890624
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 87
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -933,
+        712
+      ],
+      "size": [
+        518.2787601691631,
+        329.95619567366657
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 75,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            32
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "sfw,(((1girl))), professional photograph,sports wear,(black long hair:1.5),(big breasts:0.8),red lips,beside sea,volumetric lighting, render, 8k, octane render, cinema 4d, blender, atmospheric 4k ultra detailed, cinematic, Sharp focus, big depth of field, colors, 3d octane render, 4k, hyperrealistic, Vivid colors, extremely detailed CG unity 8k wallpaper, Photorealistic, Hyperrealistic, Hyperdetailed, analog style, soft lighting, subsurface scattering, realistic, heavy shadow, masterpiece, best quality, ultra realistic, 8k, golden ratio, Intricate, High Detail, film photography, soft focus, crisp, high definition,"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "AnimateDiffCombine",
+      "pos": [
+        197,
+        996
+      ],
+      "size": [
+        315,
+        507
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 88
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AnimateDiffCombine"
+      },
+      "widgets_values": [
+        8,
+        0,
+        false,
+        "animate_diff",
+        "image/gif",
+        false,
+        "/view?filename=animate_diff_00022_.gif&subfolder=&type=temp&format=image%2Fgif"
+      ]
+    },
+    {
+      "id": 33,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -1469,
+        802
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            78
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            75,
+            77
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "chilloutmix_NiPrunedFp32Fix.safetensors"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "AnimateDiffModuleLoader",
+      "pos": [
+        -693,
+        343
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "MOTION_LORA_STACK",
+          "link": 82,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MOTION_MODULE",
+          "type": "MOTION_MODULE",
+          "links": [
+            34
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AnimateDiffModuleLoader"
+      },
+      "widgets_values": [
+        "mm-Stabilized_mid.pth"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "VAELoader",
+      "pos": [
+        -291,
+        932
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            83
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vaeFtMse840000Ema_v100.pt"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "AnimateDiffLoraLoader",
+      "pos": [
+        -737,
+        208
+      ],
+      "size": {
+        "0": 355.20001220703125,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "MOTION_LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MOTION_LORA_STACK",
+          "type": "MOTION_LORA_STACK",
+          "links": [
+            82
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AnimateDiffLoraLoader"
+      },
+      "widgets_values": [
+        "v2_lora_ZoomIn.ckpt",
+        1
+      ]
+    },
+    {
+      "id": 22,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -928,
+        465
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            42
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        1
+      ]
+    },
+    {
+      "id": 13,
+      "type": "VAEDecode",
+      "pos": [
+        105,
+        816
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 73
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 83,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            85
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 39,
+      "type": "FaceRestoreModelLoader",
+      "pos": [
+        309,
+        502
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FACERESTORE_MODEL",
+          "type": "FACERESTORE_MODEL",
+          "links": [
+            86
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceRestoreModelLoader"
+      },
+      "widgets_values": [
+        "GFPGANv1.4.pth"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "FaceRestoreCFWithModel",
+      "pos": [
+        307,
+        606
+      ],
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "facerestore_model",
+          "type": "FACERESTORE_MODEL",
+          "link": 86,
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            87,
+            88
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceRestoreCFWithModel"
+      },
+      "widgets_values": [
+        "retinaface_resnet50",
+        0.5
+      ]
+    },
+    {
+      "id": 37,
+      "type": "AnimateDiffSlidingWindowOptions",
+      "pos": [
+        -401,
+        1086
+      ],
+      "size": {
+        "0": 315,
+        "1": 154
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "SLIDING_WINDOW_OPTS",
+          "type": "SLIDING_WINDOW_OPTS",
+          "links": [
+            84
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AnimateDiffSlidingWindowOptions"
+      },
+      "widgets_values": [
+        16,
+        1,
+        4,
+        "uniform",
+        true
+      ]
+    },
+    {
+      "id": 16,
+      "type": "AnimateDiffSampler",
+      "pos": [
+        -287,
+        441
+      ],
+      "size": {
+        "0": 330,
+        "1": 350
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "motion_module",
+          "type": "MOTION_MODULE",
+          "link": 34,
+          "slot_index": 0
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 78,
+          "slot_index": 1
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 32
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 33
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 42,
+          "slot_index": 4
+        },
+        {
+          "name": "sliding_window_opts",
+          "type": "SLIDING_WINDOW_OPTS",
+          "link": 84,
+          "slot_index": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            73
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AnimateDiffSampler"
+      },
+      "widgets_values": [
+        "default",
+        16,
+        919822115851783,
+        "randomize",
+        35,
+        5,
+        "dpmpp_2m_sde_gpu",
+        "karras",
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      32,
+      8,
+      0,
+      16,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      33,
+      7,
+      0,
+      16,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      34,
+      17,
+      0,
+      16,
+      0,
+      "MOTION_MODULE"
+    ],
+    [
+      42,
+      22,
+      0,
+      16,
+      4,
+      "LATENT"
+    ],
+    [
+      73,
+      16,
+      0,
+      13,
+      0,
+      "LATENT"
+    ],
+    [
+      75,
+      33,
+      1,
+      8,
+      0,
+      "CLIP"
+    ],
+    [
+      77,
+      33,
+      1,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      78,
+      33,
+      0,
+      16,
+      1,
+      "MODEL"
+    ],
+    [
+      82,
+      35,
+      0,
+      17,
+      0,
+      "MOTION_LORA_STACK"
+    ],
+    [
+      83,
+      36,
+      0,
+      13,
+      1,
+      "VAE"
+    ],
+    [
+      84,
+      37,
+      0,
+      16,
+      5,
+      "SLIDING_WINDOW_OPTS"
+    ],
+    [
+      85,
+      13,
+      0,
+      38,
+      1,
+      "IMAGE"
+    ],
+    [
+      86,
+      39,
+      0,
+      38,
+      0,
+      "FACERESTORE_MODEL"
+    ],
+    [
+      87,
+      38,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      88,
+      38,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
