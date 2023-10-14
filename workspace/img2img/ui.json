@@ -137,7 +137,7 @@
       "title": "prompt",
       "properties": {},
       "widgets_values": [
-        "analog film grain,BREAK (TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
+        "analog film grain,BREAK (TOK:1.5),a photo of japanese girl,she cute baby face,flat chest,shaved pussy,and big ass."
       ],
       "color": "#223",
       "bgcolor": "#335"
@@ -310,7 +310,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -348,7 +348,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "analog film grain,BREAK (TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
+        "analog film grain,BREAK (TOK:1.5),a photo of japanese girl,she cute baby face,flat chest,shaved pussy,and big ass."
       ]
     },
     {
@@ -459,7 +459,7 @@
         "1": 130
       },
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -551,7 +551,7 @@
         "1": 66
       },
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -596,98 +596,6 @@
       }
     },
     {
-      "id": 40,
-      "type": "CR LoRA Stack",
-      "pos": [
-        -517,
-        139
-      ],
-      "size": {
-        "0": 315,
-        "1": 322
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "lora_stack",
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LORA_STACK",
-          "type": "LORA_STACK",
-          "links": [
-            79
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CR LoRA Stack"
-      },
-      "widgets_values": [
-        "On",
-        "miho_v1.safetensors",
-        1,
-        1,
-        "On",
-        "NsfwPovAllInOneLoraSdxl-000009.safetensors",
-        0.3,
-        0.6,
-        "Off",
-        "None",
-        1,
-        0.4
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 44,
-      "type": "LoadImage",
-      "pos": [
-        -144,
-        899
-      ],
-      "size": {
-        "0": 315,
-        "1": 314
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            219
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "00323-877177378 (1).png",
-        "image"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 95,
       "type": "ImageScaleToTotalPixels",
       "pos": [
@@ -699,7 +607,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 11,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -780,8 +688,180 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "analog film grain,BREAK (TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
+        "analog film grain,BREAK (TOK:1.5),a photo of japanese girl,she cute baby face,flat chest,shaved pussy,and big ass."
       ]
+    },
+    {
+      "id": 94,
+      "type": "VAEEncode",
+      "pos": [
+        568.692626953125,
+        792.684814453125
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 220
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 218
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            222
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      }
+    },
+    {
+      "id": 96,
+      "type": "RepeatLatentBatch",
+      "pos": [
+        818,
+        802
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 222
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            223
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RepeatLatentBatch"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 44,
+      "type": "LoadImage",
+      "pos": [
+        1026,
+        944
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            219
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "20230520004 (8).jpg",
+        "image"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 40,
+      "type": "CR LoRA Stack",
+      "pos": [
+        -517,
+        139
+      ],
+      "size": {
+        "0": 315,
+        "1": 322
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            79
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR LoRA Stack"
+      },
+      "widgets_values": [
+        "On",
+        "miho_v1.safetensors",
+        1,
+        1,
+        "On",
+        "NsfwPovAllInOneLoraSdxl-000009.safetensors",
+        1,
+        0.4,
+        "Off",
+        "None",
+        1,
+        0.4
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     },
     {
       "id": 93,
@@ -849,94 +929,14 @@
         "Node name for S&R": "SeargeSDXLSampler"
       },
       "widgets_values": [
-        516201351503751,
+        964877563257980,
         "randomize",
         50,
-        7,
-        "dpmpp_2m",
-        "karras",
+        10,
+        "euler",
+        "normal",
         0.8,
         0.55
-      ]
-    },
-    {
-      "id": 94,
-      "type": "VAEEncode",
-      "pos": [
-        568.692626953125,
-        792.684814453125
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "pixels",
-          "type": "IMAGE",
-          "link": 220
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 218
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            222
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEEncode"
-      }
-    },
-    {
-      "id": 96,
-      "type": "RepeatLatentBatch",
-      "pos": [
-        818,
-        802
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 222
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            223
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "RepeatLatentBatch"
-      },
-      "widgets_values": [
-        1
       ]
     }
   ],

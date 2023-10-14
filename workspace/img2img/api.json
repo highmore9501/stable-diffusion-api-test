@@ -43,8 +43,8 @@
       "clip_weight_1": 1,
       "switch_2": "On",
       "lora_name_2": "NsfwPovAllInOneLoraSdxl-000009.safetensors",
-      "model_weight_2": 0.3,
-      "clip_weight_2": 0.6,
+      "model_weight_2": 1,
+      "clip_weight_2": 0.4,
       "switch_3": "Off",
       "lora_name_3": "None",
       "model_weight_3": 1,
@@ -54,7 +54,7 @@
   },
   "44": {
     "inputs": {
-      "image": "00323-877177378 (1).png",
+      "image": "20230520004 (8).jpg",
       "choose file to upload": "image"
     },
     "class_type": "LoadImage"
@@ -70,7 +70,7 @@
   },
   "48": {
     "inputs": {
-      "text": "analog film grain,BREAK (TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass.",
+      "text": "analog film grain,BREAK (TOK:1.5),a photo of japanese girl,she cute baby face,flat chest,shaved pussy,and big ass.",
       "clip": [
         "39",
         1
@@ -90,7 +90,7 @@
   },
   "55": {
     "inputs": {
-      "text": "analog film grain,BREAK (TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass.",
+      "text": "analog film grain,BREAK (TOK:1.5),a photo of japanese girl,she cute baby face,flat chest,shaved pussy,and big ass.",
       "clip": [
         "60",
         1
@@ -150,11 +150,11 @@
   },
   "93": {
     "inputs": {
-      "noise_seed": 516201351503751,
+      "noise_seed": 964877563257980,
       "steps": 50,
-      "cfg": 7,
-      "sampler_name": "dpmpp_2m",
-      "scheduler": "karras",
+      "cfg": 10,
+      "sampler_name": "euler",
+      "scheduler": "normal",
       "base_ratio": 0.8,
       "denoise": 0.55,
       "base_model": [
