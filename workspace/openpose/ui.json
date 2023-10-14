@@ -1,6 +1,6 @@
 {
-  "last_node_id": 74,
-  "last_link_id": 158,
+  "last_node_id": 76,
+  "last_link_id": 161,
   "nodes": [
     {
       "id": 55,
@@ -496,93 +496,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 40,
-      "type": "CR LoRA Stack",
-      "pos": [
-        -774,
-        252
-      ],
-      "size": {
-        "0": 315,
-        "1": 322
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "lora_stack",
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LORA_STACK",
-          "type": "LORA_STACK",
-          "links": [
-            79
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CR LoRA Stack"
-      },
-      "widgets_values": [
-        "On",
-        "miho_v1.safetensors",
-        1,
-        1,
-        "On",
-        "NsfwPovAllInOneLoraSdxl-000009.safetensors",
-        0.3,
-        0.6,
-        "Off",
-        "None",
-        1,
-        0.4
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 61,
-      "type": "Seed Generator",
-      "pos": [
-        5.06411865234395,
-        786
-      ],
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            126,
-            127
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Seed Generator"
-      },
-      "widgets_values": [
-        1118843809533146,
-        "randomize"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 51,
       "type": "KSamplerAdvanced",
       "pos": [
@@ -658,7 +571,7 @@
         {
           "name": "noise_seed",
           "type": "INT",
-          "link": 127,
+          "link": 161,
           "widget": {
             "name": "noise_seed",
             "config": [
@@ -729,7 +642,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -760,7 +673,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 7,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -797,7 +710,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 8,
+      "order": 6,
       "mode": 0,
       "outputs": [
         {
@@ -842,7 +755,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "outputs": [
         {
@@ -889,7 +802,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "outputs": [
         {
@@ -933,7 +846,7 @@
         "1": 314
       },
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "outputs": [
         {
@@ -963,142 +876,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 57,
-      "type": "KSamplerAdvanced",
-      "pos": [
-        759,
-        373
-      ],
-      "size": {
-        "0": 315,
-        "1": 334
-      },
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 152,
-          "slot_index": 0
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 157,
-          "slot_index": 1
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 115,
-          "slot_index": 2
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 113
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "link": 129,
-          "widget": {
-            "name": "steps",
-            "config": [
-              "INT",
-              {
-                "default": 20,
-                "min": 1,
-                "max": 10000
-              }
-            ]
-          }
-        },
-        {
-          "name": "cfg",
-          "type": "FLOAT",
-          "link": 131,
-          "widget": {
-            "name": "cfg",
-            "config": [
-              "FLOAT",
-              {
-                "default": 8,
-                "min": 0,
-                "max": 100,
-                "step": 0.5,
-                "round": 0.01
-              }
-            ]
-          },
-          "slot_index": 5
-        },
-        {
-          "name": "noise_seed",
-          "type": "INT",
-          "link": 126,
-          "widget": {
-            "name": "noise_seed",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 18446744073709552000
-              }
-            ]
-          },
-          "slot_index": 6
-        },
-        {
-          "name": "end_at_step",
-          "type": "INT",
-          "link": 132,
-          "widget": {
-            "name": "end_at_step",
-            "config": [
-              "INT",
-              {
-                "default": 10000,
-                "min": 0,
-                "max": 10000
-              }
-            ]
-          },
-          "slot_index": 7
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            117
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "KSampler_base",
-      "properties": {
-        "Node name for S&R": "KSamplerAdvanced"
-      },
-      "widgets_values": [
-        "enable",
-        379457837998631,
-        "randomize",
-        50,
-        8,
-        "dpmpp_2m_sde",
-        "karras",
-        0,
-        35,
-        "enable"
-      ]
-    },
-    {
       "id": 39,
       "type": "CR Apply LoRA Stack",
       "pos": [
@@ -1110,7 +887,7 @@
         "1": 66
       },
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -1216,7 +993,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "outputs": [
         {
@@ -1247,7 +1024,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -1341,6 +1118,227 @@
       "properties": {
         "Node name for S&R": "PreviewImage"
       }
+    },
+    {
+      "id": 57,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        759,
+        373
+      ],
+      "size": {
+        "0": 315,
+        "1": 334
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 152,
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 157,
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 115,
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 113
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 129,
+          "widget": {
+            "name": "steps",
+            "config": [
+              "INT",
+              {
+                "default": 20,
+                "min": 1,
+                "max": 10000
+              }
+            ]
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 131,
+          "widget": {
+            "name": "cfg",
+            "config": [
+              "FLOAT",
+              {
+                "default": 8,
+                "min": 0,
+                "max": 100,
+                "step": 0.5,
+                "round": 0.01
+              }
+            ]
+          },
+          "slot_index": 5
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 160,
+          "widget": {
+            "name": "noise_seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          },
+          "slot_index": 6
+        },
+        {
+          "name": "end_at_step",
+          "type": "INT",
+          "link": 132,
+          "widget": {
+            "name": "end_at_step",
+            "config": [
+              "INT",
+              {
+                "default": 10000,
+                "min": 0,
+                "max": 10000
+              }
+            ]
+          },
+          "slot_index": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            117
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "KSampler_base",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "enable",
+        379457837998631,
+        "randomize",
+        50,
+        8,
+        "dpmpp_2m_sde",
+        "karras",
+        0,
+        35,
+        "enable"
+      ]
+    },
+    {
+      "id": 76,
+      "type": "CR Seed",
+      "pos": [
+        -35,
+        780
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            160,
+            161
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Seed"
+      },
+      "widgets_values": [
+        0,
+        "randomize"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "CR LoRA Stack",
+      "pos": [
+        -774,
+        252
+      ],
+      "size": {
+        "0": 315,
+        "1": 322
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            79
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR LoRA Stack"
+      },
+      "widgets_values": [
+        "On",
+        "duoduo_XL.safetensors",
+        1,
+        1,
+        "Off",
+        "None",
+        0.3,
+        0.6,
+        "Off",
+        "None",
+        1,
+        0.4
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -1479,22 +1477,6 @@
       56,
       0,
       "CLIP"
-    ],
-    [
-      126,
-      61,
-      0,
-      57,
-      6,
-      "INT"
-    ],
-    [
-      127,
-      61,
-      0,
-      51,
-      6,
-      "INT"
     ],
     [
       128,
@@ -1639,6 +1621,22 @@
       58,
       0,
       "MODEL"
+    ],
+    [
+      160,
+      76,
+      0,
+      57,
+      6,
+      "INT"
+    ],
+    [
+      161,
+      76,
+      0,
+      51,
+      6,
+      "INT"
     ]
   ],
   "groups": [],

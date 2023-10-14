@@ -63,7 +63,7 @@
   "46": {
     "inputs": {
       "images": [
-        "70",
+        "74",
         0
       ]
     },
@@ -93,7 +93,7 @@
     "inputs": {
       "add_noise": "disable",
       "noise_seed": [
-        "61",
+        "73",
         0
       ],
       "steps": 50,
@@ -146,7 +146,7 @@
     "inputs": {
       "add_noise": "enable",
       "noise_seed": [
-        "61",
+        "73",
         0
       ],
       "steps": 50,
@@ -207,18 +207,18 @@
     },
     "class_type": "CheckpointLoaderSimple"
   },
-  "61": {
+  "73": {
     "inputs": {
-      "seed": 938851901255357
+      "seed": 0
     },
-    "class_type": "Seed Generator"
+    "class_type": "CR Seed"
   },
-  "70": {
+  "74": {
     "inputs": {
       "facedetection": "retinaface_resnet50",
       "codeformer_fidelity": 0.5,
       "facerestore_model": [
-        "71",
+        "75",
         0
       ],
       "image": [
@@ -228,7 +228,7 @@
     },
     "class_type": "FaceRestoreCFWithModel"
   },
-  "71": {
+  "75": {
     "inputs": {
       "model_name": "GFPGANv1.4.pth"
     },

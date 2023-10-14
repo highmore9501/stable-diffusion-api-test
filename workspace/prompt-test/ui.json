@@ -1,6 +1,6 @@
 {
-  "last_node_id": 71,
-  "last_link_id": 146,
+  "last_node_id": 75,
+  "last_link_id": 153,
   "nodes": [
     {
       "id": 55,
@@ -50,107 +50,6 @@
       },
       "widgets_values": [
         "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
-      ]
-    },
-    {
-      "id": 51,
-      "type": "KSamplerAdvanced",
-      "pos": [
-        758,
-        766
-      ],
-      "size": {
-        "0": 315,
-        "1": 334
-      },
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 121,
-          "slot_index": 0
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 109,
-          "slot_index": 1
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 112,
-          "slot_index": 2
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 117
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "link": 128,
-          "widget": {
-            "name": "steps"
-          },
-          "slot_index": 4
-        },
-        {
-          "name": "cfg",
-          "type": "FLOAT",
-          "link": 130,
-          "widget": {
-            "name": "cfg"
-          }
-        },
-        {
-          "name": "noise_seed",
-          "type": "INT",
-          "link": 127,
-          "widget": {
-            "name": "noise_seed"
-          }
-        },
-        {
-          "name": "start_at_step",
-          "type": "INT",
-          "link": 133,
-          "widget": {
-            "name": "start_at_step"
-          },
-          "slot_index": 7
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            100
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "KSampler_refiner",
-      "properties": {
-        "Node name for S&R": "KSamplerAdvanced"
-      },
-      "widgets_values": [
-        "disable",
-        145049055695836,
-        "randomize",
-        50,
-        5,
-        "dpmpp_2m_sde",
-        "karras",
-        40,
-        10000,
-        "disable"
       ]
     },
     {
@@ -302,42 +201,6 @@
       ]
     },
     {
-      "id": 61,
-      "type": "Seed Generator",
-      "pos": [
-        5.06411865234395,
-        786
-      ],
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            126,
-            127
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Seed Generator"
-      },
-      "widgets_values": [
-        938851901255357,
-        "randomize"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 62,
       "type": "PrimitiveNode",
       "pos": [
@@ -349,7 +212,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -386,7 +249,7 @@
         "1": 179.52468872070312
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -422,7 +285,7 @@
         "1": 168.52468872070312
       },
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -504,7 +367,7 @@
         {
           "name": "noise_seed",
           "type": "INT",
-          "link": 126,
+          "link": 149,
           "widget": {
             "name": "noise_seed"
           },
@@ -560,7 +423,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -597,7 +460,7 @@
         "1": 98
       },
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -645,7 +508,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "outputs": [
         {
@@ -681,7 +544,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "outputs": [
         {
@@ -749,78 +612,6 @@
       ]
     },
     {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        1132,
-        683
-      ],
-      "size": {
-        "0": 210,
-        "1": 46
-      },
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 100
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 146,
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            142
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
-    {
-      "id": 71,
-      "type": "FaceRestoreModelLoader",
-      "pos": [
-        1081,
-        139
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "FACERESTORE_MODEL",
-          "type": "FACERESTORE_MODEL",
-          "links": [
-            143
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FaceRestoreModelLoader"
-      },
-      "widgets_values": [
-        "GFPGANv1.4.pth"
-      ]
-    },
-    {
       "id": 46,
       "type": "PreviewImage",
       "pos": [
@@ -838,58 +629,12 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 144
+          "link": 153
         }
       ],
       "properties": {
         "Node name for S&R": "PreviewImage"
       }
-    },
-    {
-      "id": 70,
-      "type": "FaceRestoreCFWithModel",
-      "pos": [
-        1094,
-        245
-      ],
-      "size": {
-        "0": 315,
-        "1": 102
-      },
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "facerestore_model",
-          "type": "FACERESTORE_MODEL",
-          "link": 143,
-          "slot_index": 0
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 142
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            144
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FaceRestoreCFWithModel"
-      },
-      "widgets_values": [
-        "retinaface_resnet50",
-        0.5
-      ]
     },
     {
       "id": 39,
@@ -1001,7 +746,7 @@
         "1": 322
       },
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -1052,7 +797,7 @@
         "1": 98
       },
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "outputs": [
         {
@@ -1090,6 +835,260 @@
       ],
       "color": "#322",
       "bgcolor": "#533"
+    },
+    {
+      "id": 51,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        758,
+        766
+      ],
+      "size": {
+        "0": 315,
+        "1": 334
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 121,
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 109,
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 112,
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 117
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 128,
+          "widget": {
+            "name": "steps"
+          },
+          "slot_index": 4
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 130,
+          "widget": {
+            "name": "cfg"
+          }
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 148,
+          "widget": {
+            "name": "noise_seed"
+          },
+          "slot_index": 6
+        },
+        {
+          "name": "start_at_step",
+          "type": "INT",
+          "link": 133,
+          "widget": {
+            "name": "start_at_step"
+          },
+          "slot_index": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            100
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "KSampler_refiner",
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced"
+      },
+      "widgets_values": [
+        "disable",
+        145049055695836,
+        "randomize",
+        50,
+        5,
+        "dpmpp_2m_sde",
+        "karras",
+        40,
+        10000,
+        "disable"
+      ]
+    },
+    {
+      "id": 73,
+      "type": "CR Seed",
+      "pos": [
+        -92,
+        790
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            148,
+            149
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Seed"
+      },
+      "widgets_values": [
+        0,
+        "randomize"
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1132,
+        683
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 100
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 146,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            151
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 75,
+      "type": "FaceRestoreModelLoader",
+      "pos": [
+        1243,
+        182
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FACERESTORE_MODEL",
+          "type": "FACERESTORE_MODEL",
+          "links": [
+            152
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceRestoreModelLoader"
+      },
+      "widgets_values": [
+        "GFPGANv1.4.pth"
+      ]
+    },
+    {
+      "id": 74,
+      "type": "FaceRestoreCFWithModel",
+      "pos": [
+        1229,
+        282
+      ],
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "facerestore_model",
+          "type": "FACERESTORE_MODEL",
+          "link": 152,
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 151
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            153
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceRestoreCFWithModel"
+      },
+      "widgets_values": [
+        "retinaface_resnet50",
+        0.5
+      ]
     }
   ],
   "links": [
@@ -1262,22 +1261,6 @@
       "CLIP"
     ],
     [
-      126,
-      61,
-      0,
-      57,
-      6,
-      "INT"
-    ],
-    [
-      127,
-      61,
-      0,
-      51,
-      6,
-      "INT"
-    ],
-    [
       128,
       62,
       0,
@@ -1326,30 +1309,6 @@
       "INT"
     ],
     [
-      142,
-      8,
-      0,
-      70,
-      1,
-      "IMAGE"
-    ],
-    [
-      143,
-      71,
-      0,
-      70,
-      0,
-      "FACERESTORE_MODEL"
-    ],
-    [
-      144,
-      70,
-      0,
-      46,
-      0,
-      "IMAGE"
-    ],
-    [
       145,
       39,
       0,
@@ -1364,6 +1323,46 @@
       8,
       1,
       "VAE"
+    ],
+    [
+      148,
+      73,
+      0,
+      51,
+      6,
+      "INT"
+    ],
+    [
+      149,
+      73,
+      0,
+      57,
+      6,
+      "INT"
+    ],
+    [
+      151,
+      8,
+      0,
+      74,
+      1,
+      "IMAGE"
+    ],
+    [
+      152,
+      75,
+      0,
+      74,
+      0,
+      "FACERESTORE_MODEL"
+    ],
+    [
+      153,
+      74,
+      0,
+      46,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [],

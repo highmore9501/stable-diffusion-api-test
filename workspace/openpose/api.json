@@ -46,11 +46,11 @@
   "40": {
     "inputs": {
       "switch_1": "On",
-      "lora_name_1": "miho_v1.safetensors",
+      "lora_name_1": "duoduo_XL.safetensors",
       "model_weight_1": 1,
       "clip_weight_1": 1,
-      "switch_2": "On",
-      "lora_name_2": "NsfwPovAllInOneLoraSdxl-000009.safetensors",
+      "switch_2": "Off",
+      "lora_name_2": "None",
       "model_weight_2": 0.3,
       "clip_weight_2": 0.6,
       "switch_3": "Off",
@@ -100,7 +100,7 @@
     "inputs": {
       "add_noise": "disable",
       "noise_seed": [
-        "61",
+        "76",
         0
       ],
       "steps": 50,
@@ -153,7 +153,7 @@
     "inputs": {
       "add_noise": "enable",
       "noise_seed": [
-        "61",
+        "76",
         0
       ],
       "steps": 50,
@@ -200,12 +200,6 @@
       "ckpt_name": "sd_xl_refiner_1.0.safetensors"
     },
     "class_type": "CheckpointLoaderSimple"
-  },
-  "61": {
-    "inputs": {
-      "seed": 1118843809533146
-    },
-    "class_type": "Seed Generator"
   },
   "70": {
     "inputs": {
@@ -262,5 +256,11 @@
       "control_net_name": "models\\t2i-adapter_diffusers_xl_openpose.safetensors"
     },
     "class_type": "ControlNetLoader"
+  },
+  "76": {
+    "inputs": {
+      "seed": 0
+    },
+    "class_type": "CR Seed"
   }
 }
