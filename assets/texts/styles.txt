@@ -59,3 +59,7 @@ masterpiece painting, input_text, in the style of Rembrandt,
 cinematic photo ultra detailed sculpture, aesthetic, masterpiece, best quality, (front view:1.1) (fine white tallow jade sculpture:1.1), input_text,esthetical,fascinating,in the style of raphael and michelangelo, ahegao, . 35mm photograph, film, bokeh, professional, 4k, highly detailed
 
 ((masterpiece)), best quality, input_text, hyper-detailed, watercolour, rough paper texture
+
+input_text,analog film grain, bokeh
+
+input_text,RAW photo,(high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, photorealistic

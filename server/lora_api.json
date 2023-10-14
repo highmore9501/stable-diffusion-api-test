@@ -1,0 +1,114 @@
+{
+  "4": {
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "6": {
+    "inputs": {
+      "text": "(TOK:1.5), a nogizaka girl in stylish bar, she have long hair,metal necklace and earrings, her clothes are red sleeveless bodycon mini dress made of latex, she have medium breasts,big ass,ziprealism",
+      "clip": [
+        "37",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "embedding:negativeXL_D, nsfw,nude,naked",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "24": {
+    "inputs": {
+      "images": [
+        "41",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "36": {
+    "inputs": {
+      "width": 896,
+      "height": 1152,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "37": {
+    "inputs": {
+      "lora_name": "duoduo_XL.safetensors",
+      "strength_model": 1,
+      "strength_clip": 0.9,
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "39": {
+    "inputs": {
+      "b1": 1.1,
+      "b2": 1.2,
+      "s1": 0.9,
+      "s2": 0.2,
+      "model": [
+        "37",
+        0
+      ]
+    },
+    "class_type": "FreeU"
+  },
+  "40": {
+    "inputs": {
+      "seed": 620051698630218,
+      "steps": 35,
+      "cfg": 5,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 0.8,
+      "model": [
+        "39",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "36",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  },
+  "41": {
+    "inputs": {
+      "samples": [
+        "40",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  }
+}

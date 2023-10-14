@@ -1,18 +1,18 @@
 {
   "3": {
     "inputs": {
-      "seed": 958148975345641,
-      "steps": 35,
-      "cfg": 7,
+      "seed": 1106973686485886,
+      "steps": 20,
+      "cfg": 5,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
-      "denoise": 0.3,
+      "denoise": 0.6,
       "model": [
         "44",
         0
       ],
       "positive": [
-        "6",
+        "60",
         0
       ],
       "negative": [
@@ -34,7 +34,7 @@
   },
   "6": {
     "inputs": {
-      "text": "masterpiece, best quality, ultra high res, highres,best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,vivid,realistic,Bokeh,(a Japanese girl:1.5),(female child:1.2),cute,round face,shining skin, petite,flat chest,naked,nsfw,thigh,(shaved pussy),anal sex,after sex,Orange hair, Double ponytail,glasses, green headband, necklace, black bracelet, thin waist, black and red stockings\nBREAK\nShe was in a cozy room with colorful balloons, wood chairs, cloth sofas. ",
+      "text": "Bokeh, (TOK:1.5),realistic,",
       "clip": [
         "44",
         1
@@ -67,7 +67,7 @@
   },
   "12": {
     "inputs": {
-      "image": "030.jpg",
+      "image": "00323-877177378.png",
       "choose file to upload": "image"
     },
     "class_type": "LoadImage"
@@ -84,7 +84,7 @@
   "20": {
     "inputs": {
       "facedetection": "retinaface_resnet50",
-      "codeformer_fidelity": 0.5,
+      "codeformer_fidelity": 0.6,
       "facerestore_model": [
         "21",
         0
@@ -129,8 +129,8 @@
       "lora_name_2": "neg4all_bdsqlsz_xl_V7.safetensors",
       "model_weight_2": 1,
       "clip_weight_2": 0.3,
-      "switch_3": "Off",
-      "lora_name_3": "None",
+      "switch_3": "On",
+      "lora_name_3": "miho_v1.safetensors",
       "model_weight_3": 1,
       "clip_weight_3": 1
     },
@@ -169,5 +169,40 @@
       ]
     },
     "class_type": "RepeatLatentBatch"
+  },
+  "60": {
+    "inputs": {
+      "strength": 0.5,
+      "conditioning": [
+        "6",
+        0
+      ],
+      "control_net": [
+        "61",
+        0
+      ],
+      "image": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply"
+  },
+  "61": {
+    "inputs": {
+      "control_net_name": "models\\t2i-adapter_diffusers_xl_canny.safetensors"
+    },
+    "class_type": "ControlNetLoader"
+  },
+  "62": {
+    "inputs": {
+      "preprocessor": "CannyEdgePreprocessor",
+      "resolution": 512,
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor"
   }
 }
