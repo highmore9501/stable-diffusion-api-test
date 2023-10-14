@@ -12,8 +12,8 @@
         0
       ],
       "vae": [
-        "69",
-        0
+        "60",
+        2
       ]
     },
     "class_type": "VAEDecode"
@@ -50,7 +50,7 @@
       "model_weight_1": 1,
       "clip_weight_1": 1,
       "switch_2": "Off",
-      "lora_name_2": "NsfwPovAllInOneLoraSdxl-000009.safetensors",
+      "lora_name_2": "None",
       "model_weight_2": 1,
       "clip_weight_2": 0.5,
       "switch_3": "Off",
@@ -212,12 +212,6 @@
       "seed": 938851901255357
     },
     "class_type": "Seed Generator"
-  },
-  "69": {
-    "inputs": {
-      "vae_name": "sdxl_vae.safetensors"
-    },
-    "class_type": "VAELoader"
   },
   "70": {
     "inputs": {

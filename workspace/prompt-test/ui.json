@@ -1,6 +1,6 @@
 {
   "last_node_id": 71,
-  "last_link_id": 145,
+  "last_link_id": 146,
   "nodes": [
     {
       "id": 55,
@@ -30,13 +30,7 @@
           "type": "STRING",
           "link": 107,
           "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
+            "name": "text"
           }
         }
       ],
@@ -70,7 +64,7 @@
         "1": 334
       },
       "flags": {},
-      "order": 20,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -101,15 +95,7 @@
           "type": "INT",
           "link": 128,
           "widget": {
-            "name": "steps",
-            "config": [
-              "INT",
-              {
-                "default": 20,
-                "min": 1,
-                "max": 10000
-              }
-            ]
+            "name": "steps"
           },
           "slot_index": 4
         },
@@ -118,17 +104,7 @@
           "type": "FLOAT",
           "link": 130,
           "widget": {
-            "name": "cfg",
-            "config": [
-              "FLOAT",
-              {
-                "default": 8,
-                "min": 0,
-                "max": 100,
-                "step": 0.5,
-                "round": 0.01
-              }
-            ]
+            "name": "cfg"
           }
         },
         {
@@ -136,15 +112,7 @@
           "type": "INT",
           "link": 127,
           "widget": {
-            "name": "noise_seed",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 18446744073709552000
-              }
-            ]
+            "name": "noise_seed"
           }
         },
         {
@@ -152,15 +120,7 @@
           "type": "INT",
           "link": 133,
           "widget": {
-            "name": "start_at_step",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 10000
-              }
-            ]
+            "name": "start_at_step"
           },
           "slot_index": 7
         }
@@ -207,7 +167,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -220,13 +180,7 @@
           "type": "STRING",
           "link": 93,
           "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
+            "name": "text"
           }
         }
       ],
@@ -262,7 +216,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -275,13 +229,7 @@
           "type": "STRING",
           "link": 95,
           "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
+            "name": "text"
           }
         }
       ],
@@ -331,13 +279,7 @@
           "type": "STRING",
           "link": 110,
           "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
+            "name": "text"
           }
         }
       ],
@@ -419,15 +361,7 @@
           ],
           "slot_index": 0,
           "widget": {
-            "name": "steps",
-            "config": [
-              "INT",
-              {
-                "default": 20,
-                "min": 1,
-                "max": 10000
-              }
-            ]
+            "name": "steps"
           }
         }
       ],
@@ -464,13 +398,7 @@
           ],
           "slot_index": 0,
           "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
+            "name": "text"
           }
         }
       ],
@@ -506,13 +434,7 @@
           ],
           "slot_index": 0,
           "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
+            "name": "text"
           }
         }
       ],
@@ -536,7 +458,7 @@
         "1": 334
       },
       "flags": {},
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -567,15 +489,7 @@
           "type": "INT",
           "link": 129,
           "widget": {
-            "name": "steps",
-            "config": [
-              "INT",
-              {
-                "default": 20,
-                "min": 1,
-                "max": 10000
-              }
-            ]
+            "name": "steps"
           }
         },
         {
@@ -583,17 +497,7 @@
           "type": "FLOAT",
           "link": 131,
           "widget": {
-            "name": "cfg",
-            "config": [
-              "FLOAT",
-              {
-                "default": 8,
-                "min": 0,
-                "max": 100,
-                "step": 0.5,
-                "round": 0.01
-              }
-            ]
+            "name": "cfg"
           },
           "slot_index": 5
         },
@@ -602,15 +506,7 @@
           "type": "INT",
           "link": 126,
           "widget": {
-            "name": "noise_seed",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 18446744073709552000
-              }
-            ]
+            "name": "noise_seed"
           },
           "slot_index": 6
         },
@@ -619,15 +515,7 @@
           "type": "INT",
           "link": 132,
           "widget": {
-            "name": "end_at_step",
-            "config": [
-              "INT",
-              {
-                "default": 10000,
-                "min": 0,
-                "max": 10000
-              }
-            ]
+            "name": "end_at_step"
           },
           "slot_index": 7
         }
@@ -768,15 +656,7 @@
             133
           ],
           "widget": {
-            "name": "end_at_step",
-            "config": [
-              "INT",
-              {
-                "default": 10000,
-                "min": 0,
-                "max": 10000
-              }
-            ]
+            "name": "end_at_step"
           }
         }
       ],
@@ -813,17 +693,7 @@
           ],
           "slot_index": 0,
           "widget": {
-            "name": "cfg",
-            "config": [
-              "FLOAT",
-              {
-                "default": 8,
-                "min": 0,
-                "max": 100,
-                "step": 0.5,
-                "round": 0.01
-              }
-            ]
+            "name": "cfg"
           }
         }
       ],
@@ -835,86 +705,6 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 60,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -396,
-        657
-      ],
-      "size": {
-        "0": 315,
-        "1": 98
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            122
-          ],
-          "shape": 3
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            123,
-            124
-          ],
-          "shape": 3
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "sd_xl_refiner_1.0.safetensors"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 69,
-      "type": "VAELoader",
-      "pos": [
-        854,
-        1154
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            141
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader"
-      },
-      "widgets_values": [
-        "sdxl_vae.safetensors"
-      ]
     },
     {
       "id": 59,
@@ -970,7 +760,7 @@
         "1": 46
       },
       "flags": {},
-      "order": 21,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -981,7 +771,7 @@
         {
           "name": "vae",
           "type": "VAE",
-          "link": 141,
+          "link": 146,
           "slot_index": 1
         }
       ],
@@ -1011,7 +801,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "outputs": [
         {
@@ -1042,7 +832,7 @@
         "1": 485.91796875
       },
       "flags": {},
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1067,7 +857,7 @@
         "1": 102
       },
       "flags": {},
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1113,7 +903,7 @@
         "1": 66
       },
       "flags": {},
-      "order": 16,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -1169,7 +959,7 @@
         "1": 130
       },
       "flags": {},
-      "order": 17,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -1211,7 +1001,7 @@
         "1": 322
       },
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -1239,7 +1029,7 @@
         1,
         1,
         "Off",
-        "NsfwPovAllInOneLoraSdxl-000009.safetensors",
+        "None",
         1,
         0.5,
         "Off",
@@ -1249,6 +1039,57 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 60,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -396,
+        657
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            122
+          ],
+          "shape": 3
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            123,
+            124
+          ],
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            146
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_refiner_1.0.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
     }
   ],
   "links": [
@@ -1485,14 +1326,6 @@
       "INT"
     ],
     [
-      141,
-      69,
-      0,
-      8,
-      1,
-      "VAE"
-    ],
-    [
       142,
       8,
       0,
@@ -1523,6 +1356,14 @@
       58,
       0,
       "MODEL"
+    ],
+    [
+      146,
+      60,
+      2,
+      8,
+      1,
+      "VAE"
     ]
   ],
   "groups": [],
