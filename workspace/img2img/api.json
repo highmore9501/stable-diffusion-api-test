@@ -153,8 +153,8 @@
       "noise_seed": 964877563257980,
       "steps": 50,
       "cfg": 10,
-      "sampler_name": "euler",
-      "scheduler": "normal",
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "base_ratio": 0.8,
       "denoise": 0.55,
       "base_model": [

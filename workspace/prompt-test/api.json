@@ -52,7 +52,7 @@
       "switch_2": "Off",
       "lora_name_2": "None",
       "model_weight_2": 1,
-      "clip_weight_2": 0.5,
+      "clip_weight_2": 1.8,
       "switch_3": "Off",
       "lora_name_3": "None",
       "model_weight_3": 1,
@@ -71,7 +71,7 @@
   },
   "48": {
     "inputs": {
-      "text": "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass.",
+      "text": "analog film grain,bokeh,(TOK:1.5),she has big breasts,black hair,and big ass.",
       "clip": [
         "39",
         1
@@ -81,7 +81,7 @@
   },
   "49": {
     "inputs": {
-      "text": "tattoo,nsfw,nude,naked,embedding:negativeXL_D, ",
+      "text": "tattoo,nude,(naked:1.5),nsfw,embedding:negativeXL_D, ",
       "clip": [
         "4",
         1
@@ -124,7 +124,7 @@
   },
   "55": {
     "inputs": {
-      "text": "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass.",
+      "text": "analog film grain,bokeh,(TOK:1.5),she has big breasts,black hair,and big ass.",
       "clip": [
         "60",
         1
@@ -134,7 +134,7 @@
   },
   "56": {
     "inputs": {
-      "text": "tattoo,nsfw,nude,naked,embedding:negativeXL_D, ",
+      "text": "tattoo,nude,(naked:1.5),nsfw,embedding:negativeXL_D, ",
       "clip": [
         "60",
         1
@@ -191,9 +191,9 @@
   "59": {
     "inputs": {
       "b1": 1,
-      "b2": 1.2,
-      "s1": 0.8,
-      "s2": 1.3,
+      "b2": 1.1,
+      "s1": 0.9,
+      "s2": 0.9,
       "model": [
         "60",
         0

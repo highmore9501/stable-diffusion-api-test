@@ -16,7 +16,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -49,7 +49,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
+        "analog film grain,bokeh,(TOK:1.5),she has big breasts,black hair,and big ass."
       ]
     },
     {
@@ -98,7 +98,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
+        "analog film grain,bokeh,(TOK:1.5),she has big breasts,black hair,and big ass."
       ]
     },
     {
@@ -115,7 +115,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 11,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -147,7 +147,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "tattoo,nsfw,nude,naked,embedding:negativeXL_D, "
+        "tattoo,nude,(naked:1.5),nsfw,embedding:negativeXL_D, "
       ]
     },
     {
@@ -164,7 +164,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -197,7 +197,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "tattoo,nsfw,nude,naked,embedding:negativeXL_D, "
+        "tattoo,nude,(naked:1.5),nsfw,embedding:negativeXL_D, "
       ]
     },
     {
@@ -268,7 +268,7 @@
       "title": "negative",
       "properties": {},
       "widgets_values": [
-        "tattoo,nsfw,nude,naked,embedding:negativeXL_D, "
+        "tattoo,nude,(naked:1.5),nsfw,embedding:negativeXL_D, "
       ],
       "color": "#223",
       "bgcolor": "#335"
@@ -304,7 +304,7 @@
       "title": "prompt",
       "properties": {},
       "widgets_values": [
-        "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
+        "analog film grain,bokeh,(TOK:1.5),she has big breasts,black hair,and big ass."
       ],
       "color": "#223",
       "bgcolor": "#335"
@@ -449,54 +449,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -393,
-        509
-      ],
-      "size": {
-        "0": 315,
-        "1": 98
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            78
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            80,
-            96
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [],
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "fudukiMix_v15.safetensors"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 65,
       "type": "PrimitiveNode",
       "pos": [
@@ -508,7 +460,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -544,7 +496,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "outputs": [
         {
@@ -568,48 +520,6 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 59,
-      "type": "FreeU",
-      "pos": [
-        377,
-        771
-      ],
-      "size": {
-        "0": 315,
-        "1": 130
-      },
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 122,
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            121
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FreeU"
-      },
-      "widgets_values": [
-        1,
-        1.2,
-        0.8,
-        1.3
-      ]
     },
     {
       "id": 46,
@@ -648,7 +558,7 @@
         "1": 66
       },
       "flags": {},
-      "order": 12,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -735,57 +645,6 @@
       ]
     },
     {
-      "id": 40,
-      "type": "CR LoRA Stack",
-      "pos": [
-        -774,
-        252
-      ],
-      "size": {
-        "0": 315,
-        "1": 322
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "lora_stack",
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LORA_STACK",
-          "type": "LORA_STACK",
-          "links": [
-            79
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CR LoRA Stack"
-      },
-      "widgets_values": [
-        "On",
-        "duoduo_XL.safetensors",
-        1,
-        1,
-        "Off",
-        "None",
-        1,
-        0.5,
-        "Off",
-        "None",
-        1,
-        0.4
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 60,
       "type": "CheckpointLoaderSimple",
       "pos": [
@@ -797,7 +656,7 @@
         "1": 98
       },
       "flags": {},
-      "order": 8,
+      "order": 6,
       "mode": 0,
       "outputs": [
         {
@@ -950,7 +809,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "outputs": [
         {
@@ -1025,7 +884,7 @@
         "1": 58
       },
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "outputs": [
         {
@@ -1089,6 +948,147 @@
         "retinaface_resnet50",
         0.5
       ]
+    },
+    {
+      "id": 59,
+      "type": "FreeU",
+      "pos": [
+        377,
+        771
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 122,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            121
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FreeU"
+      },
+      "widgets_values": [
+        1,
+        1.1,
+        0.9,
+        0.9
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -393,
+        509
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            78
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            80,
+            96
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "fudukiMix_v15.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 40,
+      "type": "CR LoRA Stack",
+      "pos": [
+        -774,
+        252
+      ],
+      "size": {
+        "0": 315,
+        "1": 322
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [
+            79
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR LoRA Stack"
+      },
+      "widgets_values": [
+        "On",
+        "duoduo_XL.safetensors",
+        1,
+        1,
+        "Off",
+        "None",
+        1,
+        1.8,
+        "Off",
+        "None",
+        1,
+        0.4
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [

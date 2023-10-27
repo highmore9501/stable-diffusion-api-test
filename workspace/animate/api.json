@@ -1,7 +1,7 @@
 {
   "7": {
     "inputs": {
-      "text": "embedding:EasyNegativeV2,nfsw,naked,nude",
+      "text": "embedding:easynegative, ",
       "clip": [
         "33",
         1
@@ -11,7 +11,7 @@
   },
   "8": {
     "inputs": {
-      "text": "sfw,(((1girl))), professional photograph,sports wear,(black long hair:1.5),(big breasts:0.8),red lips,beside sea,volumetric lighting, render, 8k, octane render, cinema 4d, blender, atmospheric 4k ultra detailed, cinematic, Sharp focus, big depth of field, colors, 3d octane render, 4k, hyperrealistic, Vivid colors, extremely detailed CG unity 8k wallpaper, Photorealistic, Hyperrealistic, Hyperdetailed, analog style, soft lighting, subsurface scattering, realistic, heavy shadow, masterpiece, best quality, ultra realistic, 8k, golden ratio, Intricate, High Detail, film photography, soft focus, crisp, high definition,",
+      "text": "nsfw,(((1girl))), professional photograph,sports wear,(black long hair:1.5),(big breasts:0.8),red lips,beside sea,volumetric lighting, 8k",
       "clip": [
         "33",
         1
@@ -22,95 +22,32 @@
   "13": {
     "inputs": {
       "samples": [
-        "16",
+        "47",
         0
       ],
       "vae": [
-        "36",
-        0
+        "33",
+        2
       ]
     },
     "class_type": "VAEDecode"
   },
-  "16": {
-    "inputs": {
-      "inject_method": "default",
-      "frame_number": 16,
-      "seed": 919822115851783,
-      "steps": 35,
-      "cfg": 5,
-      "sampler_name": "dpmpp_2m_sde_gpu",
-      "scheduler": "karras",
-      "denoise": 1,
-      "motion_module": [
-        "17",
-        0
-      ],
-      "model": [
-        "33",
-        0
-      ],
-      "positive": [
-        "8",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "22",
-        0
-      ],
-      "sliding_window_opts": [
-        "37",
-        0
-      ]
-    },
-    "class_type": "AnimateDiffSampler"
-  },
-  "17": {
-    "inputs": {
-      "model_name": "mm-Stabilized_mid.pth",
-      "lora_stack": [
-        "35",
-        0
-      ]
-    },
-    "class_type": "AnimateDiffModuleLoader"
-  },
   "22": {
     "inputs": {
-      "width": 512,
-      "height": 512,
-      "batch_size": 1
+      "width": 768,
+      "height": 768,
+      "batch_size": 8
     },
     "class_type": "EmptyLatentImage"
   },
   "24": {
     "inputs": {
       "images": [
-        "38",
+        "13",
         0
       ]
     },
     "class_type": "PreviewImage"
-  },
-  "32": {
-    "inputs": {
-      "frame_rate": 8,
-      "loop_count": 0,
-      "save_image": false,
-      "filename_prefix": "animate_diff",
-      "format": "image/gif",
-      "pingpong": false,
-      "ad_video_preview__0": "/view?filename=animate_diff_00022_.gif&subfolder=&type=temp&format=image%2Fgif",
-      "images": [
-        "38",
-        0
-      ]
-    },
-    "class_type": "AnimateDiffCombine"
   },
   "33": {
     "inputs": {
@@ -118,48 +55,96 @@
     },
     "class_type": "CheckpointLoaderSimple"
   },
-  "35": {
+  "40": {
     "inputs": {
-      "lora_name": "v2_lora_ZoomIn.ckpt",
-      "alpha": 1
+      "model_name": "mm_sd_v15.ckpt",
+      "beta_schedule": "sqrt_linear (AnimateDiff)",
+      "model": [
+        "33",
+        0
+      ],
+      "context_options": [
+        "41",
+        0
+      ],
+      "motion_lora": [
+        "42",
+        0
+      ]
     },
-    "class_type": "AnimateDiffLoraLoader"
+    "class_type": "ADE_AnimateDiffLoaderWithContext"
   },
-  "36": {
+  "41": {
     "inputs": {
-      "vae_name": "vaeFtMse840000Ema_v100.pt"
-    },
-    "class_type": "VAELoader"
-  },
-  "37": {
-    "inputs": {
-      "context_length": 16,
+      "context_length": 8,
       "context_stride": 1,
       "context_overlap": 4,
       "context_schedule": "uniform",
-      "closed_loop": true
+      "closed_loop": false
     },
-    "class_type": "AnimateDiffSlidingWindowOptions"
+    "class_type": "ADE_AnimateDiffUniformContextOptions"
   },
-  "38": {
+  "42": {
     "inputs": {
-      "facedetection": "retinaface_resnet50",
-      "codeformer_fidelity": 0.5,
-      "facerestore_model": [
-        "39",
-        0
-      ],
-      "image": [
+      "lora_name": "v2_lora_ZoomIn.ckpt",
+      "strength": 1
+    },
+    "class_type": "ADE_AnimateDiffLoRALoader"
+  },
+  "44": {
+    "inputs": {
+      "frame_rate": 8,
+      "loop_count": 0,
+      "filename_prefix": "AnimateDiff",
+      "format": "image/gif",
+      "pingpong": false,
+      "save_image": true,
+      "ad_gif_preview__0": "/view?filename=AnimateDiff_00004_.gif&subfolder=&type=output&format=image%2Fgif",
+      "images": [
         "13",
         0
       ]
     },
-    "class_type": "FaceRestoreCFWithModel"
+    "class_type": "ADE_AnimateDiffCombine"
   },
-  "39": {
+  "47": {
     "inputs": {
-      "model_name": "GFPGANv1.4.pth"
+      "noise_seed": 973240474069007,
+      "steps": 50,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "base_ratio": 0.8,
+      "denoise": 1,
+      "base_model": [
+        "40",
+        0
+      ],
+      "base_positive": [
+        "8",
+        0
+      ],
+      "base_negative": [
+        "7",
+        0
+      ],
+      "refiner_model": [
+        "33",
+        0
+      ],
+      "refiner_positive": [
+        "8",
+        0
+      ],
+      "refiner_negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "22",
+        0
+      ]
     },
-    "class_type": "FaceRestoreModelLoader"
+    "class_type": "SeargeSDXLSampler"
   }
 }

@@ -8,7 +8,7 @@
   "8": {
     "inputs": {
       "samples": [
-        "77",
+        "93",
         0
       ],
       "vae": [
@@ -41,10 +41,10 @@
       "lora_name_1": "miho_v1.safetensors",
       "model_weight_1": 1,
       "clip_weight_1": 1,
-      "switch_2": "On",
-      "lora_name_2": "m99_labiaplasty_pussy_2_sdxl.safetensors",
+      "switch_2": "Off",
+      "lora_name_2": "None",
       "model_weight_2": 1,
-      "clip_weight_2": 1.8,
+      "clip_weight_2": 0.4,
       "switch_3": "Off",
       "lora_name_3": "None",
       "model_weight_3": 1,
@@ -54,23 +54,17 @@
   },
   "44": {
     "inputs": {
-      "image": "031 (1).jpg",
+      "image": "041.jpg",
       "choose file to upload": "image"
     },
     "class_type": "LoadImage"
   },
-  "46": {
-    "inputs": {
-      "images": [
-        "70",
-        0
-      ]
-    },
-    "class_type": "PreviewImage"
-  },
   "48": {
     "inputs": {
-      "text": "analog film grain,(nsfw:1.5) BREAK a photo of japanese girl,she has petite body,flat chest,fair and tender skin,black hair,shaved innie pussy,big ass.",
+      "text": [
+        "105",
+        0
+      ],
       "clip": [
         "39",
         1
@@ -80,7 +74,7 @@
   },
   "49": {
     "inputs": {
-      "text": "tatoo,embedding:negativeXL_D, ",
+      "text": "tattoo,embedding:negativeXL_D, ",
       "clip": [
         "4",
         1
@@ -90,7 +84,10 @@
   },
   "55": {
     "inputs": {
-      "text": "analog film grain,(nsfw:1.5) BREAK a photo of japanese girl,she has petite body,flat chest,fair and tender skin,black hair,shaved innie pussy,big ass.",
+      "text": [
+        "105",
+        0
+      ],
       "clip": [
         "60",
         1
@@ -100,7 +97,7 @@
   },
   "56": {
     "inputs": {
-      "text": "tatoo,embedding:negativeXL_D, ",
+      "text": "tattoo,embedding:negativeXL_D, ",
       "clip": [
         "60",
         1
@@ -148,44 +145,21 @@
     },
     "class_type": "FaceRestoreModelLoader"
   },
-  "73": {
+  "93": {
     "inputs": {
-      "strength": 1,
-      "conditioning": [
-        "48",
-        0
-      ],
-      "control_net": [
-        "74",
-        0
-      ],
-      "image": [
-        "84",
-        0
-      ]
-    },
-    "class_type": "ControlNetApply"
-  },
-  "74": {
-    "inputs": {
-      "control_net_name": "models\\t2i-adapter_diffusers_xl_openpose.safetensors"
-    },
-    "class_type": "ControlNetLoader"
-  },
-  "77": {
-    "inputs": {
-      "noise_seed": 1026624239643856,
+      "noise_seed": 81082105856179,
       "steps": 50,
-      "cfg": 9,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
       "base_ratio": 0.8,
-      "denoise": 0.6,
-      "refiner_prep_steps": 0,
+      "denoise": 0.5,
       "base_model": [
         "58",
         0
       ],
       "base_positive": [
-        "73",
+        "48",
         0
       ],
       "base_negative": [
@@ -205,42 +179,16 @@
         0
       ],
       "latent_image": [
-        "82",
-        0
-      ],
-      "sampler_name": [
-        "78",
-        0
-      ],
-      "scheduler": [
-        "78",
-        1
-      ]
-    },
-    "class_type": "SeargeSDXLSamplerV3"
-  },
-  "78": {
-    "inputs": {
-      "sampler_name": "dpmpp_2m_sde",
-      "scheduler": "karras"
-    },
-    "class_type": "SeargeSamplerInputs"
-  },
-  "80": {
-    "inputs": {
-      "upscale_method": "nearest-exact",
-      "megapixels": 0.5,
-      "image": [
-        "44",
+        "96",
         0
       ]
     },
-    "class_type": "ImageScaleToTotalPixels"
+    "class_type": "SeargeSDXLSampler"
   },
-  "81": {
+  "94": {
     "inputs": {
       "pixels": [
-        "80",
+        "95",
         0
       ],
       "vae": [
@@ -250,27 +198,68 @@
     },
     "class_type": "VAEEncode"
   },
-  "82": {
+  "95": {
     "inputs": {
-      "amount": 4,
-      "samples": [
-        "81",
-        0
-      ]
-    },
-    "class_type": "RepeatLatentBatch"
-  },
-  "84": {
-    "inputs": {
-      "detect_hand": "enable",
-      "detect_body": "enable",
-      "detect_face": "enable",
-      "resolution": 1024,
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.2,
       "image": [
         "44",
         0
       ]
     },
-    "class_type": "OpenposePreprocessor"
+    "class_type": "ImageScaleToTotalPixels"
+  },
+  "96": {
+    "inputs": {
+      "amount": 4,
+      "samples": [
+        "94",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch"
+  },
+  "97": {
+    "inputs": {
+      "model": "wd-v1-4-convnextv2-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "exclude_tags": "",
+      "image": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss"
+  },
+  "100": {
+    "inputs": {
+      "images": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "105": {
+    "inputs": {
+      "text_a": [
+        "106",
+        0
+      ],
+      "text_b": [
+        "97",
+        0
+      ],
+      "linebreak_addition": "false",
+      "delimiter": ""
+    },
+    "class_type": "Text Concatenate"
+  },
+  "106": {
+    "inputs": {
+      "prompt": "analog film grain,female child,(flat chest:1.5),big ass,"
+    },
+    "class_type": "CR Prompt Text"
   }
 }
