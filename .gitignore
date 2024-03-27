@@ -1,0 +1,12 @@
+.history/
+assets/
+examples/
+output/
+workspace/test/
+workspace/nsfw/
+workspace/Mickmumpitz_Vid2Vid_PIXAR_v01.json
+workspace/Mickmumpitz_Vid2Vid_PIXAR_v02_api.json
+workspace/Mickmumpitz_Vid2Vid_PIXAR_v02.json
+workspace/videoStyleChange.json
+room_info.json
+.vscode/settings.json
