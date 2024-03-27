@@ -1,0 +1,221 @@
+{
+  "1": {
+    "inputs": {
+      "image": "b6310d56730efbe3cedd9004e2a918e0.jpeg",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "7": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "AUTO"
+    },
+    "class_type": "SAMLoader"
+  },
+  "11": {
+    "inputs": {
+      "guide_size": 256,
+      "guide_size_for": true,
+      "max_size": 768,
+      "seed": 75721119992723,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 0.5,
+      "feather": 5,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.5,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 3,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 2,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "image": ["59", 0],
+      "model": ["12", 0],
+      "clip": ["12", 1],
+      "vae": ["12", 2],
+      "positive": ["15", 0],
+      "negative": ["18", 0],
+      "bbox_detector": ["20", 0],
+      "sam_model_opt": ["7", 0],
+      "segm_detector_opt": ["20", 1]
+    },
+    "class_type": "FaceDetailer"
+  },
+  "12": {
+    "inputs": {
+      "ckpt_name": "fudukiMix_v15.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "13": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "exclude_tags": "",
+      "tags": "1girl, solo, long_hair, looking_at_viewer, simple_background, brown_hair, dress, brown_eyes, jewelry, short_sleeves, cowboy_shot, earrings, parted_lips, necklace, bracelet, black_background, green_dress, realistic",
+      "image": ["59", 0]
+    },
+    "class_type": "WD14Tagger|pysssss"
+  },
+  "15": {
+    "inputs": {
+      "text": ["13", 0],
+      "clip": ["12", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "18": {
+    "inputs": {
+      "text": "undefined",
+      "clip": ["12", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "20": {
+    "inputs": {
+      "model_name": "segm/deepfashion2_yolov8s-seg.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider"
+  },
+  "37": {
+    "inputs": {
+      "text": "embedding:easynegative, ",
+      "clip": ["12", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "40": {
+    "inputs": {
+      "amount": 4,
+      "samples": ["58", 0]
+    },
+    "class_type": "RepeatLatentBatch"
+  },
+  "42": {
+    "inputs": {
+      "text_a": ["46", 0],
+      "text_b": ["47", 0],
+      "linebreak_addition": "false",
+      "delimiter": ""
+    },
+    "class_type": "Text Concatenate"
+  },
+  "46": {
+    "inputs": {
+      "string": "analog film grain,BREAK"
+    },
+    "class_type": "String Literal"
+  },
+  "47": {
+    "inputs": {
+      "string": "a girl stand in a busy street,sunshine"
+    },
+    "class_type": "String Literal"
+  },
+  "49": {
+    "inputs": {
+      "text": ["42", 0],
+      "clip": ["12", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "50": {
+    "inputs": {
+      "samples": ["56", 0],
+      "vae": ["12", 2]
+    },
+    "class_type": "VAEDecode"
+  },
+  "51": {
+    "inputs": {
+      "facedetection": "retinaface_resnet50",
+      "codeformer_fidelity": 0.5,
+      "facerestore_model": ["52", 0],
+      "image": ["50", 0]
+    },
+    "class_type": "FaceRestoreCFWithModel"
+  },
+  "52": {
+    "inputs": {
+      "model_name": "GFPGANv1.4.pth"
+    },
+    "class_type": "FaceRestoreModelLoader"
+  },
+  "53": {
+    "inputs": {
+      "images": ["51", 0]
+    },
+    "class_type": "PreviewImage"
+  },
+  "56": {
+    "inputs": {
+      "seed": 165209193962732,
+      "steps": 35,
+      "cfg": 8,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": ["12", 0],
+      "positive": ["62", 0],
+      "negative": ["37", 0],
+      "latent_image": ["40", 0]
+    },
+    "class_type": "KSampler"
+  },
+  "58": {
+    "inputs": {
+      "grow_mask_by": 0,
+      "pixels": ["59", 0],
+      "vae": ["12", 2],
+      "mask": ["60", 0]
+    },
+    "class_type": "VAEEncodeForInpaint"
+  },
+  "59": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1,
+      "image": ["1", 0]
+    },
+    "class_type": "ImageScaleToTotalPixels"
+  },
+  "60": {
+    "inputs": {
+      "mask": ["11", 3]
+    },
+    "class_type": "InvertMask"
+  },
+  "61": {
+    "inputs": {
+      "preprocessor": "OpenposePreprocessor",
+      "resolution": 1024,
+      "image": ["1", 0]
+    },
+    "class_type": "AIO_Preprocessor"
+  },
+  "62": {
+    "inputs": {
+      "strength": 1,
+      "conditioning": ["49", 0],
+      "control_net": ["63", 0],
+      "image": ["61", 0]
+    },
+    "class_type": "ControlNetApply"
+  },
+  "63": {
+    "inputs": {
+      "control_net_name": "models\\t2i-adapter_diffusers_xl_openpose.safetensors"
+    },
+    "class_type": "ControlNetLoader"
+  }
+}

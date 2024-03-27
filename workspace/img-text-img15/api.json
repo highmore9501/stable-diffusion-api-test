@@ -1,0 +1,151 @@
+{
+  "4": {
+    "inputs": {
+      "ckpt_name": "chilloutmix_NiPrunedFp32Fix.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "8": {
+    "inputs": {
+      "samples": ["107", 0],
+      "vae": ["4", 2]
+    },
+    "class_type": "VAEDecode"
+  },
+  "39": {
+    "inputs": {
+      "model": ["4", 0],
+      "clip": ["4", 1],
+      "lora_stack": ["40", 0]
+    },
+    "class_type": "CR Apply LoRA Stack"
+  },
+  "40": {
+    "inputs": {
+      "switch_1": "On",
+      "lora_name_1": "Grool LORA.safetensors",
+      "model_weight_1": 1,
+      "clip_weight_1": 0.2,
+      "switch_2": "Off",
+      "lora_name_2": "goutouLora_v25.safetensors",
+      "model_weight_2": 1,
+      "clip_weight_2": 0.3,
+      "switch_3": "Off",
+      "lora_name_3": "None",
+      "model_weight_3": 1,
+      "clip_weight_3": 0.4
+    },
+    "class_type": "CR LoRA Stack"
+  },
+  "44": {
+    "inputs": {
+      "image": "012.jpg",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "48": {
+    "inputs": {
+      "text": ["105", 0],
+      "clip": ["39", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "49": {
+    "inputs": {
+      "text": "tattoo,embedding:easynegative, ",
+      "clip": ["4", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "70": {
+    "inputs": {
+      "facedetection": "retinaface_resnet50",
+      "codeformer_fidelity": 0.5,
+      "facerestore_model": ["71", 0],
+      "image": ["8", 0]
+    },
+    "class_type": "FaceRestoreCFWithModel"
+  },
+  "71": {
+    "inputs": {
+      "model_name": "GFPGANv1.4.pth"
+    },
+    "class_type": "FaceRestoreModelLoader"
+  },
+  "94": {
+    "inputs": {
+      "pixels": ["95", 0],
+      "vae": ["108", 0]
+    },
+    "class_type": "VAEEncode"
+  },
+  "95": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1,
+      "image": ["44", 0]
+    },
+    "class_type": "ImageScaleToTotalPixels"
+  },
+  "96": {
+    "inputs": {
+      "amount": 4,
+      "samples": ["94", 0]
+    },
+    "class_type": "RepeatLatentBatch"
+  },
+  "97": {
+    "inputs": {
+      "model": "wd-v1-4-convnextv2-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "exclude_tags": "censored",
+      "tags": "1girl, solo,looking_at_viewer, blue_eyes, thighhighs, navel, animal_ears, sitting, underwear, panties, white_panties, mosaic_censoring, white_thighhighs, animal_ear_fluff, window, stuffed_toy, stuffed_animal",
+      "image": ["44", 0]
+    },
+    "class_type": "WD14Tagger|pysssss"
+  },
+  "100": {
+    "inputs": {
+      "images": ["70", 0]
+    },
+    "class_type": "PreviewImage"
+  },
+  "105": {
+    "inputs": {
+      "text_a": ["106", 0],
+      "text_b": ["97", 0],
+      "linebreak_addition": "false",
+      "delimiter": ""
+    },
+    "class_type": "Text Concatenate"
+  },
+  "106": {
+    "inputs": {
+      "prompt": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed,(japanese girl:1.5),shinning skin,"
+    },
+    "class_type": "CR Prompt Text"
+  },
+  "107": {
+    "inputs": {
+      "seed": 635803115338941,
+      "steps": 45,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m_sde_gpu",
+      "scheduler": "karras",
+      "denoise": 0.55,
+      "model": ["39", 0],
+      "positive": ["48", 0],
+      "negative": ["49", 0],
+      "latent_image": ["96", 0]
+    },
+    "class_type": "KSampler"
+  },
+  "108": {
+    "inputs": {
+      "vae_name": "vaeFtMse840000Ema_v100.pt"
+    },
+    "class_type": "VAELoader"
+  }
+}

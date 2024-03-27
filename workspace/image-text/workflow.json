@@ -1,0 +1,118 @@
+{
+  "last_node_id": 107,
+  "last_link_id": 243,
+  "nodes": [
+    {
+      "id": 44,
+      "type": "LoadImage",
+      "pos": [-539, 810],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [224],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": ["041.jpg", "image"],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 97,
+      "type": "WD14Tagger|pysssss",
+      "pos": [-48, 764],
+      "size": {
+        "0": 319.30584716796875,
+        "1": 199.1265411376953
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 224
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [242],
+          "shape": 6,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WD14Tagger|pysssss"
+      },
+      "widgets_values": [
+        "wd-v1-4-convnextv2-tagger-v2",
+        0.35,
+        0.85,
+        "",
+        "mona_\\(genshin_impact\\), 1girl, long_hair, looking_at_viewer, blush"
+      ]
+    },
+    {
+      "id": 107,
+      "type": "ShowText|pysssss",
+      "pos": [338, 735],
+      "size": [315, 76],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 242,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "mona_\\(genshin_impact\\), 1girl, long_hair, looking_at_viewer, blush"
+      ]
+    }
+  ],
+  "links": [
+    [224, 44, 0, 97, 0, "IMAGE"],
+    [242, 97, 0, 107, 0, "STRING"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

@@ -1,0 +1,119 @@
+{
+  "4": {
+    "inputs": {
+      "ckpt_name": "fudukiMix_v15.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": ["18", 0],
+      "clip": ["12", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": ["19", 0],
+      "clip": ["4", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": {
+      "samples": ["14", 0],
+      "vae": ["15", 2]
+    },
+    "class_type": "VAEDecode"
+  },
+  "10": {
+    "inputs": {
+      "images": ["8", 0]
+    },
+    "class_type": "PreviewImage"
+  },
+  "12": {
+    "inputs": {
+      "model": ["4", 0],
+      "clip": ["4", 1],
+      "lora_stack": ["13", 0]
+    },
+    "class_type": "CR Apply LoRA Stack"
+  },
+  "13": {
+    "inputs": {
+      "switch_1": "On",
+      "lora_name_1": "miho_v1.safetensors",
+      "model_weight_1": 1,
+      "clip_weight_1": 1,
+      "switch_2": "On",
+      "lora_name_2": "cos-000001.safetensors",
+      "model_weight_2": 1,
+      "clip_weight_2": 1,
+      "switch_3": "Off",
+      "lora_name_3": "None",
+      "model_weight_3": 1,
+      "clip_weight_3": 1
+    },
+    "class_type": "CR LoRA Stack"
+  },
+  "14": {
+    "inputs": {
+      "noise_seed": 0,
+      "steps": 30,
+      "cfg": 7,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "base_ratio": 0.8,
+      "denoise": 1,
+      "base_model": ["12", 0],
+      "base_positive": ["6", 0],
+      "base_negative": ["7", 0],
+      "refiner_model": ["15", 0],
+      "refiner_positive": ["16", 0],
+      "refiner_negative": ["17", 0],
+      "latent_image": ["5", 0]
+    },
+    "class_type": "SeargeSDXLSampler"
+  },
+  "15": {
+    "inputs": {
+      "ckpt_name": "sd_xl_refiner_1.0.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "16": {
+    "inputs": {
+      "text": ["18", 0],
+      "clip": ["15", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "17": {
+    "inputs": {
+      "text": ["19", 0],
+      "clip": ["15", 1]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "18": {
+    "inputs": {
+      "string": "analog film grain,\nBREAK\n1girl, solo, shirt, thighhighs, school uniform, white shirt"
+    },
+    "class_type": "String Literal"
+  },
+  "19": {
+    "inputs": {
+      "string": "tatoo,embedding:negativeXL_D, "
+    },
+    "class_type": "String Literal"
+  }
+}

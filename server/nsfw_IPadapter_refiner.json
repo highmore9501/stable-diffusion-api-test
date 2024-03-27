@@ -5,10 +5,7 @@
     {
       "id": 55,
       "type": "CLIPTextEncode",
-      "pos": [
-        451,
-        625
-      ],
+      "pos": [451, 625],
       "size": {
         "0": 234.47552490234375,
         "1": 54
@@ -38,9 +35,7 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
-          "links": [
-            109
-          ],
+          "links": [109],
           "shape": 3,
           "slot_index": 0
         }
@@ -49,16 +44,13 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
+        "analog film grain,bokeh,(TOK:1.5),a photo of a girl,she has flat chest,black hair,and big ass."
       ]
     },
     {
       "id": 51,
       "type": "KSamplerAdvanced",
-      "pos": [
-        758,
-        766
-      ],
+      "pos": [758, 766],
       "size": {
         "0": 315,
         "1": 334
@@ -129,9 +121,7 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            100
-          ],
+          "links": [100],
           "shape": 3,
           "slot_index": 0
         }
@@ -156,10 +146,7 @@
     {
       "id": 48,
       "type": "CLIPTextEncode",
-      "pos": [
-        441,
-        329
-      ],
+      "pos": [441, 329],
       "size": {
         "0": 400,
         "1": 200
@@ -188,9 +175,7 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
-          "links": [
-            114
-          ],
+          "links": [114],
           "shape": 3,
           "slot_index": 0
         }
@@ -199,16 +184,13 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
+        "analog film grain,bokeh,(TOK:1.5),a photo of a girl,she has flat chest,black hair,and big ass."
       ]
     },
     {
       "id": 49,
       "type": "CLIPTextEncode",
-      "pos": [
-        439,
-        395
-      ],
+      "pos": [439, 395],
       "size": {
         "0": 210,
         "1": 59.635986328125
@@ -237,9 +219,7 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
-          "links": [
-            115
-          ],
+          "links": [115],
           "shape": 3,
           "slot_index": 0
         }
@@ -247,17 +227,12 @@
       "properties": {
         "Node name for S&R": "CLIPTextEncode"
       },
-      "widgets_values": [
-        "tattoo,nsfw,nude,naked,embedding:negativeXL_D, "
-      ]
+      "widgets_values": ["tattoo,nsfw,nude,naked,embedding:negativeXL_D, "]
     },
     {
       "id": 56,
       "type": "CLIPTextEncode",
-      "pos": [
-        448,
-        678
-      ],
+      "pos": [448, 678],
       "size": {
         "0": 241.57553100585938,
         "1": 58.54765701293945
@@ -287,9 +262,7 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
-          "links": [
-            112
-          ],
+          "links": [112],
           "shape": 3,
           "slot_index": 0
         }
@@ -297,17 +270,12 @@
       "properties": {
         "Node name for S&R": "CLIPTextEncode"
       },
-      "widgets_values": [
-        "tattoo,nsfw,nude,naked,embedding:negativeXL_D, "
-      ]
+      "widgets_values": ["tattoo,nsfw,nude,naked,embedding:negativeXL_D, "]
     },
     {
       "id": 62,
       "type": "PrimitiveNode",
-      "pos": [
-        5.080732421875155,
-        913
-      ],
+      "pos": [5.080732421875155, 913],
       "size": {
         "0": 210,
         "1": 82
@@ -319,10 +287,7 @@
         {
           "name": "INT",
           "type": "INT",
-          "links": [
-            128,
-            129
-          ],
+          "links": [128, 129],
           "slot_index": 0,
           "widget": {
             "name": "steps"
@@ -331,20 +296,14 @@
       ],
       "title": "Steps",
       "properties": {},
-      "widgets_values": [
-        50,
-        "fixed"
-      ],
+      "widgets_values": [50, "fixed"],
       "color": "#232",
       "bgcolor": "#353"
     },
     {
       "id": 50,
       "type": "PrimitiveNode",
-      "pos": [
-        -20,
-        540
-      ],
+      "pos": [-20, 540],
       "size": {
         "0": 411.963134765625,
         "1": 179.52468872070312
@@ -356,10 +315,7 @@
         {
           "name": "STRING",
           "type": "STRING",
-          "links": [
-            95,
-            110
-          ],
+          "links": [95, 110],
           "slot_index": 0,
           "widget": {
             "name": "text"
@@ -368,19 +324,14 @@
       ],
       "title": "negative",
       "properties": {},
-      "widgets_values": [
-        "tattoo,nsfw,nude,naked,embedding:negativeXL_D, "
-      ],
+      "widgets_values": ["tattoo,nsfw,nude,naked,embedding:negativeXL_D, "],
       "color": "#223",
       "bgcolor": "#335"
     },
     {
       "id": 47,
       "type": "PrimitiveNode",
-      "pos": [
-        -14,
-        317
-      ],
+      "pos": [-14, 317],
       "size": {
         "0": 402.963134765625,
         "1": 168.52468872070312
@@ -392,10 +343,7 @@
         {
           "name": "STRING",
           "type": "STRING",
-          "links": [
-            93,
-            107
-          ],
+          "links": [93, 107],
           "slot_index": 0,
           "widget": {
             "name": "text"
@@ -405,7 +353,7 @@
       "title": "prompt",
       "properties": {},
       "widgets_values": [
-        "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
+        "analog film grain,bokeh,(TOK:1.5),a photo of a girl,she has flat chest,black hair,and big ass."
       ],
       "color": "#223",
       "bgcolor": "#335"
@@ -413,10 +361,7 @@
     {
       "id": 36,
       "type": "EmptyLatentImage",
-      "pos": [
-        -316,
-        1044
-      ],
+      "pos": [-316, 1044],
       "size": {
         "0": 315,
         "1": 106
@@ -429,9 +374,7 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            113
-          ],
+          "links": [113],
           "shape": 3,
           "slot_index": 0
         }
@@ -439,21 +382,14 @@
       "properties": {
         "Node name for S&R": "EmptyLatentImage"
       },
-      "widgets_values": [
-        896,
-        1152,
-        1
-      ],
+      "widgets_values": [896, 1152, 1],
       "color": "#232",
       "bgcolor": "#353"
     },
     {
       "id": 65,
       "type": "PrimitiveNode",
-      "pos": [
-        15.823000000000093,
-        1040
-      ],
+      "pos": [15.823000000000093, 1040],
       "size": {
         "0": 210,
         "1": 82
@@ -465,10 +401,7 @@
         {
           "name": "INT",
           "type": "INT",
-          "links": [
-            132,
-            133
-          ],
+          "links": [132, 133],
           "widget": {
             "name": "end_at_step"
           }
@@ -476,20 +409,14 @@
       ],
       "title": "mid_step",
       "properties": {},
-      "widgets_values": [
-        40,
-        "fixed"
-      ],
+      "widgets_values": [40, "fixed"],
       "color": "#232",
       "bgcolor": "#353"
     },
     {
       "id": 64,
       "type": "PrimitiveNode",
-      "pos": [
-        23,
-        1166
-      ],
+      "pos": [23, 1166],
       "size": {
         "0": 210,
         "1": 82
@@ -501,10 +428,7 @@
         {
           "name": "FLOAT",
           "type": "FLOAT",
-          "links": [
-            130,
-            131
-          ],
+          "links": [130, 131],
           "slot_index": 0,
           "widget": {
             "name": "cfg"
@@ -513,20 +437,14 @@
       ],
       "title": "cfg",
       "properties": {},
-      "widgets_values": [
-        5,
-        "fixed"
-      ],
+      "widgets_values": [5, "fixed"],
       "color": "#232",
       "bgcolor": "#353"
     },
     {
       "id": 59,
       "type": "FreeU",
-      "pos": [
-        377,
-        771
-      ],
+      "pos": [377, 771],
       "size": {
         "0": 315,
         "1": 130
@@ -546,29 +464,19 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            121
-          ],
+          "links": [121],
           "shape": 3
         }
       ],
       "properties": {
         "Node name for S&R": "FreeU"
       },
-      "widgets_values": [
-        1,
-        1.2,
-        0.8,
-        1.3
-      ]
+      "widgets_values": [1, 1.2, 0.8, 1.3]
     },
     {
       "id": 46,
       "type": "PreviewImage",
-      "pos": [
-        1494,
-        405
-      ],
+      "pos": [1494, 405],
       "size": {
         "0": 415.42474365234375,
         "1": 485.91796875
@@ -590,10 +498,7 @@
     {
       "id": 39,
       "type": "CR Apply LoRA Stack",
-      "pos": [
-        -290,
-        281
-      ],
+      "pos": [-290, 281],
       "size": {
         "0": 210,
         "1": 66
@@ -623,18 +528,14 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            145
-          ],
+          "links": [145],
           "shape": 3,
           "slot_index": 0
         },
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            94
-          ],
+          "links": [94],
           "shape": 3,
           "slot_index": 1
         }
@@ -646,10 +547,7 @@
     {
       "id": 58,
       "type": "FreeU",
-      "pos": [
-        124,
-        40
-      ],
+      "pos": [124, 40],
       "size": {
         "0": 315,
         "1": 130
@@ -668,9 +566,7 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            120
-          ],
+          "links": [120],
           "shape": 3,
           "slot_index": 0
         }
@@ -678,20 +574,12 @@
       "properties": {
         "Node name for S&R": "FreeU"
       },
-      "widgets_values": [
-        1,
-        1.2,
-        0.8,
-        0.3
-      ]
+      "widgets_values": [1, 1.2, 0.8, 0.3]
     },
     {
       "id": 40,
       "type": "CR LoRA Stack",
-      "pos": [
-        -774,
-        252
-      ],
+      "pos": [-774, 252],
       "size": {
         "0": 315,
         "1": 322
@@ -710,9 +598,7 @@
         {
           "name": "LORA_STACK",
           "type": "LORA_STACK",
-          "links": [
-            79
-          ],
+          "links": [79],
           "shape": 3
         }
       ],
@@ -739,10 +625,7 @@
     {
       "id": 57,
       "type": "KSamplerAdvanced",
-      "pos": [
-        759,
-        373
-      ],
+      "pos": [759, 373],
       "size": {
         "0": 315,
         "1": 334
@@ -814,9 +697,7 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            117
-          ],
+          "links": [117],
           "shape": 3,
           "slot_index": 0
         }
@@ -841,10 +722,7 @@
     {
       "id": 72,
       "type": "CR Seed",
-      "pos": [
-        -72,
-        786
-      ],
+      "pos": [-72, 786],
       "size": {
         "0": 315,
         "1": 82
@@ -856,10 +734,7 @@
         {
           "name": "seed",
           "type": "INT",
-          "links": [
-            147,
-            148
-          ],
+          "links": [147, 148],
           "shape": 3,
           "slot_index": 0
         }
@@ -867,18 +742,12 @@
       "properties": {
         "Node name for S&R": "CR Seed"
       },
-      "widgets_values": [
-        337735118689371,
-        "randomize"
-      ]
+      "widgets_values": [337735118689371, "randomize"]
     },
     {
       "id": 8,
       "type": "VAEDecode",
-      "pos": [
-        1132,
-        683
-      ],
+      "pos": [1132, 683],
       "size": {
         "0": 210,
         "1": 46
@@ -903,9 +772,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            149
-          ],
+          "links": [149],
           "slot_index": 0
         }
       ],
@@ -916,10 +783,7 @@
     {
       "id": 4,
       "type": "CheckpointLoaderSimple",
-      "pos": [
-        -393,
-        509
-      ],
+      "pos": [-393, 509],
       "size": {
         "0": 315,
         "1": 98
@@ -931,18 +795,13 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            78
-          ],
+          "links": [78],
           "slot_index": 0
         },
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            80,
-            96
-          ],
+          "links": [80, 96],
           "slot_index": 1
         },
         {
@@ -955,19 +814,14 @@
       "properties": {
         "Node name for S&R": "CheckpointLoaderSimple"
       },
-      "widgets_values": [
-        "sd_xl_base_1.0.safetensors"
-      ],
+      "widgets_values": ["sd_xl_base_1.0.safetensors"],
       "color": "#322",
       "bgcolor": "#533"
     },
     {
       "id": 60,
       "type": "CheckpointLoaderSimple",
-      "pos": [
-        -396,
-        657
-      ],
+      "pos": [-396, 657],
       "size": {
         "0": 315,
         "1": 98
@@ -979,26 +833,19 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            122
-          ],
+          "links": [122],
           "shape": 3
         },
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            123,
-            124
-          ],
+          "links": [123, 124],
           "shape": 3
         },
         {
           "name": "VAE",
           "type": "VAE",
-          "links": [
-            152
-          ],
+          "links": [152],
           "shape": 3,
           "slot_index": 2
         }
@@ -1006,270 +853,44 @@
       "properties": {
         "Node name for S&R": "CheckpointLoaderSimple"
       },
-      "widgets_values": [
-        "sd_xl_refiner_1.0.safetensors"
-      ],
+      "widgets_values": ["sd_xl_refiner_1.0.safetensors"],
       "color": "#322",
       "bgcolor": "#533"
     }
   ],
   "links": [
-    [
-      78,
-      4,
-      0,
-      39,
-      0,
-      "MODEL"
-    ],
-    [
-      79,
-      40,
-      0,
-      39,
-      2,
-      "LORA_STACK"
-    ],
-    [
-      80,
-      4,
-      1,
-      39,
-      1,
-      "CLIP"
-    ],
-    [
-      93,
-      47,
-      0,
-      48,
-      1,
-      "STRING"
-    ],
-    [
-      94,
-      39,
-      1,
-      48,
-      0,
-      "CLIP"
-    ],
-    [
-      95,
-      50,
-      0,
-      49,
-      1,
-      "STRING"
-    ],
-    [
-      96,
-      4,
-      1,
-      49,
-      0,
-      "CLIP"
-    ],
-    [
-      100,
-      51,
-      0,
-      8,
-      0,
-      "LATENT"
-    ],
-    [
-      107,
-      47,
-      0,
-      55,
-      1,
-      "STRING"
-    ],
-    [
-      109,
-      55,
-      0,
-      51,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      110,
-      50,
-      0,
-      56,
-      1,
-      "STRING"
-    ],
-    [
-      112,
-      56,
-      0,
-      51,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      113,
-      36,
-      0,
-      57,
-      3,
-      "LATENT"
-    ],
-    [
-      114,
-      48,
-      0,
-      57,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      115,
-      49,
-      0,
-      57,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      117,
-      57,
-      0,
-      51,
-      3,
-      "LATENT"
-    ],
-    [
-      120,
-      58,
-      0,
-      57,
-      0,
-      "MODEL"
-    ],
-    [
-      121,
-      59,
-      0,
-      51,
-      0,
-      "MODEL"
-    ],
-    [
-      122,
-      60,
-      0,
-      59,
-      0,
-      "MODEL"
-    ],
-    [
-      123,
-      60,
-      1,
-      55,
-      0,
-      "CLIP"
-    ],
-    [
-      124,
-      60,
-      1,
-      56,
-      0,
-      "CLIP"
-    ],
-    [
-      128,
-      62,
-      0,
-      51,
-      4,
-      "INT"
-    ],
-    [
-      129,
-      62,
-      0,
-      57,
-      4,
-      "INT"
-    ],
-    [
-      130,
-      64,
-      0,
-      51,
-      5,
-      "FLOAT"
-    ],
-    [
-      131,
-      64,
-      0,
-      57,
-      5,
-      "FLOAT"
-    ],
-    [
-      132,
-      65,
-      0,
-      57,
-      7,
-      "INT"
-    ],
-    [
-      133,
-      65,
-      0,
-      51,
-      7,
-      "INT"
-    ],
-    [
-      145,
-      39,
-      0,
-      58,
-      0,
-      "MODEL"
-    ],
-    [
-      147,
-      72,
-      0,
-      57,
-      6,
-      "INT"
-    ],
-    [
-      148,
-      72,
-      0,
-      51,
-      6,
-      "INT"
-    ],
-    [
-      149,
-      8,
-      0,
-      46,
-      0,
-      "IMAGE"
-    ],
-    [
-      152,
-      60,
-      2,
-      8,
-      1,
-      "VAE"
-    ]
+    [78, 4, 0, 39, 0, "MODEL"],
+    [79, 40, 0, 39, 2, "LORA_STACK"],
+    [80, 4, 1, 39, 1, "CLIP"],
+    [93, 47, 0, 48, 1, "STRING"],
+    [94, 39, 1, 48, 0, "CLIP"],
+    [95, 50, 0, 49, 1, "STRING"],
+    [96, 4, 1, 49, 0, "CLIP"],
+    [100, 51, 0, 8, 0, "LATENT"],
+    [107, 47, 0, 55, 1, "STRING"],
+    [109, 55, 0, 51, 1, "CONDITIONING"],
+    [110, 50, 0, 56, 1, "STRING"],
+    [112, 56, 0, 51, 2, "CONDITIONING"],
+    [113, 36, 0, 57, 3, "LATENT"],
+    [114, 48, 0, 57, 1, "CONDITIONING"],
+    [115, 49, 0, 57, 2, "CONDITIONING"],
+    [117, 57, 0, 51, 3, "LATENT"],
+    [120, 58, 0, 57, 0, "MODEL"],
+    [121, 59, 0, 51, 0, "MODEL"],
+    [122, 60, 0, 59, 0, "MODEL"],
+    [123, 60, 1, 55, 0, "CLIP"],
+    [124, 60, 1, 56, 0, "CLIP"],
+    [128, 62, 0, 51, 4, "INT"],
+    [129, 62, 0, 57, 4, "INT"],
+    [130, 64, 0, 51, 5, "FLOAT"],
+    [131, 64, 0, 57, 5, "FLOAT"],
+    [132, 65, 0, 57, 7, "INT"],
+    [133, 65, 0, 51, 7, "INT"],
+    [145, 39, 0, 58, 0, "MODEL"],
+    [147, 72, 0, 57, 6, "INT"],
+    [148, 72, 0, 51, 6, "INT"],
+    [149, 8, 0, 46, 0, "IMAGE"],
+    [152, 60, 2, 8, 1, "VAE"]
   ],
   "groups": [],
   "config": {},

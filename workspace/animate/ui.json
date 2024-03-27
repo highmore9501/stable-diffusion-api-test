@@ -1,143 +1,100 @@
 {
-  "last_node_id": 39,
-  "last_link_id": 88,
+  "last_node_id": 47,
+  "last_link_id": 109,
   "nodes": [
     {
-      "id": 7,
-      "type": "CLIPTextEncode",
+      "id": 44,
+      "type": "ADE_AnimateDiffCombine",
       "pos": [
-        -873,
-        1106
-      ],
-      "size": {
-        "0": 400,
-        "1": 200
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 77
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            33
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "embedding:EasyNegativeV2,nfsw,naked,nude"
-      ]
-    },
-    {
-      "id": 24,
-      "type": "PreviewImage",
-      "pos": [
-        693,
-        725
-      ],
-      "size": [
-        624.9632299804689,
-        843.4424462890624
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 87
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
-      "id": 8,
-      "type": "CLIPTextEncode",
-      "pos": [
-        -933,
-        712
-      ],
-      "size": [
-        518.2787601691631,
-        329.95619567366657
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 75,
-          "slot_index": 0
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            32
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "sfw,(((1girl))), professional photograph,sports wear,(black long hair:1.5),(big breasts:0.8),red lips,beside sea,volumetric lighting, render, 8k, octane render, cinema 4d, blender, atmospheric 4k ultra detailed, cinematic, Sharp focus, big depth of field, colors, 3d octane render, 4k, hyperrealistic, Vivid colors, extremely detailed CG unity 8k wallpaper, Photorealistic, Hyperrealistic, Hyperdetailed, analog style, soft lighting, subsurface scattering, realistic, heavy shadow, masterpiece, best quality, ultra realistic, 8k, golden ratio, Intricate, High Detail, film photography, soft focus, crisp, high definition,"
-      ]
-    },
-    {
-      "id": 32,
-      "type": "AnimateDiffCombine",
-      "pos": [
-        197,
-        996
+        346,
+        969
       ],
       "size": [
         315,
         507
       ],
       "flags": {},
-      "order": 13,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 88
+          "link": 108
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GIF",
+          "type": "GIF",
+          "links": null,
+          "shape": 3,
+          "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "AnimateDiffCombine"
+        "Node name for S&R": "ADE_AnimateDiffCombine"
       },
       "widgets_values": [
         8,
         0,
-        false,
-        "animate_diff",
+        "AnimateDiff",
         "image/gif",
         false,
-        "/view?filename=animate_diff_00022_.gif&subfolder=&type=temp&format=image%2Fgif"
+        true,
+        "/view?filename=AnimateDiff_00004_.gif&subfolder=&type=output&format=image%2Fgif"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "ADE_AnimateDiffLoaderWithContext",
+      "pos": [
+        -793,
+        265
+      ],
+      "size": {
+        "0": 315,
+        "1": 122
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 91
+        },
+        {
+          "name": "context_options",
+          "type": "CONTEXT_OPTIONS",
+          "link": 89,
+          "slot_index": 1
+        },
+        {
+          "name": "motion_lora",
+          "type": "MOTION_LORA",
+          "link": 90,
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            100
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffLoaderWithContext"
+      },
+      "widgets_values": [
+        "mm_sd_v15.ckpt",
+        "sqrt_linear (AnimateDiff)"
       ]
     },
     {
@@ -159,7 +116,8 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            78
+            91,
+            101
           ],
           "shape": 3,
           "slot_index": 0
@@ -177,7 +135,9 @@
         {
           "name": "VAE",
           "type": "VAE",
-          "links": [],
+          "links": [
+            98
+          ],
           "shape": 3,
           "slot_index": 2
         }
@@ -190,146 +150,84 @@
       ]
     },
     {
-      "id": 17,
-      "type": "AnimateDiffModuleLoader",
+      "id": 8,
+      "type": "CLIPTextEncode",
       "pos": [
-        -693,
-        343
+        -933,
+        712
       ],
       "size": {
-        "0": 315,
-        "1": 58
+        "0": 518.2787475585938,
+        "1": 329.9562072753906
       },
       "flags": {},
-      "order": 8,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
-          "name": "lora_stack",
-          "type": "MOTION_LORA_STACK",
-          "link": 82,
+          "name": "clip",
+          "type": "CLIP",
+          "link": 75,
           "slot_index": 0
         }
       ],
       "outputs": [
         {
-          "name": "MOTION_MODULE",
-          "type": "MOTION_MODULE",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
           "links": [
-            34
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AnimateDiffModuleLoader"
-      },
-      "widgets_values": [
-        "mm-Stabilized_mid.pth"
-      ]
-    },
-    {
-      "id": 36,
-      "type": "VAELoader",
-      "pos": [
-        -291,
-        932
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            83
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader"
-      },
-      "widgets_values": [
-        "vaeFtMse840000Ema_v100.pt"
-      ]
-    },
-    {
-      "id": 35,
-      "type": "AnimateDiffLoraLoader",
-      "pos": [
-        -737,
-        208
-      ],
-      "size": {
-        "0": 355.20001220703125,
-        "1": 82
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "lora_stack",
-          "type": "MOTION_LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MOTION_LORA_STACK",
-          "type": "MOTION_LORA_STACK",
-          "links": [
-            82
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AnimateDiffLoraLoader"
-      },
-      "widgets_values": [
-        "v2_lora_ZoomIn.ckpt",
-        1
-      ]
-    },
-    {
-      "id": 22,
-      "type": "EmptyLatentImage",
-      "pos": [
-        -928,
-        465
-      ],
-      "size": {
-        "0": 315,
-        "1": 106
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            42
+            102,
+            103
           ],
           "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "EmptyLatentImage"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        512,
-        512,
-        1
+        "nsfw,(((1girl))), professional photograph,sports wear,(black long hair:1.5),(big breasts:0.8),red lips,beside sea,volumetric lighting, 8k"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -873,
+        1106
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            104,
+            105
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "embedding:easynegative, "
       ]
     },
     {
@@ -344,18 +242,18 @@
         "1": 46
       },
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 73
+          "link": 107
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 83,
+          "link": 98,
           "slot_index": 1
         }
       ],
@@ -364,7 +262,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            85
+            108,
+            109
           ],
           "shape": 3,
           "slot_index": 0
@@ -375,166 +274,93 @@
       }
     },
     {
-      "id": 39,
-      "type": "FaceRestoreModelLoader",
+      "id": 42,
+      "type": "ADE_AnimateDiffLoRALoader",
       "pos": [
-        309,
-        502
+        -1284,
+        358
       ],
       "size": {
-        "0": 315,
-        "1": 58
+        "0": 355.20001220703125,
+        "1": 82
       },
       "flags": {},
-      "order": 4,
+      "order": 1,
       "mode": 0,
+      "inputs": [
+        {
+          "name": "prev_motion_lora",
+          "type": "MOTION_LORA",
+          "link": null
+        }
+      ],
       "outputs": [
         {
-          "name": "FACERESTORE_MODEL",
-          "type": "FACERESTORE_MODEL",
+          "name": "MOTION_LORA",
+          "type": "MOTION_LORA",
           "links": [
-            86
+            90
           ],
           "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "FaceRestoreModelLoader"
+        "Node name for S&R": "ADE_AnimateDiffLoRALoader"
       },
       "widgets_values": [
-        "GFPGANv1.4.pth"
+        "v2_lora_ZoomIn.ckpt",
+        1
       ]
     },
     {
-      "id": 38,
-      "type": "FaceRestoreCFWithModel",
+      "id": 47,
+      "type": "SeargeSDXLSampler",
       "pos": [
-        307,
-        606
+        -268,
+        708
       ],
       "size": {
         "0": 315,
-        "1": 102
+        "1": 346
       },
       "flags": {},
-      "order": 11,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
-          "name": "facerestore_model",
-          "type": "FACERESTORE_MODEL",
-          "link": 86,
-          "slot_index": 0
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 85
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            87,
-            88
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "FaceRestoreCFWithModel"
-      },
-      "widgets_values": [
-        "retinaface_resnet50",
-        0.5
-      ]
-    },
-    {
-      "id": 37,
-      "type": "AnimateDiffSlidingWindowOptions",
-      "pos": [
-        -401,
-        1086
-      ],
-      "size": {
-        "0": 315,
-        "1": 154
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "SLIDING_WINDOW_OPTS",
-          "type": "SLIDING_WINDOW_OPTS",
-          "links": [
-            84
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AnimateDiffSlidingWindowOptions"
-      },
-      "widgets_values": [
-        16,
-        1,
-        4,
-        "uniform",
-        true
-      ]
-    },
-    {
-      "id": 16,
-      "type": "AnimateDiffSampler",
-      "pos": [
-        -287,
-        441
-      ],
-      "size": {
-        "0": 330,
-        "1": 350
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "motion_module",
-          "type": "MOTION_MODULE",
-          "link": 34,
-          "slot_index": 0
-        },
-        {
-          "name": "model",
+          "name": "base_model",
           "type": "MODEL",
-          "link": 78,
-          "slot_index": 1
+          "link": 100
         },
         {
-          "name": "positive",
+          "name": "base_positive",
           "type": "CONDITIONING",
-          "link": 32
+          "link": 102
         },
         {
-          "name": "negative",
+          "name": "base_negative",
           "type": "CONDITIONING",
-          "link": 33
+          "link": 104
+        },
+        {
+          "name": "refiner_model",
+          "type": "MODEL",
+          "link": 101
+        },
+        {
+          "name": "refiner_positive",
+          "type": "CONDITIONING",
+          "link": 103
+        },
+        {
+          "name": "refiner_negative",
+          "type": "CONDITIONING",
+          "link": 105
         },
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 42,
-          "slot_index": 4
-        },
-        {
-          "name": "sliding_window_opts",
-          "type": "SLIDING_WINDOW_OPTS",
-          "link": 84,
-          "slot_index": 5
+          "link": 106
         }
       ],
       "outputs": [
@@ -542,69 +368,122 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            73
+            107
           ],
           "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "AnimateDiffSampler"
+        "Node name for S&R": "SeargeSDXLSampler"
       },
       "widgets_values": [
-        "default",
-        16,
-        919822115851783,
+        973240474069007,
         "randomize",
-        35,
-        5,
-        "dpmpp_2m_sde_gpu",
+        50,
+        7,
+        "dpmpp_2m",
         "karras",
+        0.8,
         1
       ]
+    },
+    {
+      "id": 41,
+      "type": "ADE_AnimateDiffUniformContextOptions",
+      "pos": [
+        -1206,
+        135
+      ],
+      "size": {
+        "0": 315,
+        "1": 154
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTEXT_OPTIONS",
+          "type": "CONTEXT_OPTIONS",
+          "links": [
+            89
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffUniformContextOptions"
+      },
+      "widgets_values": [
+        8,
+        1,
+        4,
+        "uniform",
+        false
+      ]
+    },
+    {
+      "id": 22,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -793,
+        440
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            106
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        768,
+        768,
+        8
+      ]
+    },
+    {
+      "id": 24,
+      "type": "PreviewImage",
+      "pos": [
+        693,
+        725
+      ],
+      "size": {
+        "0": 624.9632568359375,
+        "1": 843.4424438476562
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 109
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
     }
   ],
   "links": [
-    [
-      32,
-      8,
-      0,
-      16,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      33,
-      7,
-      0,
-      16,
-      3,
-      "CONDITIONING"
-    ],
-    [
-      34,
-      17,
-      0,
-      16,
-      0,
-      "MOTION_MODULE"
-    ],
-    [
-      42,
-      22,
-      0,
-      16,
-      4,
-      "LATENT"
-    ],
-    [
-      73,
-      16,
-      0,
-      13,
-      0,
-      "LATENT"
-    ],
     [
       75,
       33,
@@ -622,66 +501,114 @@
       "CLIP"
     ],
     [
-      78,
+      89,
+      41,
+      0,
+      40,
+      1,
+      "CONTEXT_OPTIONS"
+    ],
+    [
+      90,
+      42,
+      0,
+      40,
+      2,
+      "MOTION_LORA"
+    ],
+    [
+      91,
       33,
       0,
-      16,
-      1,
+      40,
+      0,
       "MODEL"
     ],
     [
-      82,
-      35,
-      0,
-      17,
-      0,
-      "MOTION_LORA_STACK"
-    ],
-    [
-      83,
-      36,
-      0,
+      98,
+      33,
+      2,
       13,
       1,
       "VAE"
     ],
     [
-      84,
-      37,
+      100,
+      40,
       0,
-      16,
-      5,
-      "SLIDING_WINDOW_OPTS"
+      47,
+      0,
+      "MODEL"
     ],
     [
-      85,
+      101,
+      33,
+      0,
+      47,
+      3,
+      "MODEL"
+    ],
+    [
+      102,
+      8,
+      0,
+      47,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      103,
+      8,
+      0,
+      47,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      104,
+      7,
+      0,
+      47,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      105,
+      7,
+      0,
+      47,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      106,
+      22,
+      0,
+      47,
+      6,
+      "LATENT"
+    ],
+    [
+      107,
+      47,
+      0,
       13,
       0,
-      38,
-      1,
+      "LATENT"
+    ],
+    [
+      108,
+      13,
+      0,
+      44,
+      0,
       "IMAGE"
     ],
     [
-      86,
-      39,
-      0,
-      38,
-      0,
-      "FACERESTORE_MODEL"
-    ],
-    [
-      87,
-      38,
+      109,
+      13,
       0,
       24,
-      0,
-      "IMAGE"
-    ],
-    [
-      88,
-      38,
-      0,
-      32,
       0,
       "IMAGE"
     ]

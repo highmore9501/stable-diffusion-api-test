@@ -5,10 +5,7 @@
     {
       "id": 7,
       "type": "CLIPTextEncode",
-      "pos": [
-        404,
-        433
-      ],
+      "pos": [404, 433],
       "size": {
         "0": 425.27801513671875,
         "1": 180.6060791015625
@@ -27,26 +24,19 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
-          "links": [
-            55
-          ],
+          "links": [55],
           "slot_index": 0
         }
       ],
       "properties": {
         "Node name for S&R": "CLIPTextEncode"
       },
-      "widgets_values": [
-        "embedding:negativeXL_D, "
-      ]
+      "widgets_values": ["embedding:negativeXL_D, "]
     },
     {
       "id": 6,
       "type": "CLIPTextEncode",
-      "pos": [
-        415,
-        186
-      ],
+      "pos": [415, 186],
       "size": {
         "0": 422.84503173828125,
         "1": 164.31304931640625
@@ -65,9 +55,7 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
-          "links": [
-            56
-          ],
+          "links": [56],
           "slot_index": 0
         }
       ],
@@ -75,16 +63,13 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "masterpiece, best quality, ultra high res, highres, indirect lighting, extremely delicate and beautiful,extremely detailed,flat chest,naked,nsfw,thigh,pussy,Thin waist,"
+        "masterpiece, best quality, ultra high res, highres, indirect lighting, extremely delicate and beautiful,extremely detailed,thigh,Thin waist,"
       ]
     },
     {
       "id": 3,
       "type": "KSampler",
-      "pos": [
-        955,
-        387
-      ],
+      "pos": [955, 387],
       "size": {
         "0": 315,
         "1": 262
@@ -119,9 +104,7 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            7
-          ],
+          "links": [7],
           "slot_index": 0
         }
       ],
@@ -141,10 +124,7 @@
     {
       "id": 4,
       "type": "CheckpointLoaderSimple",
-      "pos": [
-        -340,
-        630
-      ],
+      "pos": [-340, 630],
       "size": {
         "0": 315,
         "1": 98
@@ -156,44 +136,31 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            17
-          ],
+          "links": [17],
           "slot_index": 0
         },
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            5,
-            18
-          ],
+          "links": [5, 18],
           "slot_index": 1
         },
         {
           "name": "VAE",
           "type": "VAE",
-          "links": [
-            46,
-            64
-          ],
+          "links": [46, 64],
           "slot_index": 2
         }
       ],
       "properties": {
         "Node name for S&R": "CheckpointLoaderSimple"
       },
-      "widgets_values": [
-        "fudukiMix_v15.safetensors"
-      ]
+      "widgets_values": ["fudukiMix_v15.safetensors"]
     },
     {
       "id": 14,
       "type": "LoraLoader",
-      "pos": [
-        -332,
-        446
-      ],
+      "pos": [-332, 446],
       "size": {
         "0": 315,
         "1": 126
@@ -217,18 +184,14 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            19
-          ],
+          "links": [19],
           "shape": 3,
           "slot_index": 0
         },
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            20
-          ],
+          "links": [20],
           "shape": 3,
           "slot_index": 1
         }
@@ -236,19 +199,12 @@
       "properties": {
         "Node name for S&R": "LoraLoader"
       },
-      "widgets_values": [
-        "NsfwPovAllInOneLoraSdxl-000009.safetensors",
-        1,
-        0.4
-      ]
+      "widgets_values": ["NsfwPovAllInOneLoraSdxl-000009.safetensors", 1, 0.4]
     },
     {
       "id": 8,
       "type": "VAEDecode",
-      "pos": [
-        1329,
-        555
-      ],
+      "pos": [1329, 555],
       "size": {
         "0": 210,
         "1": 46
@@ -273,9 +229,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            73
-          ],
+          "links": [73],
           "slot_index": 0
         }
       ],
@@ -286,10 +240,7 @@
     {
       "id": 44,
       "type": "FaceRestoreModelLoader",
-      "pos": [
-        1642,
-        439
-      ],
+      "pos": [1642, 439],
       "size": {
         "0": 315,
         "1": 58
@@ -301,26 +252,19 @@
         {
           "name": "FACERESTORE_MODEL",
           "type": "FACERESTORE_MODEL",
-          "links": [
-            74
-          ],
+          "links": [74],
           "shape": 3
         }
       ],
       "properties": {
         "Node name for S&R": "FaceRestoreModelLoader"
       },
-      "widgets_values": [
-        "GFPGANv1.4.pth"
-      ]
+      "widgets_values": ["GFPGANv1.4.pth"]
     },
     {
       "id": 42,
       "type": "RepeatLatentBatch",
-      "pos": [
-        669,
-        741
-      ],
+      "pos": [669, 741],
       "size": {
         "0": 315,
         "1": 58
@@ -339,26 +283,19 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            71
-          ],
+          "links": [71],
           "shape": 3
         }
       ],
       "properties": {
         "Node name for S&R": "RepeatLatentBatch"
       },
-      "widgets_values": [
-        1
-      ]
+      "widgets_values": [1]
     },
     {
       "id": 13,
       "type": "PreviewImage",
-      "pos": [
-        1062,
-        899
-      ],
+      "pos": [1062, 899],
       "size": {
         "0": 210,
         "1": 246
@@ -380,10 +317,7 @@
     {
       "id": 43,
       "type": "FaceRestoreCFWithModel",
-      "pos": [
-        1634.7865234375001,
-        540.6282165527343
-      ],
+      "pos": [1634.7865234375001, 540.6282165527343],
       "size": {
         "0": 315,
         "1": 102
@@ -408,9 +342,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            75
-          ],
+          "links": [75],
           "shape": 3,
           "slot_index": 0
         }
@@ -418,18 +350,12 @@
       "properties": {
         "Node name for S&R": "FaceRestoreCFWithModel"
       },
-      "widgets_values": [
-        "retinaface_resnet50",
-        0.5
-      ]
+      "widgets_values": ["retinaface_resnet50", 0.5]
     },
     {
       "id": 12,
       "type": "LoadImage",
-      "pos": [
-        -501,
-        835
-      ],
+      "pos": [-501, 835],
       "size": {
         "0": 315,
         "1": 314
@@ -441,18 +367,14 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            80
-          ],
+          "links": [80],
           "shape": 3,
           "slot_index": 0
         },
         {
           "name": "MASK",
           "type": "MASK",
-          "links": [
-            65
-          ],
+          "links": [65],
           "shape": 3,
           "slot_index": 1
         }
@@ -468,10 +390,7 @@
     {
       "id": 49,
       "type": "ImageScaleToTotalPixels",
-      "pos": [
-        -82,
-        1008
-      ],
+      "pos": [-82, 1008],
       "size": {
         "0": 315,
         "1": 82
@@ -490,9 +409,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            81
-          ],
+          "links": [81],
           "shape": 3,
           "slot_index": 0
         }
@@ -500,18 +417,12 @@
       "properties": {
         "Node name for S&R": "ImageScaleToTotalPixels"
       },
-      "widgets_values": [
-        "nearest-exact",
-        0.8
-      ]
+      "widgets_values": ["nearest-exact", 0.8]
     },
     {
       "id": 39,
       "type": "VAEEncodeForInpaint",
-      "pos": [
-        246,
-        833
-      ],
+      "pos": [246, 833],
       "size": {
         "0": 315,
         "1": 98
@@ -540,9 +451,7 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            82
-          ],
+          "links": [82],
           "shape": 3,
           "slot_index": 0
         }
@@ -550,156 +459,28 @@
       "properties": {
         "Node name for S&R": "VAEEncodeForInpaint"
       },
-      "widgets_values": [
-        6
-      ]
+      "widgets_values": [6]
     }
   ],
   "links": [
-    [
-      5,
-      4,
-      1,
-      7,
-      0,
-      "CLIP"
-    ],
-    [
-      7,
-      3,
-      0,
-      8,
-      0,
-      "LATENT"
-    ],
-    [
-      17,
-      4,
-      0,
-      14,
-      0,
-      "MODEL"
-    ],
-    [
-      18,
-      4,
-      1,
-      14,
-      1,
-      "CLIP"
-    ],
-    [
-      19,
-      14,
-      0,
-      3,
-      0,
-      "MODEL"
-    ],
-    [
-      20,
-      14,
-      1,
-      6,
-      0,
-      "CLIP"
-    ],
-    [
-      46,
-      4,
-      2,
-      8,
-      1,
-      "VAE"
-    ],
-    [
-      55,
-      7,
-      0,
-      3,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      56,
-      6,
-      0,
-      3,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      64,
-      4,
-      2,
-      39,
-      1,
-      "VAE"
-    ],
-    [
-      65,
-      12,
-      1,
-      39,
-      2,
-      "MASK"
-    ],
-    [
-      71,
-      42,
-      0,
-      3,
-      3,
-      "LATENT"
-    ],
-    [
-      73,
-      8,
-      0,
-      43,
-      1,
-      "IMAGE"
-    ],
-    [
-      74,
-      44,
-      0,
-      43,
-      0,
-      "FACERESTORE_MODEL"
-    ],
-    [
-      75,
-      43,
-      0,
-      13,
-      0,
-      "IMAGE"
-    ],
-    [
-      80,
-      12,
-      0,
-      49,
-      0,
-      "IMAGE"
-    ],
-    [
-      81,
-      49,
-      0,
-      39,
-      0,
-      "IMAGE"
-    ],
-    [
-      82,
-      39,
-      0,
-      42,
-      0,
-      "LATENT"
-    ]
+    [5, 4, 1, 7, 0, "CLIP"],
+    [7, 3, 0, 8, 0, "LATENT"],
+    [17, 4, 0, 14, 0, "MODEL"],
+    [18, 4, 1, 14, 1, "CLIP"],
+    [19, 14, 0, 3, 0, "MODEL"],
+    [20, 14, 1, 6, 0, "CLIP"],
+    [46, 4, 2, 8, 1, "VAE"],
+    [55, 7, 0, 3, 2, "CONDITIONING"],
+    [56, 6, 0, 3, 1, "CONDITIONING"],
+    [64, 4, 2, 39, 1, "VAE"],
+    [65, 12, 1, 39, 2, "MASK"],
+    [71, 42, 0, 3, 3, "LATENT"],
+    [73, 8, 0, 43, 1, "IMAGE"],
+    [74, 44, 0, 43, 0, "FACERESTORE_MODEL"],
+    [75, 43, 0, 13, 0, "IMAGE"],
+    [80, 12, 0, 49, 0, "IMAGE"],
+    [81, 49, 0, 39, 0, "IMAGE"],
+    [82, 39, 0, 42, 0, "LATENT"]
   ],
   "groups": [],
   "config": {},

@@ -1,0 +1,678 @@
+{
+  "1": {
+    "inputs": {
+      "image": "微信图片_20231028163011 (1).jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "7": {
+    "inputs": {
+      "model_name": "sam_vit_b_01ec64.pth",
+      "device_mode": "AUTO"
+    },
+    "class_type": "SAMLoader",
+    "_meta": {
+      "title": "SAMLoader (Impact)"
+    }
+  },
+  "11": {
+    "inputs": {
+      "guide_size": 256,
+      "guide_size_for": true,
+      "max_size": 768,
+      "seed": 596074390942302,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 0.5,
+      "feather": 5,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.5,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 3,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 2,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 0,
+      "image": [
+        "59",
+        0
+      ],
+      "model": [
+        "12",
+        0
+      ],
+      "clip": [
+        "12",
+        1
+      ],
+      "vae": [
+        "12",
+        2
+      ],
+      "positive": [
+        "15",
+        0
+      ],
+      "negative": [
+        "18",
+        0
+      ],
+      "bbox_detector": [
+        "20",
+        0
+      ],
+      "sam_model_opt": [
+        "7",
+        0
+      ],
+      "segm_detector_opt": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "PersonDetailer"
+    }
+  },
+  "12": {
+    "inputs": {
+      "ckpt_name": "fudukiMix_v15.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "13": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "replace_underscore": "",
+      "trailing_comma": "solo, looking_at_viewer, shirt, black_hair, 1boy, standing, full_body, short_sleeves, male_focus, shorts, indoors, hand_on_hip, facial_hair, black_shorts, sandals, blue_shirt, t-shirt, realistic, door, clock, tiles, slippers, photo_background, flip-flops, sink, wall_clock",
+      "exclude_tags": "",
+      "tags": "solo, looking_at_viewer, shirt, black_hair, 1boy, standing, full_body, short_sleeves, male_focus, shorts, indoors, hand_on_hip, facial_hair, black_shorts, sandals, blue_shirt, t-shirt, realistic, door, stubble, clock, tiles, slippers, photo_background, sink, wall_clock, ",
+      "image": [
+        "59",
+        0
+      ]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "15": {
+    "inputs": {
+      "text": [
+        "13",
+        0
+      ],
+      "clip": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "18": {
+    "inputs": {
+      "text": [
+        "152",
+        0
+      ],
+      "clip": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "20": {
+    "inputs": {
+      "model_name": "segm/person_yolov8m-seg.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "37": {
+    "inputs": {
+      "text": "human,girl,man,child",
+      "clip": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "42": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "46",
+        0
+      ],
+      "text_b": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Env text Concatenate"
+    }
+  },
+  "46": {
+    "inputs": {
+      "string": "analog film grain,"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "Style Words For Env"
+    }
+  },
+  "47": {
+    "inputs": {
+      "string": "sunshine,beach,coconut trees,"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "Env Words"
+    }
+  },
+  "49": {
+    "inputs": {
+      "text": [
+        "42",
+        0
+      ],
+      "clip": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Env Prompt"
+    }
+  },
+  "56": {
+    "inputs": {
+      "seed": 972974565055792,
+      "steps": 35,
+      "cfg": 8,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 0.9,
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "49",
+        0
+      ],
+      "negative": [
+        "37",
+        0
+      ],
+      "latent_image": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "59": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.2,
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "60": {
+    "inputs": {
+      "mask": [
+        "11",
+        3
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "74": {
+    "inputs": {
+      "samples": [
+        "56",
+        0
+      ],
+      "vae": [
+        "12",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "75": {
+    "inputs": {
+      "images": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Env Changed"
+    }
+  },
+  "94": {
+    "inputs": {
+      "seed": 71135867742062,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 0.25,
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "96",
+        0
+      ],
+      "negative": [
+        "18",
+        0
+      ],
+      "latent_image": [
+        "111",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "96": {
+    "inputs": {
+      "text": [
+        "113",
+        0
+      ],
+      "clip": [
+        "12",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Face Prompt"
+    }
+  },
+  "99": {
+    "inputs": {
+      "samples": [
+        "128",
+        0
+      ],
+      "vae": [
+        "12",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "101": {
+    "inputs": {
+      "images": [
+        "102",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Face Changed"
+    }
+  },
+  "102": {
+    "inputs": {
+      "facedetection": "retinaface_resnet50",
+      "codeformer_fidelity": 0.5,
+      "facerestore_model": [
+        "103",
+        0
+      ],
+      "image": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "FaceRestoreCFWithModel",
+    "_meta": {
+      "title": "FaceRestoreCFWithModel"
+    }
+  },
+  "103": {
+    "inputs": {
+      "model_name": "GFPGANv1.4.pth"
+    },
+    "class_type": "FaceRestoreModelLoader",
+    "_meta": {
+      "title": "FaceRestoreModelLoader"
+    }
+  },
+  "104": {
+    "inputs": {
+      "unet_name": "sdxlInpainting01Official_v01-inpainting.safetensors"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "UNETLoader"
+    }
+  },
+  "111": {
+    "inputs": {
+      "samples": [
+        "56",
+        0
+      ],
+      "mask": [
+        "11",
+        3
+      ]
+    },
+    "class_type": "SetLatentNoiseMask",
+    "_meta": {
+      "title": "Set Latent Noise Mask"
+    }
+  },
+  "112": {
+    "inputs": {
+      "string": "a handsome man with sunglasses,look at viewer"
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "Person Prompt"
+    }
+  },
+  "113": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": [
+        "46",
+        0
+      ],
+      "text_b": [
+        "112",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "116": {
+    "inputs": {
+      "grow_mask_by": 10,
+      "pixels": [
+        "102",
+        0
+      ],
+      "vae": [
+        "12",
+        2
+      ],
+      "mask": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeForInpaint",
+    "_meta": {
+      "title": "VAE Encode (for Inpainting)"
+    }
+  },
+  "117": {
+    "inputs": {
+      "guide_size": 256,
+      "guide_size_for": true,
+      "max_size": 768,
+      "seed": 1117465317576693,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 0.5,
+      "feather": 5,
+      "noise_mask": true,
+      "force_inpaint": true,
+      "bbox_threshold": 0.5,
+      "bbox_dilation": 10,
+      "bbox_crop_factor": 3,
+      "sam_detection_hint": "center-1",
+      "sam_dilation": 0,
+      "sam_threshold": 0.93,
+      "sam_bbox_expansion": 2,
+      "sam_mask_hint_threshold": 0.7,
+      "sam_mask_hint_use_negative": "False",
+      "drop_size": 10,
+      "wildcard": "",
+      "cycle": 1,
+      "inpaint_model": false,
+      "noise_mask_feather": 0,
+      "image": [
+        "59",
+        0
+      ],
+      "model": [
+        "12",
+        0
+      ],
+      "clip": [
+        "12",
+        1
+      ],
+      "vae": [
+        "12",
+        2
+      ],
+      "positive": [
+        "15",
+        0
+      ],
+      "negative": [
+        "18",
+        0
+      ],
+      "bbox_detector": [
+        "121",
+        0
+      ],
+      "sam_model_opt": [
+        "7",
+        0
+      ],
+      "segm_detector_opt": [
+        "121",
+        1
+      ]
+    },
+    "class_type": "FaceDetailer",
+    "_meta": {
+      "title": "PersonDetailer"
+    }
+  },
+  "121": {
+    "inputs": {
+      "model_name": "bbox/face_yolov8m.pt"
+    },
+    "class_type": "UltralyticsDetectorProvider",
+    "_meta": {
+      "title": "UltralyticsDetectorProvider"
+    }
+  },
+  "124": {
+    "inputs": {
+      "grow_mask_by": 0,
+      "pixels": [
+        "59",
+        0
+      ],
+      "vae": [
+        "12",
+        2
+      ],
+      "mask": [
+        "136",
+        0
+      ]
+    },
+    "class_type": "VAEEncodeForInpaint",
+    "_meta": {
+      "title": "VAE Encode (for Inpainting)"
+    }
+  },
+  "128": {
+    "inputs": {
+      "seed": 321101569036105,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "104",
+        0
+      ],
+      "positive": [
+        "96",
+        0
+      ],
+      "negative": [
+        "18",
+        0
+      ],
+      "latent_image": [
+        "144",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "135": {
+    "inputs": {
+      "images": [
+        "143",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Human Repaint"
+    }
+  },
+  "136": {
+    "inputs": {
+      "expand": 16,
+      "tapered_corners": true,
+      "mask": [
+        "117",
+        3
+      ]
+    },
+    "class_type": "GrowMask",
+    "_meta": {
+      "title": "GrowMask"
+    }
+  },
+  "143": {
+    "inputs": {
+      "samples": [
+        "94",
+        0
+      ],
+      "vae": [
+        "12",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "144": {
+    "inputs": {
+      "amount": 1,
+      "samples": [
+        "124",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "Repeat Latent Batch"
+    }
+  },
+  "152": {
+    "inputs": {
+      "string": "embedding:negativeXL_D, "
+    },
+    "class_type": "String Literal",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  }
+}

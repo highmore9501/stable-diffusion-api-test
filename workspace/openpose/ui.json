@@ -1,415 +1,144 @@
 {
-  "last_node_id": 76,
-  "last_link_id": 161,
+  "last_node_id": 88,
+  "last_link_id": 190,
   "nodes": [
     {
-      "id": 55,
-      "type": "CLIPTextEncode",
-      "pos": [
-        451,
-        625
-      ],
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [-1140, 630],
       "size": {
-        "0": 234.47552490234375,
-        "1": 54
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 14,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 123,
-          "slot_index": 0
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 107,
-          "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            109
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "analog film grain,BREAK (TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
-      ]
-    },
-    {
-      "id": 48,
-      "type": "CLIPTextEncode",
-      "pos": [
-        441,
-        329
-      ],
-      "size": {
-        "0": 400,
-        "1": 200
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 94
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 93,
-          "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            156
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "analog film grain,BREAK (TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
-      ]
-    },
-    {
-      "id": 49,
-      "type": "CLIPTextEncode",
-      "pos": [
-        439,
-        395
-      ],
-      "size": {
-        "0": 210,
-        "1": 59.635986328125
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 96
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 95,
-          "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            115
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "tattoo,embedding:negativeXL_D, "
-      ]
-    },
-    {
-      "id": 56,
-      "type": "CLIPTextEncode",
-      "pos": [
-        448,
-        678
-      ],
-      "size": {
-        "0": 241.57553100585938,
-        "1": 58.54765701293945
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 124,
-          "slot_index": 0
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 110,
-          "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            112
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "tattoo,embedding:negativeXL_D, "
-      ]
-    },
-    {
-      "id": 50,
-      "type": "PrimitiveNode",
-      "pos": [
-        -20,
-        540
-      ],
-      "size": {
-        "0": 411.963134765625,
-        "1": 179.52468872070312
+        "0": 315,
+        "1": 98
       },
       "flags": {},
       "order": 0,
       "mode": 0,
       "outputs": [
         {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            95,
-            110
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
-          }
-        }
-      ],
-      "title": "negative",
-      "properties": {},
-      "widgets_values": [
-        "tattoo,embedding:negativeXL_D, "
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 47,
-      "type": "PrimitiveNode",
-      "pos": [
-        -14,
-        317
-      ],
-      "size": {
-        "0": 402.963134765625,
-        "1": 168.52468872070312
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            93,
-            107
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
-          }
-        }
-      ],
-      "title": "prompt",
-      "properties": {},
-      "widgets_values": [
-        "analog film grain,BREAK (TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass."
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -393,
-        509
-      ],
-      "size": {
-        "0": 315,
-        "1": 98
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            78
-          ],
+          "links": [78],
           "slot_index": 0
         },
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            80,
-            96
-          ],
+          "links": [80, 96],
           "slot_index": 1
         },
         {
           "name": "VAE",
           "type": "VAE",
-          "links": [],
+          "links": [181],
           "slot_index": 2
         }
       ],
       "properties": {
         "Node name for S&R": "CheckpointLoaderSimple"
       },
-      "widgets_values": [
-        "fudukiMix_v15.safetensors"
-      ],
+      "widgets_values": ["fudukiMix_v15.safetensors"],
       "color": "#322",
       "bgcolor": "#533"
     },
     {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        1132,
-        683
-      ],
+      "id": 60,
+      "type": "CheckpointLoaderSimple",
+      "pos": [-1140, 770],
       "size": {
-        "0": 210,
-        "1": 46
+        "0": 315,
+        "1": 98
       },
       "flags": {},
-      "order": 23,
+      "order": 1,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 100
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 142,
-          "slot_index": 1
-        }
-      ],
       "outputs": [
         {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            143
-          ],
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [170],
+          "shape": 3,
           "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [123, 124],
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [142],
+          "shape": 3,
+          "slot_index": 2
         }
       ],
       "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": ["sd_xl_refiner_1.0.safetensors"],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 50,
+      "type": "PrimitiveNode",
+      "pos": [-1131.312736328125, 1070],
+      "size": [306.31273632812497, 141.64138037109387],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [95, 110],
+          "slot_index": 0,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "title": "negative",
+      "properties": {},
+      "widgets_values": ["tatoo,embedding:negativeXL_D, "],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 71,
+      "type": "FaceRestoreModelLoader",
+      "pos": [-790, 320],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FACERESTORE_MODEL",
+          "type": "FACERESTORE_MODEL",
+          "links": [144],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceRestoreModelLoader"
+      },
+      "widgets_values": ["GFPGANv1.4.pth"]
     },
     {
       "id": 70,
       "type": "FaceRestoreCFWithModel",
-      "pos": [
-        1443.6275329589844,
-        513.0458679199219
-      ],
+      "pos": [-790, 430],
       "size": {
         "0": 315,
         "1": 102
       },
       "flags": {},
-      "order": 24,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -428,9 +157,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            145
-          ],
+          "links": [145],
           "shape": 3,
           "slot_index": 0
         }
@@ -438,205 +165,284 @@
       "properties": {
         "Node name for S&R": "FaceRestoreCFWithModel"
       },
-      "widgets_values": [
-        "retinaface_resnet50",
-        0.5
-      ]
+      "widgets_values": ["retinaface_resnet50", 0.5]
     },
     {
-      "id": 60,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -396,
-        657
-      ],
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [-790, 580],
       "size": {
-        "0": 315,
-        "1": 98
+        "0": 210,
+        "1": 46
       },
       "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            146
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            123,
-            124
-          ],
-          "shape": 3
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            142
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "sd_xl_refiner_1.0.safetensors"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 51,
-      "type": "KSamplerAdvanced",
-      "pos": [
-        758,
-        766
-      ],
-      "size": {
-        "0": 315,
-        "1": 334
-      },
-      "flags": {},
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 146,
-          "slot_index": 0
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 109,
-          "slot_index": 1
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 112,
-          "slot_index": 2
-        },
-        {
-          "name": "latent_image",
+          "name": "samples",
           "type": "LATENT",
-          "link": 117
+          "link": 172
         },
         {
-          "name": "steps",
-          "type": "INT",
-          "link": 128,
-          "widget": {
-            "name": "steps",
-            "config": [
-              "INT",
-              {
-                "default": 20,
-                "min": 1,
-                "max": 10000
-              }
-            ]
-          },
-          "slot_index": 4
-        },
-        {
-          "name": "cfg",
-          "type": "FLOAT",
-          "link": 130,
-          "widget": {
-            "name": "cfg",
-            "config": [
-              "FLOAT",
-              {
-                "default": 8,
-                "min": 0,
-                "max": 100,
-                "step": 0.5,
-                "round": 0.01
-              }
-            ]
-          }
-        },
-        {
-          "name": "noise_seed",
-          "type": "INT",
-          "link": 161,
-          "widget": {
-            "name": "noise_seed",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 18446744073709552000
-              }
-            ]
-          }
-        },
-        {
-          "name": "start_at_step",
-          "type": "INT",
-          "link": 133,
-          "widget": {
-            "name": "start_at_step",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 10000
-              }
-            ]
-          },
-          "slot_index": 7
+          "name": "vae",
+          "type": "VAE",
+          "link": 142,
+          "slot_index": 1
         }
       ],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            100
-          ],
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [143],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 48,
+      "type": "CLIPTextEncode",
+      "pos": [-790, 680],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 94
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 93,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [156],
           "shape": 3,
           "slot_index": 0
         }
       ],
-      "title": "KSampler_refiner",
       "properties": {
-        "Node name for S&R": "KSamplerAdvanced"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "disable",
-        688954105720239,
-        "randomize",
-        50,
-        8,
-        "dpmpp_2m_sde",
-        "karras",
-        35,
-        10000,
-        "disable"
+        "analog film grain,BREAK a photo of japanese girl,she has petite body,flat chest,fair and tender skin,black hair"
       ]
     },
     {
-      "id": 71,
-      "type": "FaceRestoreModelLoader",
-      "pos": [
-        1446,
-        403
+      "id": 49,
+      "type": "CLIPTextEncode",
+      "pos": [-790, 730],
+      "size": {
+        "0": 210,
+        "1": 59.635986328125
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 96
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 95,
+          "widget": {
+            "name": "text"
+          }
+        }
       ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [163],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": ["tatoo,embedding:negativeXL_D, "]
+    },
+    {
+      "id": 80,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [-790, 780],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 176
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [177],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels"
+      },
+      "widgets_values": ["nearest-exact", 0.5]
+    },
+    {
+      "id": 56,
+      "type": "CLIPTextEncode",
+      "pos": [-790, 1290],
+      "size": {
+        "0": 241.57553100585938,
+        "1": 58.54765701293945
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 124,
+          "slot_index": 0
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 110,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [169],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": ["tatoo,embedding:negativeXL_D, "]
+    },
+    {
+      "id": 84,
+      "type": "OpenposePreprocessor",
+      "pos": [-430, 980],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 183
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [184],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenposePreprocessor"
+      },
+      "widgets_values": ["enable", "enable", "enable", 1024]
+    },
+    {
+      "id": 73,
+      "type": "ControlNetApply",
+      "pos": [-50, 1110],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 98
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 156
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 155,
+          "slot_index": 1
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 184
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [164],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApply"
+      },
+      "widgets_values": [1]
+    },
+    {
+      "id": 74,
+      "type": "ControlNetLoader",
+      "pos": [-1140, 1274],
       "size": {
         "0": 315,
         "1": 58
@@ -646,248 +452,213 @@
       "mode": 0,
       "outputs": [
         {
-          "name": "FACERESTORE_MODEL",
-          "type": "FACERESTORE_MODEL",
-          "links": [
-            144
-          ],
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [155],
           "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "FaceRestoreModelLoader"
+        "Node name for S&R": "ControlNetLoader"
       },
       "widgets_values": [
-        "GFPGANv1.4.pth"
+        "models\\t2i-adapter_diffusers_xl_openpose.safetensors"
       ]
     },
     {
-      "id": 36,
-      "type": "EmptyLatentImage",
-      "pos": [
-        -316,
-        1044
-      ],
+      "id": 55,
+      "type": "CLIPTextEncode",
+      "pos": [-790, 1278],
       "size": {
-        "0": 315,
-        "1": 106
+        "0": 234.47552490234375,
+        "1": 54
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 123,
+          "slot_index": 0
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 107,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [168],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "analog film grain,BREAK a photo of japanese girl,she has petite body,flat chest,fair and tender skin,black hair"
+      ]
+    },
+    {
+      "id": 81,
+      "type": "VAEEncode",
+      "pos": [-430, 1286],
+      "size": {
+        "0": 210,
+        "1": 46
       },
       "flags": {},
-      "order": 5,
+      "order": 17,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 177
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 181
+        }
+      ],
       "outputs": [
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            113
-          ],
+          "links": [179],
           "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "EmptyLatentImage"
-      },
-      "widgets_values": [
-        896,
-        1344,
-        1
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
+        "Node name for S&R": "VAEEncode"
+      }
     },
     {
-      "id": 62,
-      "type": "PrimitiveNode",
-      "pos": [
-        5,
-        913
-      ],
-      "size": {
-        "0": 210,
-        "1": 82
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            128,
-            129
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "steps",
-            "config": [
-              "INT",
-              {
-                "default": 20,
-                "min": 1,
-                "max": 10000
-              }
-            ]
-          }
-        }
-      ],
-      "title": "TotalSteps",
-      "properties": {},
-      "widgets_values": [
-        50,
-        "fixed"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 64,
-      "type": "PrimitiveNode",
-      "pos": [
-        23,
-        1166
-      ],
-      "size": {
-        "0": 210,
-        "1": 82
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            130,
-            131
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "cfg",
-            "config": [
-              "FLOAT",
-              {
-                "default": 8,
-                "min": 0,
-                "max": 100,
-                "step": 0.5,
-                "round": 0.01
-              }
-            ]
-          }
-        }
-      ],
-      "title": "CFG",
-      "properties": {},
-      "widgets_values": [
-        8,
-        "fixed"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 65,
-      "type": "PrimitiveNode",
-      "pos": [
-        16,
-        1040
-      ],
-      "size": {
-        "0": 210,
-        "1": 82
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            132,
-            133
-          ],
-          "widget": {
-            "name": "end_at_step",
-            "config": [
-              "INT",
-              {
-                "default": 10000,
-                "min": 0,
-                "max": 10000
-              }
-            ]
-          }
-        }
-      ],
-      "title": "MidSteps",
-      "properties": {},
-      "widgets_values": [
-        35,
-        "fixed"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 44,
-      "type": "LoadImage",
-      "pos": [
-        -738,
-        -151
-      ],
+      "id": 82,
+      "type": "RepeatLatentBatch",
+      "pos": [-50, 1274],
       "size": {
         "0": 315,
-        "1": 314
+        "1": 58
       },
       "flags": {},
-      "order": 9,
+      "order": 19,
       "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 179
+        }
+      ],
       "outputs": [
         {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            153
-          ],
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [180],
           "shape": 3,
           "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "LoadImage"
+        "Node name for S&R": "RepeatLatentBatch"
       },
-      "widgets_values": [
-        "10008.jpg",
-        "image"
+      "widgets_values": [4]
+    },
+    {
+      "id": 77,
+      "type": "SeargeSDXLSamplerV3",
+      "pos": [320, 970],
+      "size": [315, 362],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "base_model",
+          "type": "MODEL",
+          "link": 165
+        },
+        {
+          "name": "base_positive",
+          "type": "CONDITIONING",
+          "link": 164
+        },
+        {
+          "name": "base_negative",
+          "type": "CONDITIONING",
+          "link": 163
+        },
+        {
+          "name": "refiner_model",
+          "type": "MODEL",
+          "link": 170
+        },
+        {
+          "name": "refiner_positive",
+          "type": "CONDITIONING",
+          "link": 168
+        },
+        {
+          "name": "refiner_negative",
+          "type": "CONDITIONING",
+          "link": 169
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 180
+        },
+        {
+          "name": "sampler_name",
+          "type": "SAMPLER_NAME",
+          "link": 173,
+          "slot_index": 7
+        },
+        {
+          "name": "scheduler",
+          "type": "SCHEDULER_NAME",
+          "link": 175,
+          "slot_index": 8
+        }
       ],
-      "color": "#432",
-      "bgcolor": "#653"
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [172],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SeargeSDXLSamplerV3"
+      },
+      "widgets_values": [1026624239643856, "randomize", 50, 9, 0.8, 0.6, 0]
     },
     {
       "id": 39,
       "type": "CR Apply LoRA Stack",
-      "pos": [
-        -290,
-        281
-      ],
+      "pos": [-1040, 160],
       "size": {
         "0": 210,
         "1": 66
       },
       "flags": {},
-      "order": 17,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -911,18 +682,14 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            158
-          ],
+          "links": [158],
           "shape": 3,
           "slot_index": 0
         },
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            94
-          ],
+          "links": [94],
           "shape": 3,
           "slot_index": 1
         }
@@ -932,139 +699,15 @@
       }
     },
     {
-      "id": 73,
-      "type": "ControlNetApply",
-      "pos": [
-        577,
-        86
-      ],
-      "size": {
-        "0": 317.4000244140625,
-        "1": 98
-      },
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 156
-        },
-        {
-          "name": "control_net",
-          "type": "CONTROL_NET",
-          "link": 155,
-          "slot_index": 1
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 154
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            157
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ControlNetApply"
-      },
-      "widgets_values": [
-        1
-      ]
-    },
-    {
-      "id": 74,
-      "type": "ControlNetLoader",
-      "pos": [
-        582,
-        -22
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "CONTROL_NET",
-          "type": "CONTROL_NET",
-          "links": [
-            155
-          ],
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ControlNetLoader"
-      },
-      "widgets_values": [
-        "models\\t2i-adapter_diffusers_xl_openpose.safetensors"
-      ]
-    },
-    {
-      "id": 72,
-      "type": "AIO_Preprocessor",
-      "pos": [
-        229,
-        -44
-      ],
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 153
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            154
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "AIO_Preprocessor"
-      },
-      "widgets_values": [
-        "OpenposePreprocessor",
-        512
-      ]
-    },
-    {
       "id": 58,
       "type": "FreeU",
-      "pos": [
-        53,
-        137
-      ],
+      "pos": [-790, 160],
       "size": {
         "0": 315,
         "1": 130
       },
       "flags": {},
-      "order": 18,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1077,9 +720,7 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            152
-          ],
+          "links": [165],
           "shape": 3,
           "slot_index": 0
         }
@@ -1087,26 +728,119 @@
       "properties": {
         "Node name for S&R": "FreeU"
       },
+      "widgets_values": [1, 1.05, 0.9500000000000001, 0.9500000000000001]
+    },
+    {
+      "id": 78,
+      "type": "SeargeSamplerInputs",
+      "pos": [-430, 1151],
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "sampler_name",
+          "type": "SAMPLER_NAME",
+          "links": [173],
+          "shape": 3
+        },
+        {
+          "name": "scheduler",
+          "type": "SCHEDULER_NAME",
+          "links": [175],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SeargeSamplerInputs"
+      },
+      "widgets_values": ["dpmpp_2m_sde", "karras"]
+    },
+    {
+      "id": 40,
+      "type": "CR LoRA Stack",
+      "pos": [-1140, 260],
+      "size": {
+        "0": 315,
+        "1": 322
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": [79],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR LoRA Stack"
+      },
       "widgets_values": [
+        "On",
+        "miho_v1.safetensors",
         1,
-        1.05,
-        0.9500000000000001,
-        0.9500000000000001
-      ]
+        1,
+        "Off",
+        "None",
+        1,
+        1.8,
+        "Off",
+        "None",
+        1,
+        0.4
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 47,
+      "type": "PrimitiveNode",
+      "pos": [-1153, 912],
+      "size": [325.63904609332417, 130.47586315514627],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [93, 107],
+          "slot_index": 0,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "title": "prompt",
+      "properties": {},
+      "widgets_values": [
+        "analog film grain,BREAK a photo of japanese girl,she has petite body,flat chest,fair and tender skin,black hair"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
     },
     {
       "id": 46,
       "type": "PreviewImage",
-      "pos": [
-        1442,
-        671
-      ],
-      "size": {
-        "0": 781.425048828125,
-        "1": 702.8309326171875
-      },
+      "pos": [-390, 71],
+      "size": [932.8852119140627, 849.2523128356934],
       "flags": {},
-      "order": 25,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1120,524 +854,74 @@
       }
     },
     {
-      "id": 57,
-      "type": "KSamplerAdvanced",
-      "pos": [
-        759,
-        373
-      ],
+      "id": 44,
+      "type": "LoadImage",
+      "pos": [-790, 910],
       "size": {
         "0": 315,
-        "1": 334
+        "1": 314
       },
       "flags": {},
-      "order": 21,
+      "order": 8,
       "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 152,
-          "slot_index": 0
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 157,
-          "slot_index": 1
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 115,
-          "slot_index": 2
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 113
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "link": 129,
-          "widget": {
-            "name": "steps",
-            "config": [
-              "INT",
-              {
-                "default": 20,
-                "min": 1,
-                "max": 10000
-              }
-            ]
-          }
-        },
-        {
-          "name": "cfg",
-          "type": "FLOAT",
-          "link": 131,
-          "widget": {
-            "name": "cfg",
-            "config": [
-              "FLOAT",
-              {
-                "default": 8,
-                "min": 0,
-                "max": 100,
-                "step": 0.5,
-                "round": 0.01
-              }
-            ]
-          },
-          "slot_index": 5
-        },
-        {
-          "name": "noise_seed",
-          "type": "INT",
-          "link": 160,
-          "widget": {
-            "name": "noise_seed",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 18446744073709552000
-              }
-            ]
-          },
-          "slot_index": 6
-        },
-        {
-          "name": "end_at_step",
-          "type": "INT",
-          "link": 132,
-          "widget": {
-            "name": "end_at_step",
-            "config": [
-              "INT",
-              {
-                "default": 10000,
-                "min": 0,
-                "max": 10000
-              }
-            ]
-          },
-          "slot_index": 7
-        }
-      ],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            117
-          ],
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [176, 183],
           "shape": 3,
           "slot_index": 0
-        }
-      ],
-      "title": "KSampler_base",
-      "properties": {
-        "Node name for S&R": "KSamplerAdvanced"
-      },
-      "widgets_values": [
-        "enable",
-        379457837998631,
-        "randomize",
-        50,
-        8,
-        "dpmpp_2m_sde",
-        "karras",
-        0,
-        35,
-        "enable"
-      ]
-    },
-    {
-      "id": 76,
-      "type": "CR Seed",
-      "pos": [
-        -35,
-        780
-      ],
-      "size": {
-        "0": 315,
-        "1": 82
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "outputs": [
+        },
         {
-          "name": "seed",
-          "type": "INT",
-          "links": [
-            160,
-            161
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CR Seed"
-      },
-      "widgets_values": [
-        0,
-        "randomize"
-      ]
-    },
-    {
-      "id": 40,
-      "type": "CR LoRA Stack",
-      "pos": [
-        -774,
-        252
-      ],
-      "size": {
-        "0": 315,
-        "1": 322
-      },
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "lora_stack",
-          "type": "LORA_STACK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LORA_STACK",
-          "type": "LORA_STACK",
-          "links": [
-            79
-          ],
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
           "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "CR LoRA Stack"
+        "Node name for S&R": "LoadImage"
       },
-      "widgets_values": [
-        "On",
-        "duoduo_XL.safetensors",
-        1,
-        1,
-        "Off",
-        "None",
-        0.3,
-        0.6,
-        "Off",
-        "None",
-        1,
-        0.4
-      ],
+      "widgets_values": ["031 (1).jpg", "image"],
       "color": "#432",
       "bgcolor": "#653"
     }
   ],
   "links": [
-    [
-      78,
-      4,
-      0,
-      39,
-      0,
-      "MODEL"
-    ],
-    [
-      79,
-      40,
-      0,
-      39,
-      2,
-      "LORA_STACK"
-    ],
-    [
-      80,
-      4,
-      1,
-      39,
-      1,
-      "CLIP"
-    ],
-    [
-      93,
-      47,
-      0,
-      48,
-      1,
-      "STRING"
-    ],
-    [
-      94,
-      39,
-      1,
-      48,
-      0,
-      "CLIP"
-    ],
-    [
-      95,
-      50,
-      0,
-      49,
-      1,
-      "STRING"
-    ],
-    [
-      96,
-      4,
-      1,
-      49,
-      0,
-      "CLIP"
-    ],
-    [
-      100,
-      51,
-      0,
-      8,
-      0,
-      "LATENT"
-    ],
-    [
-      107,
-      47,
-      0,
-      55,
-      1,
-      "STRING"
-    ],
-    [
-      109,
-      55,
-      0,
-      51,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      110,
-      50,
-      0,
-      56,
-      1,
-      "STRING"
-    ],
-    [
-      112,
-      56,
-      0,
-      51,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      113,
-      36,
-      0,
-      57,
-      3,
-      "LATENT"
-    ],
-    [
-      115,
-      49,
-      0,
-      57,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      117,
-      57,
-      0,
-      51,
-      3,
-      "LATENT"
-    ],
-    [
-      123,
-      60,
-      1,
-      55,
-      0,
-      "CLIP"
-    ],
-    [
-      124,
-      60,
-      1,
-      56,
-      0,
-      "CLIP"
-    ],
-    [
-      128,
-      62,
-      0,
-      51,
-      4,
-      "INT"
-    ],
-    [
-      129,
-      62,
-      0,
-      57,
-      4,
-      "INT"
-    ],
-    [
-      130,
-      64,
-      0,
-      51,
-      5,
-      "FLOAT"
-    ],
-    [
-      131,
-      64,
-      0,
-      57,
-      5,
-      "FLOAT"
-    ],
-    [
-      132,
-      65,
-      0,
-      57,
-      7,
-      "INT"
-    ],
-    [
-      133,
-      65,
-      0,
-      51,
-      7,
-      "INT"
-    ],
-    [
-      142,
-      60,
-      2,
-      8,
-      1,
-      "VAE"
-    ],
-    [
-      143,
-      8,
-      0,
-      70,
-      1,
-      "IMAGE"
-    ],
-    [
-      144,
-      71,
-      0,
-      70,
-      0,
-      "FACERESTORE_MODEL"
-    ],
-    [
-      145,
-      70,
-      0,
-      46,
-      0,
-      "IMAGE"
-    ],
-    [
-      146,
-      60,
-      0,
-      51,
-      0,
-      "MODEL"
-    ],
-    [
-      152,
-      58,
-      0,
-      57,
-      0,
-      "MODEL"
-    ],
-    [
-      153,
-      44,
-      0,
-      72,
-      0,
-      "IMAGE"
-    ],
-    [
-      154,
-      72,
-      0,
-      73,
-      2,
-      "IMAGE"
-    ],
-    [
-      155,
-      74,
-      0,
-      73,
-      1,
-      "CONTROL_NET"
-    ],
-    [
-      156,
-      48,
-      0,
-      73,
-      0,
-      "CONDITIONING"
-    ],
-    [
-      157,
-      73,
-      0,
-      57,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      158,
-      39,
-      0,
-      58,
-      0,
-      "MODEL"
-    ],
-    [
-      160,
-      76,
-      0,
-      57,
-      6,
-      "INT"
-    ],
-    [
-      161,
-      76,
-      0,
-      51,
-      6,
-      "INT"
-    ]
+    [78, 4, 0, 39, 0, "MODEL"],
+    [79, 40, 0, 39, 2, "LORA_STACK"],
+    [80, 4, 1, 39, 1, "CLIP"],
+    [93, 47, 0, 48, 1, "STRING"],
+    [94, 39, 1, 48, 0, "CLIP"],
+    [95, 50, 0, 49, 1, "STRING"],
+    [96, 4, 1, 49, 0, "CLIP"],
+    [107, 47, 0, 55, 1, "STRING"],
+    [110, 50, 0, 56, 1, "STRING"],
+    [123, 60, 1, 55, 0, "CLIP"],
+    [124, 60, 1, 56, 0, "CLIP"],
+    [142, 60, 2, 8, 1, "VAE"],
+    [143, 8, 0, 70, 1, "IMAGE"],
+    [144, 71, 0, 70, 0, "FACERESTORE_MODEL"],
+    [145, 70, 0, 46, 0, "IMAGE"],
+    [155, 74, 0, 73, 1, "CONTROL_NET"],
+    [156, 48, 0, 73, 0, "CONDITIONING"],
+    [158, 39, 0, 58, 0, "MODEL"],
+    [163, 49, 0, 77, 2, "CONDITIONING"],
+    [164, 73, 0, 77, 1, "CONDITIONING"],
+    [165, 58, 0, 77, 0, "MODEL"],
+    [168, 55, 0, 77, 4, "CONDITIONING"],
+    [169, 56, 0, 77, 5, "CONDITIONING"],
+    [170, 60, 0, 77, 3, "MODEL"],
+    [172, 77, 0, 8, 0, "LATENT"],
+    [173, 78, 0, 77, 7, "SAMPLER_NAME"],
+    [175, 78, 1, 77, 8, "SCHEDULER_NAME"],
+    [176, 44, 0, 80, 0, "IMAGE"],
+    [177, 80, 0, 81, 0, "IMAGE"],
+    [179, 81, 0, 82, 0, "LATENT"],
+    [180, 82, 0, 77, 6, "LATENT"],
+    [181, 4, 2, 81, 1, "VAE"],
+    [183, 44, 0, 84, 0, "IMAGE"],
+    [184, 84, 0, 73, 2, "IMAGE"]
   ],
   "groups": [],
   "config": {},

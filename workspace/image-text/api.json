@@ -1,0 +1,26 @@
+{
+  "44": {
+    "inputs": {
+      "image": "041.jpg",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "97": {
+    "inputs": {
+      "model": "wd-v1-4-convnextv2-tagger-v2",
+      "threshold": 0.35,
+      "character_threshold": 0.85,
+      "exclude_tags": "",
+      "tags": "mona_\\(genshin_impact\\), 1girl, long_hair, looking_at_viewer",
+      "image": ["44", 0]
+    },
+    "class_type": "WD14Tagger|pysssss"
+  },
+  "107": {
+    "inputs": {
+      "text": ["97", 0]
+    },
+    "class_type": "ShowText|pysssss"
+  }
+}

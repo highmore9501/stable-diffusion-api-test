@@ -1,0 +1,207 @@
+{
+  "4": {
+    "inputs": {
+      "ckpt_name": "iniverseMixXLSFWNSFW_v40.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": ["129", 0],
+      "vae": ["4", 2]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "39": {
+    "inputs": {
+      "model": ["4", 0],
+      "clip": ["4", 1],
+      "lora_stack": ["40", 0]
+    },
+    "class_type": "CR Apply LoRA Stack",
+    "_meta": {
+      "title": "💊 CR Apply LoRA Stack"
+    }
+  },
+  "40": {
+    "inputs": {
+      "switch_1": "On",
+      "lora_name_1": "miho_v1.safetensors",
+      "model_weight_1": 1,
+      "clip_weight_1": 1,
+      "switch_2": "Off",
+      "lora_name_2": "None",
+      "model_weight_2": 1,
+      "clip_weight_2": 0.4,
+      "switch_3": "Off",
+      "lora_name_3": "None",
+      "model_weight_3": 1,
+      "clip_weight_3": 0.4
+    },
+    "class_type": "CR LoRA Stack",
+    "_meta": {
+      "title": "💊 CR LoRA Stack"
+    }
+  },
+  "44": {
+    "inputs": {
+      "image": "16.jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "48": {
+    "inputs": {
+      "text": ["105", 0],
+      "clip": ["39", 1]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "49": {
+    "inputs": {
+      "text": "tattoo,embedding:negativeXL_D, embedding:aidxlv04_neg, embedding:EasyNegativeV2, ",
+      "clip": ["4", 1]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "95": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1.2,
+      "image": ["44", 0]
+    },
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
+  },
+  "97": {
+    "inputs": {
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.8,
+      "character_threshold": 0.85,
+      "replace_underscore": "censored",
+      "trailing_comma": "1girl, solo, looking_at_viewer, blue_eyes, thighhighs, ",
+      "exclude_tags": "",
+      "image": ["44", 0]
+    },
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
+  },
+  "100": {
+    "inputs": {
+      "images": ["8", 0]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "105": {
+    "inputs": {
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": ["97", 0],
+      "text_b": ["106", 0]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "106": {
+    "inputs": {
+      "prompt": "(loli:1.5),smooth skin,analog film grain,"
+    },
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "positive"
+    }
+  },
+  "122": {
+    "inputs": {
+      "pixels": ["95", 0],
+      "vae": ["4", 2]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "123": {
+    "inputs": {
+      "amount": 4,
+      "samples": ["122", 0]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "Repeat Latent Batch"
+    }
+  },
+  "124": {
+    "inputs": {
+      "clip_vision": ["125", 0],
+      "image": ["44", 0]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP Vision Encode"
+    }
+  },
+  "125": {
+    "inputs": {
+      "clip_name": "clip_vision_g.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Load CLIP Vision"
+    }
+  },
+  "127": {
+    "inputs": {
+      "strength": 0.5,
+      "noise_augmentation": 0,
+      "conditioning": ["48", 0],
+      "clip_vision_output": ["124", 0]
+    },
+    "class_type": "unCLIPConditioning",
+    "_meta": {
+      "title": "unCLIPConditioning"
+    }
+  },
+  "129": {
+    "inputs": {
+      "seed": 1052116661101908,
+      "steps": 35,
+      "cfg": 8,
+      "sampler_name": "dpmpp_2m_sde_gpu",
+      "scheduler": "karras",
+      "denoise": 0.5,
+      "model": ["39", 0],
+      "positive": ["127", 0],
+      "negative": ["49", 0],
+      "latent_image": ["123", 0]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  }
+}
