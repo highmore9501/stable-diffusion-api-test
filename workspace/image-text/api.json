@@ -12,20 +12,14 @@
       "threshold": 0.35,
       "character_threshold": 0.85,
       "exclude_tags": "",
-      "tags": "mona_\\(genshin_impact\\), 1girl, long_hair, breasts, looking_at_viewer, blush, open_mouth, bangs, blue_eyes, black_hair, thighhighs, 1boy, hat, cleavage, twintails, jewelry, medium_breasts, hetero, earrings, small_breasts, lying, censored, parted_lips, penis, pussy, solo_focus, choker, tears, spread_legs, cum, sex, star_\\(symbol\\), cape, mosaic_censoring, vaginal, leotard, lips, pillow, fur_trim, pubic_hair, uncensored, covered_navel, capelet, witch_hat, cum_in_pussy, on_bed, highleg, crying, male_pubic_hair, clothing_aside, highleg_leotard, clothed_sex, clothed_female_nude_male, veins, hat_ornament, fur_collar, clitoris, overflow, blue_leotard, fur-trimmed_capelet, leotard_aside",
-      "image": [
-        "44",
-        0
-      ]
+      "tags": "mona_\\(genshin_impact\\), 1girl, long_hair, looking_at_viewer",
+      "image": ["44", 0]
     },
     "class_type": "WD14Tagger|pysssss"
   },
   "107": {
     "inputs": {
-      "text": [
-        "97",
-        0
-      ]
+      "text": ["97", 0]
     },
     "class_type": "ShowText|pysssss"
   }

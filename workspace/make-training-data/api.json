@@ -7,22 +7,10 @@
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
       "denoise": 1,
-      "model": [
-        "14",
-        0
-      ],
-      "positive": [
-        "11",
-        0
-      ],
-      "negative": [
-        "11",
-        1
-      ],
-      "latent_image": [
-        "5",
-        0
-      ]
+      "model": ["14", 0],
+      "positive": ["11", 0],
+      "negative": ["11", 1],
+      "latent_image": ["5", 0]
     },
     "class_type": "KSampler"
   },
@@ -42,34 +30,22 @@
   },
   "6": {
     "inputs": {
-      "text": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,1girl,sex, petite,(small breast:1.5),black twin tails,white stockings, naked,thigh,show breasts and pussy,",
-      "clip": [
-        "14",
-        1
-      ]
+      "text": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,1girl,petite,(small breast:1.5),black twin tails,white stockings, thigh",
+      "clip": ["14", 1]
     },
     "class_type": "CLIPTextEncode"
   },
   "7": {
     "inputs": {
       "text": "worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch, tooth, open mouth, bad hand, bad fingers",
-      "clip": [
-        "4",
-        1
-      ]
+      "clip": ["4", 1]
     },
     "class_type": "CLIPTextEncode"
   },
   "8": {
     "inputs": {
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ]
+      "samples": ["3", 0],
+      "vae": ["4", 2]
     },
     "class_type": "VAEDecode"
   },
@@ -84,22 +60,10 @@
       "strength": 1,
       "start_percent": 0,
       "end_percent": 0.6,
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "control_net": [
-        "10",
-        0
-      ],
-      "image": [
-        "17",
-        0
-      ]
+      "positive": ["6", 0],
+      "negative": ["7", 0],
+      "control_net": ["10", 0],
+      "image": ["17", 0]
     },
     "class_type": "ControlNetApplyAdvanced"
   },
@@ -115,14 +79,8 @@
       "lora_name": "neg4all_bdsqlsz_xl_V7.safetensors",
       "strength_model": 1,
       "strength_clip": 0.6,
-      "model": [
-        "4",
-        0
-      ],
-      "clip": [
-        "4",
-        1
-      ]
+      "model": ["4", 0],
+      "clip": ["4", 1]
     },
     "class_type": "LoraLoader"
   },
@@ -130,10 +88,7 @@
     "inputs": {
       "preprocessor": "OpenposePreprocessor",
       "resolution": 512,
-      "image": [
-        "12",
-        0
-      ]
+      "image": ["12", 0]
     },
     "class_type": "AIO_Preprocessor"
   },
@@ -141,14 +96,8 @@
     "inputs": {
       "facedetection": "retinaface_resnet50",
       "codeformer_fidelity": 0.5,
-      "facerestore_model": [
-        "21",
-        0
-      ],
-      "image": [
-        "8",
-        0
-      ]
+      "facerestore_model": ["21", 0],
+      "image": ["8", 0]
     },
     "class_type": "FaceRestoreCFWithModel"
   },
@@ -168,14 +117,8 @@
       "reference_order": "left to right",
       "reverse_reference_order": false,
       "console_logging_level": 0,
-      "image": [
-        "20",
-        0
-      ],
-      "reference_image": [
-        "23",
-        0
-      ]
+      "image": ["20", 0],
+      "reference_image": ["23", 0]
     },
     "class_type": "RoopImproved"
   },
@@ -188,10 +131,7 @@
   },
   "24": {
     "inputs": {
-      "images": [
-        "22",
-        0
-      ]
+      "images": ["22", 0]
     },
     "class_type": "PreviewImage"
   }

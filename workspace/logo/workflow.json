@@ -1,0 +1,896 @@
+{
+  "last_node_id": 83,
+  "last_link_id": 190,
+  "nodes": [
+    {
+      "id": 50,
+      "type": "PrimitiveNode",
+      "pos": [
+        -20,
+        540
+      ],
+      "size": {
+        "0": 411.963134765625,
+        "1": 179.52468872070312
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            95
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "title": "negative",
+      "properties": {},
+      "widgets_values": [
+        "tattoo,embedding:negativeXL_D, human"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 47,
+      "type": "PrimitiveNode",
+      "pos": [
+        -14,
+        317
+      ],
+      "size": {
+        "0": 402.963134765625,
+        "1": 168.52468872070312
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            93
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "title": "prompt",
+      "properties": {},
+      "widgets_values": [
+        "Logo,Avatar Frame,pencilling,no human,\"秒红科技\", BREAK Its screen content showcases a combination of bold typography and a simple yet striking graphic element, creating a visually appealing composition that instantly communicates the brand's essence."
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 75,
+      "type": "VAEEncode",
+      "pos": [
+        122,
+        832
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 168,
+          "slot_index": 0
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 167
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            166
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      }
+    },
+    {
+      "id": 76,
+      "type": "ImageScaleToTotalPixels",
+      "pos": [
+        -256,
+        874
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 169,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            168
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScaleToTotalPixels"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1172,
+        689
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 189
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 190,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            173,
+            174
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 78,
+      "type": "SaveImage",
+      "pos": [
+        1454,
+        366
+      ],
+      "size": [
+        315,
+        270.0000047683716
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 174
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "PreviewImage",
+      "pos": [
+        1412,
+        686
+      ],
+      "size": {
+        "0": 781.425048828125,
+        "1": 702.8309326171875
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 173
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 79,
+      "type": "LoraLoader",
+      "pos": [
+        -412,
+        305
+      ],
+      "size": {
+        "0": 315,
+        "1": 126
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 176
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 178
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            186
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            179
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "LogoRedmondV2-Logo-LogoRedmAF.safetensors",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 77,
+      "type": "LoadImage",
+      "pos": [
+        -642,
+        861
+      ],
+      "size": {
+        "0": 315,
+        "1": 314.0000305175781
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            169,
+            180
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "秒红logo草.png",
+        "image"
+      ]
+    },
+    {
+      "id": 80,
+      "type": "AIO_Preprocessor",
+      "pos": [
+        -198,
+        1061
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 180
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            181
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AIO_Preprocessor"
+      },
+      "widgets_values": [
+        "LineArtPreprocessor",
+        1024
+      ]
+    },
+    {
+      "id": 82,
+      "type": "ControlNetLoader",
+      "pos": [
+        113,
+        1170
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            182
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "models\\control_v11p_sd15_lineart.pth"
+      ]
+    },
+    {
+      "id": 81,
+      "type": "ControlNetApply",
+      "pos": [
+        439,
+        983
+      ],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 98
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 183
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 182,
+          "slot_index": 1
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 181
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            185
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApply"
+      },
+      "widgets_values": [
+        1
+      ]
+    },
+    {
+      "id": 49,
+      "type": "CLIPTextEncode",
+      "pos": [
+        457,
+        547
+      ],
+      "size": {
+        "0": 210,
+        "1": 59.635986328125
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 96
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 95,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            187
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "tattoo,embedding:negativeXL_D, human"
+      ]
+    },
+    {
+      "id": 48,
+      "type": "CLIPTextEncode",
+      "pos": [
+        458,
+        482
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 179
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 93,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            183
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Logo,Avatar Frame,pencilling,no human,\"秒红科技\", BREAK Its screen content showcases a combination of bold typography and a simple yet striking graphic element, creating a visually appealing composition that instantly communicates the brand's essence."
+      ]
+    },
+    {
+      "id": 74,
+      "type": "RepeatLatentBatch",
+      "pos": [
+        443,
+        834
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 166,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            188
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RepeatLatentBatch"
+      },
+      "widgets_values": [
+        4
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -423,
+        513
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            176
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            96,
+            178
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            167,
+            190
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "AnythingV5Ink_v32Ink.safetensors"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 83,
+      "type": "KSampler",
+      "pos": [
+        839,
+        399
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 186
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 185
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 187
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 188
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            189
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        928505702943581,
+        "randomize",
+        35,
+        8,
+        "dpmpp_2m_sde",
+        "karras",
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      93,
+      47,
+      0,
+      48,
+      1,
+      "STRING"
+    ],
+    [
+      95,
+      50,
+      0,
+      49,
+      1,
+      "STRING"
+    ],
+    [
+      96,
+      4,
+      1,
+      49,
+      0,
+      "CLIP"
+    ],
+    [
+      166,
+      75,
+      0,
+      74,
+      0,
+      "LATENT"
+    ],
+    [
+      167,
+      4,
+      2,
+      75,
+      1,
+      "VAE"
+    ],
+    [
+      168,
+      76,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ],
+    [
+      169,
+      77,
+      0,
+      76,
+      0,
+      "IMAGE"
+    ],
+    [
+      173,
+      8,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      174,
+      8,
+      0,
+      78,
+      0,
+      "IMAGE"
+    ],
+    [
+      176,
+      4,
+      0,
+      79,
+      0,
+      "MODEL"
+    ],
+    [
+      178,
+      4,
+      1,
+      79,
+      1,
+      "CLIP"
+    ],
+    [
+      179,
+      79,
+      1,
+      48,
+      0,
+      "CLIP"
+    ],
+    [
+      180,
+      77,
+      0,
+      80,
+      0,
+      "IMAGE"
+    ],
+    [
+      181,
+      80,
+      0,
+      81,
+      2,
+      "IMAGE"
+    ],
+    [
+      182,
+      82,
+      0,
+      81,
+      1,
+      "CONTROL_NET"
+    ],
+    [
+      183,
+      48,
+      0,
+      81,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      185,
+      81,
+      0,
+      83,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      186,
+      79,
+      0,
+      83,
+      0,
+      "MODEL"
+    ],
+    [
+      187,
+      49,
+      0,
+      83,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      188,
+      74,
+      0,
+      83,
+      3,
+      "LATENT"
+    ],
+    [
+      189,
+      83,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      190,
+      4,
+      2,
+      8,
+      1,
+      "VAE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

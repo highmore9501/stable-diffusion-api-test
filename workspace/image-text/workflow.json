@@ -5,10 +5,7 @@
     {
       "id": 44,
       "type": "LoadImage",
-      "pos": [
-        -539,
-        810
-      ],
+      "pos": [-539, 810],
       "size": {
         "0": 315,
         "1": 314
@@ -20,9 +17,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            224
-          ],
+          "links": [224],
           "shape": 3,
           "slot_index": 0
         },
@@ -36,20 +31,14 @@
       "properties": {
         "Node name for S&R": "LoadImage"
       },
-      "widgets_values": [
-        "041.jpg",
-        "image"
-      ],
+      "widgets_values": ["041.jpg", "image"],
       "color": "#432",
       "bgcolor": "#653"
     },
     {
       "id": 97,
       "type": "WD14Tagger|pysssss",
-      "pos": [
-        -48,
-        764
-      ],
+      "pos": [-48, 764],
       "size": {
         "0": 319.30584716796875,
         "1": 199.1265411376953
@@ -68,9 +57,7 @@
         {
           "name": "STRING",
           "type": "STRING",
-          "links": [
-            242
-          ],
+          "links": [242],
           "shape": 6,
           "slot_index": 0
         }
@@ -83,20 +70,14 @@
         0.35,
         0.85,
         "",
-        "mona_\\(genshin_impact\\), 1girl, long_hair, breasts, looking_at_viewer, blush, open_mouth, bangs, blue_eyes, black_hair, thighhighs, 1boy, hat, cleavage, twintails, jewelry, medium_breasts, hetero, earrings, small_breasts, lying, censored, parted_lips, penis, pussy, solo_focus, choker, tears, spread_legs, cum, sex, star_\\(symbol\\), cape, mosaic_censoring, vaginal, leotard, lips, pillow, fur_trim, pubic_hair, uncensored, covered_navel, capelet, witch_hat, cum_in_pussy, on_bed, highleg, crying, male_pubic_hair, clothing_aside, highleg_leotard, clothed_sex, clothed_female_nude_male, veins, hat_ornament, fur_collar, clitoris, overflow, blue_leotard, fur-trimmed_capelet, leotard_aside"
+        "mona_\\(genshin_impact\\), 1girl, long_hair, looking_at_viewer, blush"
       ]
     },
     {
       "id": 107,
       "type": "ShowText|pysssss",
-      "pos": [
-        338,
-        735
-      ],
-      "size": [
-        315,
-        76
-      ],
+      "pos": [338, 735],
+      "size": [315, 76],
       "flags": {},
       "order": 2,
       "mode": 0,
@@ -122,27 +103,13 @@
         "Node name for S&R": "ShowText|pysssss"
       },
       "widgets_values": [
-        "mona_\\(genshin_impact\\), 1girl, long_hair, breasts, looking_at_viewer, blush, open_mouth, bangs, blue_eyes, black_hair, thighhighs, 1boy, hat, cleavage, twintails, jewelry, medium_breasts, hetero, earrings, small_breasts, lying, censored, parted_lips, penis, pussy, solo_focus, choker, tears, spread_legs, cum, sex, star_\\(symbol\\), cape, mosaic_censoring, vaginal, leotard, lips, pillow, fur_trim, pubic_hair, uncensored, covered_navel, capelet, witch_hat, cum_in_pussy, on_bed, highleg, crying, male_pubic_hair, clothing_aside, highleg_leotard, clothed_sex, clothed_female_nude_male, veins, hat_ornament, fur_collar, clitoris, overflow, blue_leotard, fur-trimmed_capelet, leotard_aside"
+        "mona_\\(genshin_impact\\), 1girl, long_hair, looking_at_viewer, blush"
       ]
     }
   ],
   "links": [
-    [
-      224,
-      44,
-      0,
-      97,
-      0,
-      "IMAGE"
-    ],
-    [
-      242,
-      97,
-      0,
-      107,
-      0,
-      "STRING"
-    ]
+    [224, 44, 0, 97, 0, "IMAGE"],
+    [242, 97, 0, 107, 0, "STRING"]
   ],
   "groups": [],
   "config": {},

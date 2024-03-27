@@ -5,10 +5,7 @@
     {
       "id": 106,
       "type": "CR Prompt Text",
-      "pos": [
-        -23,
-        345
-      ],
+      "pos": [-23, 345],
       "size": {
         "0": 400,
         "1": 200
@@ -20,9 +17,7 @@
         {
           "name": "prompt",
           "type": "STRING",
-          "links": [
-            238
-          ],
+          "links": [238],
           "shape": 3
         }
       ],
@@ -39,10 +34,7 @@
     {
       "id": 50,
       "type": "PrimitiveNode",
-      "pos": [
-        -25,
-        584
-      ],
+      "pos": [-25, 584],
       "size": {
         "0": 411.963134765625,
         "1": 179.52468872070312
@@ -54,9 +46,7 @@
         {
           "name": "STRING",
           "type": "STRING",
-          "links": [
-            95
-          ],
+          "links": [95],
           "slot_index": 0,
           "widget": {
             "name": "text"
@@ -65,19 +55,14 @@
       ],
       "title": "negative",
       "properties": {},
-      "widgets_values": [
-        "tattoo,embedding:easynegative, "
-      ],
+      "widgets_values": ["tattoo,embedding:easynegative, "],
       "color": "#223",
       "bgcolor": "#335"
     },
     {
       "id": 95,
       "type": "ImageScaleToTotalPixels",
-      "pos": [
-        -105,
-        810
-      ],
+      "pos": [-105, 810],
       "size": {
         "0": 315,
         "1": 82
@@ -96,9 +81,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            220
-          ],
+          "links": [220],
           "shape": 3,
           "slot_index": 0
         }
@@ -106,18 +89,12 @@
       "properties": {
         "Node name for S&R": "ImageScaleToTotalPixels"
       },
-      "widgets_values": [
-        "nearest-exact",
-        1
-      ]
+      "widgets_values": ["nearest-exact", 1]
     },
     {
       "id": 8,
       "type": "VAEDecode",
-      "pos": [
-        1213,
-        417
-      ],
+      "pos": [1213, 417],
       "size": {
         "0": 210,
         "1": 46
@@ -142,9 +119,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            143
-          ],
+          "links": [143],
           "slot_index": 0
         }
       ],
@@ -155,10 +130,7 @@
     {
       "id": 70,
       "type": "FaceRestoreCFWithModel",
-      "pos": [
-        1214,
-        265
-      ],
+      "pos": [1214, 265],
       "size": {
         "0": 315,
         "1": 102
@@ -183,9 +155,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            229
-          ],
+          "links": [229],
           "shape": 3,
           "slot_index": 0
         }
@@ -193,18 +163,12 @@
       "properties": {
         "Node name for S&R": "FaceRestoreCFWithModel"
       },
-      "widgets_values": [
-        "retinaface_resnet50",
-        0.5
-      ]
+      "widgets_values": ["retinaface_resnet50", 0.5]
     },
     {
       "id": 71,
       "type": "FaceRestoreModelLoader",
-      "pos": [
-        863,
-        270
-      ],
+      "pos": [863, 270],
       "size": {
         "0": 315,
         "1": 58
@@ -216,26 +180,19 @@
         {
           "name": "FACERESTORE_MODEL",
           "type": "FACERESTORE_MODEL",
-          "links": [
-            144
-          ],
+          "links": [144],
           "shape": 3
         }
       ],
       "properties": {
         "Node name for S&R": "FaceRestoreModelLoader"
       },
-      "widgets_values": [
-        "GFPGANv1.4.pth"
-      ]
+      "widgets_values": ["GFPGANv1.4.pth"]
     },
     {
       "id": 48,
       "type": "CLIPTextEncode",
-      "pos": [
-        537,
-        418
-      ],
+      "pos": [537, 418],
       "size": {
         "0": 210,
         "1": 54
@@ -264,9 +221,7 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
-          "links": [
-            241
-          ],
+          "links": [241],
           "shape": 3,
           "slot_index": 0
         }
@@ -275,16 +230,13 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "analog film grain,BREAK (TOK:1.5),a photo of japanese girl,she cute baby face,flat chest,shaved pussy,and big ass."
+        "analog film grain,BREAK (TOK:1.5),a photo of japanese girl"
       ]
     },
     {
       "id": 105,
       "type": "Text Concatenate",
-      "pos": [
-        282,
-        887
-      ],
+      "pos": [282, 887],
       "size": {
         "0": 315,
         "1": 178
@@ -331,9 +283,7 @@
         {
           "name": "STRING",
           "type": "STRING",
-          "links": [
-            239
-          ],
+          "links": [239],
           "shape": 3,
           "slot_index": 0
         }
@@ -341,26 +291,13 @@
       "properties": {
         "Node name for S&R": "Text Concatenate"
       },
-      "widgets_values": [
-        "",
-        "",
-        "false",
-        "",
-        "",
-        ""
-      ]
+      "widgets_values": ["", "", "false", "", "", ""]
     },
     {
       "id": 97,
       "type": "WD14Tagger|pysssss",
-      "pos": [
-        -121,
-        957
-      ],
-      "size": [
-        371.9704700816761,
-        291.12446178089476
-      ],
+      "pos": [-121, 957],
+      "size": [371.9704700816761, 291.12446178089476],
       "flags": {},
       "order": 8,
       "mode": 0,
@@ -375,9 +312,7 @@
         {
           "name": "STRING",
           "type": "STRING",
-          "links": [
-            236
-          ],
+          "links": [236],
           "shape": 6,
           "slot_index": 0
         }
@@ -396,10 +331,7 @@
     {
       "id": 49,
       "type": "CLIPTextEncode",
-      "pos": [
-        538,
-        525
-      ],
+      "pos": [538, 525],
       "size": {
         "0": 210,
         "1": 59.635986328125
@@ -428,9 +360,7 @@
         {
           "name": "CONDITIONING",
           "type": "CONDITIONING",
-          "links": [
-            242
-          ],
+          "links": [242],
           "shape": 3,
           "slot_index": 0
         }
@@ -438,17 +368,12 @@
       "properties": {
         "Node name for S&R": "CLIPTextEncode"
       },
-      "widgets_values": [
-        "tattoo,embedding:easynegative, "
-      ]
+      "widgets_values": ["tattoo,embedding:easynegative, "]
     },
     {
       "id": 96,
       "type": "RepeatLatentBatch",
-      "pos": [
-        481,
-        748
-      ],
+      "pos": [481, 748],
       "size": {
         "0": 315,
         "1": 58
@@ -467,9 +392,7 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            244
-          ],
+          "links": [244],
           "shape": 3,
           "slot_index": 0
         }
@@ -477,17 +400,12 @@
       "properties": {
         "Node name for S&R": "RepeatLatentBatch"
       },
-      "widgets_values": [
-        4
-      ]
+      "widgets_values": [4]
     },
     {
       "id": 44,
       "type": "LoadImage",
-      "pos": [
-        -539,
-        810
-      ],
+      "pos": [-539, 810],
       "size": {
         "0": 315,
         "1": 314
@@ -499,10 +417,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            219,
-            224
-          ],
+          "links": [219, 224],
           "shape": 3,
           "slot_index": 0
         },
@@ -516,20 +431,14 @@
       "properties": {
         "Node name for S&R": "LoadImage"
       },
-      "widgets_values": [
-        "012.jpg",
-        "image"
-      ],
+      "widgets_values": ["012.jpg", "image"],
       "color": "#432",
       "bgcolor": "#653"
     },
     {
       "id": 39,
       "type": "CR Apply LoRA Stack",
-      "pos": [
-        -139,
-        179
-      ],
+      "pos": [-139, 179],
       "size": {
         "0": 210,
         "1": 66
@@ -559,18 +468,14 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            247
-          ],
+          "links": [247],
           "shape": 3,
           "slot_index": 0
         },
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            94
-          ],
+          "links": [94],
           "shape": 3,
           "slot_index": 1
         }
@@ -582,10 +487,7 @@
     {
       "id": 94,
       "type": "VAEEncode",
-      "pos": [
-        595,
-        656
-      ],
+      "pos": [595, 656],
       "size": {
         "0": 210,
         "1": 46
@@ -610,9 +512,7 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            222
-          ],
+          "links": [222],
           "shape": 3,
           "slot_index": 0
         }
@@ -624,10 +524,7 @@
     {
       "id": 4,
       "type": "CheckpointLoaderSimple",
-      "pos": [
-        -518,
-        570
-      ],
+      "pos": [-518, 570],
       "size": {
         "0": 315,
         "1": 98
@@ -639,45 +536,33 @@
         {
           "name": "MODEL",
           "type": "MODEL",
-          "links": [
-            78
-          ],
+          "links": [78],
           "slot_index": 0
         },
         {
           "name": "CLIP",
           "type": "CLIP",
-          "links": [
-            80,
-            96
-          ],
+          "links": [80, 96],
           "slot_index": 1
         },
         {
           "name": "VAE",
           "type": "VAE",
-          "links": [
-            246
-          ],
+          "links": [246],
           "slot_index": 2
         }
       ],
       "properties": {
         "Node name for S&R": "CheckpointLoaderSimple"
       },
-      "widgets_values": [
-        "chilloutmix_NiPrunedFp32Fix.safetensors"
-      ],
+      "widgets_values": ["chilloutmix_NiPrunedFp32Fix.safetensors"],
       "color": "#322",
       "bgcolor": "#533"
     },
     {
       "id": 108,
       "type": "VAELoader",
-      "pos": [
-        -519,
-        709
-      ],
+      "pos": [-519, 709],
       "size": {
         "0": 315,
         "1": 58
@@ -689,26 +574,19 @@
         {
           "name": "VAE",
           "type": "VAE",
-          "links": [
-            248
-          ],
+          "links": [248],
           "shape": 3
         }
       ],
       "properties": {
         "Node name for S&R": "VAELoader"
       },
-      "widgets_values": [
-        "vaeFtMse840000Ema_v100.pt"
-      ]
+      "widgets_values": ["vaeFtMse840000Ema_v100.pt"]
     },
     {
       "id": 107,
       "type": "KSampler",
-      "pos": [
-        872,
-        414
-      ],
+      "pos": [872, 414],
       "size": {
         "0": 315,
         "1": 262
@@ -742,9 +620,7 @@
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            245
-          ],
+          "links": [245],
           "shape": 3,
           "slot_index": 0
         }
@@ -765,10 +641,7 @@
     {
       "id": 40,
       "type": "CR LoRA Stack",
-      "pos": [
-        -519,
-        206
-      ],
+      "pos": [-519, 206],
       "size": {
         "0": 315,
         "1": 322
@@ -787,9 +660,7 @@
         {
           "name": "LORA_STACK",
           "type": "LORA_STACK",
-          "links": [
-            79
-          ],
+          "links": [79],
           "shape": 3
         }
       ],
@@ -816,10 +687,7 @@
     {
       "id": 100,
       "type": "PreviewImage",
-      "pos": [
-        870,
-        733
-      ],
+      "pos": [870, 733],
       "size": {
         "0": 602.9432373046875,
         "1": 608.3880004882812
@@ -840,190 +708,29 @@
     }
   ],
   "links": [
-    [
-      78,
-      4,
-      0,
-      39,
-      0,
-      "MODEL"
-    ],
-    [
-      79,
-      40,
-      0,
-      39,
-      2,
-      "LORA_STACK"
-    ],
-    [
-      80,
-      4,
-      1,
-      39,
-      1,
-      "CLIP"
-    ],
-    [
-      94,
-      39,
-      1,
-      48,
-      0,
-      "CLIP"
-    ],
-    [
-      95,
-      50,
-      0,
-      49,
-      1,
-      "STRING"
-    ],
-    [
-      96,
-      4,
-      1,
-      49,
-      0,
-      "CLIP"
-    ],
-    [
-      143,
-      8,
-      0,
-      70,
-      1,
-      "IMAGE"
-    ],
-    [
-      144,
-      71,
-      0,
-      70,
-      0,
-      "FACERESTORE_MODEL"
-    ],
-    [
-      219,
-      44,
-      0,
-      95,
-      0,
-      "IMAGE"
-    ],
-    [
-      220,
-      95,
-      0,
-      94,
-      0,
-      "IMAGE"
-    ],
-    [
-      222,
-      94,
-      0,
-      96,
-      0,
-      "LATENT"
-    ],
-    [
-      224,
-      44,
-      0,
-      97,
-      0,
-      "IMAGE"
-    ],
-    [
-      229,
-      70,
-      0,
-      100,
-      0,
-      "IMAGE"
-    ],
-    [
-      236,
-      97,
-      0,
-      105,
-      1,
-      "STRING"
-    ],
-    [
-      238,
-      106,
-      0,
-      105,
-      0,
-      "STRING"
-    ],
-    [
-      239,
-      105,
-      0,
-      48,
-      1,
-      "STRING"
-    ],
-    [
-      241,
-      48,
-      0,
-      107,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      242,
-      49,
-      0,
-      107,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      244,
-      96,
-      0,
-      107,
-      3,
-      "LATENT"
-    ],
-    [
-      245,
-      107,
-      0,
-      8,
-      0,
-      "LATENT"
-    ],
-    [
-      246,
-      4,
-      2,
-      8,
-      1,
-      "VAE"
-    ],
-    [
-      247,
-      39,
-      0,
-      107,
-      0,
-      "MODEL"
-    ],
-    [
-      248,
-      108,
-      0,
-      94,
-      1,
-      "VAE"
-    ]
+    [78, 4, 0, 39, 0, "MODEL"],
+    [79, 40, 0, 39, 2, "LORA_STACK"],
+    [80, 4, 1, 39, 1, "CLIP"],
+    [94, 39, 1, 48, 0, "CLIP"],
+    [95, 50, 0, 49, 1, "STRING"],
+    [96, 4, 1, 49, 0, "CLIP"],
+    [143, 8, 0, 70, 1, "IMAGE"],
+    [144, 71, 0, 70, 0, "FACERESTORE_MODEL"],
+    [219, 44, 0, 95, 0, "IMAGE"],
+    [220, 95, 0, 94, 0, "IMAGE"],
+    [222, 94, 0, 96, 0, "LATENT"],
+    [224, 44, 0, 97, 0, "IMAGE"],
+    [229, 70, 0, 100, 0, "IMAGE"],
+    [236, 97, 0, 105, 1, "STRING"],
+    [238, 106, 0, 105, 0, "STRING"],
+    [239, 105, 0, 48, 1, "STRING"],
+    [241, 48, 0, 107, 1, "CONDITIONING"],
+    [242, 49, 0, 107, 2, "CONDITIONING"],
+    [244, 96, 0, 107, 3, "LATENT"],
+    [245, 107, 0, 8, 0, "LATENT"],
+    [246, 4, 2, 8, 1, "VAE"],
+    [247, 39, 0, 107, 0, "MODEL"],
+    [248, 108, 0, 94, 1, "VAE"]
   ],
   "groups": [],
   "config": {},

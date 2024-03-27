@@ -7,14 +7,8 @@
   },
   "8": {
     "inputs": {
-      "samples": [
-        "51",
-        0
-      ],
-      "vae": [
-        "60",
-        2
-      ]
+      "samples": ["51", 0],
+      "vae": ["60", 2]
     },
     "class_type": "VAEDecode"
   },
@@ -28,18 +22,9 @@
   },
   "39": {
     "inputs": {
-      "model": [
-        "4",
-        0
-      ],
-      "clip": [
-        "4",
-        1
-      ],
-      "lora_stack": [
-        "40",
-        0
-      ]
+      "model": ["4", 0],
+      "clip": ["4", 1],
+      "lora_stack": ["40", 0]
     },
     "class_type": "CR Apply LoRA Stack"
   },
@@ -62,40 +47,28 @@
   },
   "46": {
     "inputs": {
-      "images": [
-        "8",
-        0
-      ]
+      "images": ["8", 0]
     },
     "class_type": "PreviewImage"
   },
   "48": {
     "inputs": {
-      "text": "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass.",
-      "clip": [
-        "39",
-        1
-      ]
+      "text": "analog film grain,bokeh,(TOK:1.5),a photo of a girl,she has flat chest,black hair,and big ass.",
+      "clip": ["39", 1]
     },
     "class_type": "CLIPTextEncode"
   },
   "49": {
     "inputs": {
       "text": "tattoo,nsfw,nude,naked,embedding:negativeXL_D, ",
-      "clip": [
-        "4",
-        1
-      ]
+      "clip": ["4", 1]
     },
     "class_type": "CLIPTextEncode"
   },
   "51": {
     "inputs": {
       "add_noise": "disable",
-      "noise_seed": [
-        "72",
-        0
-      ],
+      "noise_seed": ["72", 0],
       "steps": 50,
       "cfg": 5,
       "sampler_name": "dpmpp_2m_sde",
@@ -103,52 +76,31 @@
       "start_at_step": 40,
       "end_at_step": 10000,
       "return_with_leftover_noise": "disable",
-      "model": [
-        "59",
-        0
-      ],
-      "positive": [
-        "55",
-        0
-      ],
-      "negative": [
-        "56",
-        0
-      ],
-      "latent_image": [
-        "57",
-        0
-      ]
+      "model": ["59", 0],
+      "positive": ["55", 0],
+      "negative": ["56", 0],
+      "latent_image": ["57", 0]
     },
     "class_type": "KSamplerAdvanced"
   },
   "55": {
     "inputs": {
-      "text": "analog film grain,bokeh,(TOK:1.5),a photo of 14 yo girl,she has flat chest,shaved pussy,black hair,and big ass.",
-      "clip": [
-        "60",
-        1
-      ]
+      "text": "analog film grain,bokeh,(TOK:1.5),a photo of a girl,she has flat chest,black hair,and big ass.",
+      "clip": ["60", 1]
     },
     "class_type": "CLIPTextEncode"
   },
   "56": {
     "inputs": {
       "text": "tattoo,nsfw,nude,naked,embedding:negativeXL_D, ",
-      "clip": [
-        "60",
-        1
-      ]
+      "clip": ["60", 1]
     },
     "class_type": "CLIPTextEncode"
   },
   "57": {
     "inputs": {
       "add_noise": "enable",
-      "noise_seed": [
-        "72",
-        0
-      ],
+      "noise_seed": ["72", 0],
       "steps": 50,
       "cfg": 5,
       "sampler_name": "dpmpp_2m_sde",
@@ -156,22 +108,10 @@
       "start_at_step": 0,
       "end_at_step": 40,
       "return_with_leftover_noise": "enable",
-      "model": [
-        "58",
-        0
-      ],
-      "positive": [
-        "48",
-        0
-      ],
-      "negative": [
-        "49",
-        0
-      ],
-      "latent_image": [
-        "36",
-        0
-      ]
+      "model": ["58", 0],
+      "positive": ["48", 0],
+      "negative": ["49", 0],
+      "latent_image": ["36", 0]
     },
     "class_type": "KSamplerAdvanced"
   },
@@ -181,10 +121,7 @@
       "b2": 1.2,
       "s1": 0.8,
       "s2": 0.3,
-      "model": [
-        "39",
-        0
-      ]
+      "model": ["39", 0]
     },
     "class_type": "FreeU"
   },
@@ -194,10 +131,7 @@
       "b2": 1.2,
       "s1": 0.8,
       "s2": 1.3,
-      "model": [
-        "60",
-        0
-      ]
+      "model": ["60", 0]
     },
     "class_type": "FreeU"
   },

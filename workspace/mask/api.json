@@ -7,22 +7,10 @@
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
       "denoise": 1,
-      "model": [
-        "14",
-        0
-      ],
-      "positive": [
-        "6",
-        0
-      ],
-      "negative": [
-        "7",
-        0
-      ],
-      "latent_image": [
-        "42",
-        0
-      ]
+      "model": ["14", 0],
+      "positive": ["6", 0],
+      "negative": ["7", 0],
+      "latent_image": ["42", 0]
     },
     "class_type": "KSampler"
   },
@@ -34,34 +22,22 @@
   },
   "6": {
     "inputs": {
-      "text": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,1girl,sex, petite,(small breast:1.5),black twin tails,white stockings, naked,thigh,show breasts and pussy,",
-      "clip": [
-        "14",
-        1
-      ]
+      "text": "masterpiece, best quality, ultra high res, highres, best shadow, physics-based rendering, extremely delicate and beautiful,extremely detailed, amazing,1girl,black twin tails,white stockings, thigh,",
+      "clip": ["14", 1]
     },
     "class_type": "CLIPTextEncode"
   },
   "7": {
     "inputs": {
       "text": "embedding:negativeXL_D, ",
-      "clip": [
-        "4",
-        1
-      ]
+      "clip": ["4", 1]
     },
     "class_type": "CLIPTextEncode"
   },
   "8": {
     "inputs": {
-      "samples": [
-        "3",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ]
+      "samples": ["3", 0],
+      "vae": ["4", 2]
     },
     "class_type": "VAEDecode"
   },
@@ -74,10 +50,7 @@
   },
   "13": {
     "inputs": {
-      "images": [
-        "43",
-        0
-      ]
+      "images": ["43", 0]
     },
     "class_type": "PreviewImage"
   },
@@ -86,42 +59,24 @@
       "lora_name": "NsfwPovAllInOneLoraSdxl-000009.safetensors",
       "strength_model": 1,
       "strength_clip": 0.4,
-      "model": [
-        "4",
-        0
-      ],
-      "clip": [
-        "4",
-        1
-      ]
+      "model": ["4", 0],
+      "clip": ["4", 1]
     },
     "class_type": "LoraLoader"
   },
   "39": {
     "inputs": {
       "grow_mask_by": 10,
-      "pixels": [
-        "49",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ],
-      "mask": [
-        "12",
-        1
-      ]
+      "pixels": ["49", 0],
+      "vae": ["4", 2],
+      "mask": ["12", 1]
     },
     "class_type": "VAEEncodeForInpaint"
   },
   "42": {
     "inputs": {
       "amount": 1,
-      "samples": [
-        "39",
-        0
-      ]
+      "samples": ["39", 0]
     },
     "class_type": "RepeatLatentBatch"
   },
@@ -129,14 +84,8 @@
     "inputs": {
       "facedetection": "retinaface_resnet50",
       "codeformer_fidelity": 0.5,
-      "facerestore_model": [
-        "44",
-        0
-      ],
-      "image": [
-        "8",
-        0
-      ]
+      "facerestore_model": ["44", 0],
+      "image": ["8", 0]
     },
     "class_type": "FaceRestoreCFWithModel"
   },
@@ -150,10 +99,7 @@
     "inputs": {
       "upscale_method": "nearest-exact",
       "megapixels": 0.8,
-      "image": [
-        "12",
-        0
-      ]
+      "image": ["12", 0]
     },
     "class_type": "ImageScaleToTotalPixels"
   }

@@ -1,39 +1,33 @@
 {
   "4": {
     "inputs": {
-      "ckpt_name": "fudukiMix_v15.safetensors"
+      "ckpt_name": "iniverseMixXLSFWNSFW_v40.safetensors"
     },
-    "class_type": "CheckpointLoaderSimple"
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
   },
   "8": {
     "inputs": {
-      "samples": [
-        "93",
-        0
-      ],
-      "vae": [
-        "60",
-        2
-      ]
+      "samples": ["93", 0],
+      "vae": ["60", 2]
     },
-    "class_type": "VAEDecode"
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
   },
   "39": {
     "inputs": {
-      "model": [
-        "4",
-        0
-      ],
-      "clip": [
-        "4",
-        1
-      ],
-      "lora_stack": [
-        "40",
-        0
-      ]
+      "model": ["4", 0],
+      "clip": ["4", 1],
+      "lora_stack": ["40", 0]
     },
-    "class_type": "CR Apply LoRA Stack"
+    "class_type": "CR Apply LoRA Stack",
+    "_meta": {
+      "title": "💊 CR Apply LoRA Stack"
+    }
   },
   "40": {
     "inputs": {
@@ -50,60 +44,60 @@
       "model_weight_3": 1,
       "clip_weight_3": 0.4
     },
-    "class_type": "CR LoRA Stack"
+    "class_type": "CR LoRA Stack",
+    "_meta": {
+      "title": "💊 CR LoRA Stack"
+    }
   },
   "44": {
     "inputs": {
-      "image": "041.jpg",
-      "choose file to upload": "image"
+      "image": "108928106_p5.jpg",
+      "upload": "image"
     },
-    "class_type": "LoadImage"
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
   },
   "48": {
     "inputs": {
-      "text": [
-        "105",
-        0
-      ],
-      "clip": [
-        "39",
-        1
-      ]
+      "text": ["105", 0],
+      "clip": ["39", 1]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
   },
   "49": {
     "inputs": {
-      "text": "tattoo,embedding:negativeXL_D, ",
-      "clip": [
-        "4",
-        1
-      ]
+      "text": "tattoo,embedding:negativeXL_D, embedding:aidxlv04_neg, embedding:EasyNegativeV2, ",
+      "clip": ["4", 1]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
   },
   "55": {
     "inputs": {
-      "text": [
-        "105",
-        0
-      ],
-      "clip": [
-        "60",
-        1
-      ]
+      "text": ["105", 0],
+      "clip": ["60", 1]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
   },
   "56": {
     "inputs": {
-      "text": "tattoo,embedding:negativeXL_D, ",
-      "clip": [
-        "60",
-        1
-      ]
+      "text": "tattoo,embedding:negativeXL_D, embedding:aidxlv04_neg, embedding:EasyNegativeV2, ",
+      "clip": ["60", 1]
     },
-    "class_type": "CLIPTextEncode"
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
   },
   "58": {
     "inputs": {
@@ -111,155 +105,183 @@
       "b2": 1.05,
       "s1": 0.9500000000000001,
       "s2": 0.9500000000000001,
-      "model": [
-        "39",
-        0
-      ]
+      "model": ["39", 0]
     },
-    "class_type": "FreeU"
+    "class_type": "FreeU",
+    "_meta": {
+      "title": "FreeU"
+    }
   },
   "60": {
     "inputs": {
       "ckpt_name": "sd_xl_refiner_1.0.safetensors"
     },
-    "class_type": "CheckpointLoaderSimple"
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
   },
   "70": {
     "inputs": {
       "facedetection": "retinaface_resnet50",
       "codeformer_fidelity": 0.5,
-      "facerestore_model": [
-        "71",
-        0
-      ],
-      "image": [
-        "8",
-        0
-      ]
+      "facerestore_model": ["71", 0],
+      "image": ["8", 0]
     },
-    "class_type": "FaceRestoreCFWithModel"
+    "class_type": "FaceRestoreCFWithModel",
+    "_meta": {
+      "title": "FaceRestoreCFWithModel"
+    }
   },
   "71": {
     "inputs": {
       "model_name": "GFPGANv1.4.pth"
     },
-    "class_type": "FaceRestoreModelLoader"
+    "class_type": "FaceRestoreModelLoader",
+    "_meta": {
+      "title": "FaceRestoreModelLoader"
+    }
   },
   "93": {
     "inputs": {
-      "noise_seed": 81082105856179,
+      "noise_seed": 923445434119301,
       "steps": 50,
-      "cfg": 7,
+      "cfg": 8,
       "sampler_name": "dpmpp_2m_sde",
       "scheduler": "karras",
       "base_ratio": 0.8,
-      "denoise": 0.5,
-      "base_model": [
-        "58",
-        0
-      ],
-      "base_positive": [
-        "48",
-        0
-      ],
-      "base_negative": [
-        "49",
-        0
-      ],
-      "refiner_model": [
-        "60",
-        0
-      ],
-      "refiner_positive": [
-        "55",
-        0
-      ],
-      "refiner_negative": [
-        "56",
-        0
-      ],
-      "latent_image": [
-        "96",
-        0
-      ]
+      "denoise": 0.9,
+      "base_model": ["58", 0],
+      "base_positive": ["127", 0],
+      "base_negative": ["49", 0],
+      "refiner_model": ["60", 0],
+      "refiner_positive": ["128", 0],
+      "refiner_negative": ["56", 0],
+      "latent_image": ["123", 0]
     },
-    "class_type": "SeargeSDXLSampler"
-  },
-  "94": {
-    "inputs": {
-      "pixels": [
-        "95",
-        0
-      ],
-      "vae": [
-        "4",
-        2
-      ]
-    },
-    "class_type": "VAEEncode"
+    "class_type": "SeargeSDXLSampler",
+    "_meta": {
+      "title": "SDXL Sampler v1 (Searge)"
+    }
   },
   "95": {
     "inputs": {
       "upscale_method": "nearest-exact",
-      "megapixels": 1.2,
-      "image": [
-        "44",
-        0
-      ]
+      "megapixels": 1,
+      "image": ["44", 0]
     },
-    "class_type": "ImageScaleToTotalPixels"
-  },
-  "96": {
-    "inputs": {
-      "amount": 4,
-      "samples": [
-        "94",
-        0
-      ]
-    },
-    "class_type": "RepeatLatentBatch"
+    "class_type": "ImageScaleToTotalPixels",
+    "_meta": {
+      "title": "ImageScaleToTotalPixels"
+    }
   },
   "97": {
     "inputs": {
-      "model": "wd-v1-4-convnextv2-tagger-v2",
-      "threshold": 0.35,
+      "model": "wd-v1-4-moat-tagger-v2",
+      "threshold": 0.5,
       "character_threshold": 0.85,
+      "replace_underscore": "censored",
+      "trailing_comma": "1girl, solo, long_hair,looking_at_viewer, bangs, blue_eyes, simple_background, black_hair, thighhighs, gloves, hat, ribbon, bare_shoulders, twintails, jewelry, thighs, cowboy_shot, earrings, detached_sleeves, black_gloves, star_\\(symbol\\), white_thighhighs, leotard, lips, hand_on_hip, fur_trim, witch_hat, cameltoe, highleg, lace_trim, highleg_leotard, realistic, blue_leotard, star_earrings",
       "exclude_tags": "",
-      "image": [
-        "44",
-        0
-      ]
+      "tags": "1girl, solo, long hair, looking at viewer, black hair, navel, twintails, nipples, outdoors, ground vehicle, motor vehicle, motorcycle, ",
+      "image": ["44", 0]
     },
-    "class_type": "WD14Tagger|pysssss"
+    "class_type": "WD14Tagger|pysssss",
+    "_meta": {
+      "title": "WD14 Tagger 🐍"
+    }
   },
   "100": {
     "inputs": {
-      "images": [
-        "70",
-        0
-      ]
+      "images": ["70", 0]
     },
-    "class_type": "PreviewImage"
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
   },
   "105": {
     "inputs": {
-      "text_a": [
-        "106",
-        0
-      ],
-      "text_b": [
-        "97",
-        0
-      ],
-      "linebreak_addition": "false",
-      "delimiter": ""
+      "delimiter": "",
+      "clean_whitespace": "true",
+      "text_a": ["97", 0],
+      "text_b": ["106", 0]
     },
-    "class_type": "Text Concatenate"
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
   },
   "106": {
     "inputs": {
-      "prompt": "analog film grain,female child,(flat chest:1.5),big ass,"
+      "prompt": "(loli:1.5),smooth skin,analog film grain,"
     },
-    "class_type": "CR Prompt Text"
+    "class_type": "CR Prompt Text",
+    "_meta": {
+      "title": "positive"
+    }
+  },
+  "122": {
+    "inputs": {
+      "pixels": ["95", 0],
+      "vae": ["4", 2]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "123": {
+    "inputs": {
+      "amount": 4,
+      "samples": ["122", 0]
+    },
+    "class_type": "RepeatLatentBatch",
+    "_meta": {
+      "title": "Repeat Latent Batch"
+    }
+  },
+  "124": {
+    "inputs": {
+      "clip_vision": ["125", 0],
+      "image": ["44", 0]
+    },
+    "class_type": "CLIPVisionEncode",
+    "_meta": {
+      "title": "CLIP Vision Encode"
+    }
+  },
+  "125": {
+    "inputs": {
+      "clip_name": "clip_vision_g.safetensors"
+    },
+    "class_type": "CLIPVisionLoader",
+    "_meta": {
+      "title": "Load CLIP Vision"
+    }
+  },
+  "127": {
+    "inputs": {
+      "strength": 0.5,
+      "noise_augmentation": 0,
+      "conditioning": ["48", 0],
+      "clip_vision_output": ["124", 0]
+    },
+    "class_type": "unCLIPConditioning",
+    "_meta": {
+      "title": "unCLIPConditioning"
+    }
+  },
+  "128": {
+    "inputs": {
+      "strength": 0.5,
+      "noise_augmentation": 0,
+      "conditioning": ["55", 0],
+      "clip_vision_output": ["124", 0]
+    },
+    "class_type": "unCLIPConditioning",
+    "_meta": {
+      "title": "unCLIPConditioning"
+    }
   }
 }

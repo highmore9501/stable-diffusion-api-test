@@ -1,0 +1,179 @@
+{
+  "4": {
+    "inputs": {
+      "ckpt_name": "AnythingV5Ink_v32Ink.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "83",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "46": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "48": {
+    "inputs": {
+      "text": "Logo,Avatar Frame,pencilling,no human,\"秒红科技\", BREAK Its screen content showcases a combination of bold typography and a simple yet striking graphic element, creating a visually appealing composition that instantly communicates the brand's essence.",
+      "clip": [
+        "79",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "49": {
+    "inputs": {
+      "text": "tattoo,embedding:negativeXL_D, human",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "74": {
+    "inputs": {
+      "amount": 4,
+      "samples": [
+        "75",
+        0
+      ]
+    },
+    "class_type": "RepeatLatentBatch"
+  },
+  "75": {
+    "inputs": {
+      "pixels": [
+        "76",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "76": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "megapixels": 1,
+      "image": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "ImageScaleToTotalPixels"
+  },
+  "77": {
+    "inputs": {
+      "image": "秒红logo草.png",
+      "choose file to upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "78": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "79": {
+    "inputs": {
+      "lora_name": "LogoRedmondV2-Logo-LogoRedmAF.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "80": {
+    "inputs": {
+      "preprocessor": "LineArtPreprocessor",
+      "resolution": 1024,
+      "image": [
+        "77",
+        0
+      ]
+    },
+    "class_type": "AIO_Preprocessor"
+  },
+  "81": {
+    "inputs": {
+      "strength": 1,
+      "conditioning": [
+        "48",
+        0
+      ],
+      "control_net": [
+        "82",
+        0
+      ],
+      "image": [
+        "80",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply"
+  },
+  "82": {
+    "inputs": {
+      "control_net_name": "models\\control_v11p_sd15_lineart.pth"
+    },
+    "class_type": "ControlNetLoader"
+  },
+  "83": {
+    "inputs": {
+      "seed": 928505702943581,
+      "steps": 35,
+      "cfg": 8,
+      "sampler_name": "dpmpp_2m_sde",
+      "scheduler": "karras",
+      "denoise": 1,
+      "model": [
+        "79",
+        0
+      ],
+      "positive": [
+        "81",
+        0
+      ],
+      "negative": [
+        "49",
+        0
+      ],
+      "latent_image": [
+        "74",
+        0
+      ]
+    },
+    "class_type": "KSampler"
+  }
+}
